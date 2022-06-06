@@ -1,0 +1,2 @@
+class Dayt < ApplicationRecord
+end
