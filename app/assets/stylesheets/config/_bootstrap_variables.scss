@@ -6,11 +6,14 @@
 // General style
 $font-family-sans-serif:  $body-font;
 $headings-font-family:    $headers-font;
-$body-bg:                 $light-gray;
+$body-bg:                 $blue-background;
 $font-size-base: 1rem;
 
 // Colors
-$body-color: $blue-background;
+//font:
+$body-color: $gray-titles;
+
+//buttons:
 $primary:    $blue;
 $success:    $green;
 $info:       $yellow;
@@ -26,11 +29,13 @@ $border-radius-sm: 2px;
 
 // Phone Portrait
 @media only screen
-  and (min-device-width: 330px)
-  and (max-device-width: 870px)
+  and (min-device-width: 370px)
+  and (max-device-width: 750px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
     .selector {
       background-color: $blue-background;
     }
 }
+
+
