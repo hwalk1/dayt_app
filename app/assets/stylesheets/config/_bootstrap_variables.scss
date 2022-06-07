@@ -10,7 +10,7 @@ $body-bg:                 $light-gray;
 $font-size-base: 1rem;
 
 // Colors
-$body-color: $gray;
+$body-color: $blue-background;
 $primary:    $blue;
 $success:    $green;
 $info:       $yellow;
@@ -22,4 +22,15 @@ $border-radius:    2px;
 $border-radius-lg: 2px;
 $border-radius-sm: 2px;
 
-// Override other variables below!
+/* BOOSTRAP MEDIA BREAKPOINTS */
+
+// Phone Portrait
+@media only screen
+  and (min-device-width: 330px)
+  and (max-device-width: 870px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .selector {
+      background-color: $blue-background;
+    }
+}

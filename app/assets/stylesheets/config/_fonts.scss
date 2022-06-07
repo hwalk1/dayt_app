@@ -1,16 +1,52 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@500;600&family=Open+Sans:wght@400;500&display=swap');
 
-// Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
 
-// To use a font file (.woff) uncomment following lines
-// @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
-// }
-// $my-font: "Font Name";
+  //  <!-- ============  FONT & TYPOGRAPHY  ============-->
+
+  // Define fonts for body and headers
+  $body-font: 'Open Sans', sans-serif;
+  $headers-font: 'Kodchasan', sans-serif;
+
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  $big-font-size: 2rem;
+  $h1-font-size: 1.5rem;
+  $h2-font-size: 1.25rem;
+  $h3-font-size: 1.125rem;
+  $normal-font-size: .938rem;
+  $small-font-size: .813rem;
+  $smaller-font-size: .75rem;
+
+  // <!-- ============  FONT WEIGHT  ============--> //
+
+  // Open Sans:
+  $font-open-regular: 400;
+  $font-open-medium: 500;
+
+  // Kodchasan:
+  $font-kodchasan-medium: 500;
+  $font-kodchasan-semi-bold: 600;
+
+  /* <!-- ============  MARGENES BOTTOM ============--> */
+  /* .25rem = 4px, .5rem = 8px, 0.75rem = 12px ... */
+
+  $mb-0-25: .25rem;
+  $mb-0-5: .5rem;
+  $mb-0-75: .75rem;
+  $mb-1: 1rem;
+  $mb-1-5: 1.5rem;
+  $mb-2: 2rem;
+  $mb-2-5: 2.5rem;
+  $mb-3: 3rem;
+
+
+  // To use a font file (.woff) uncomment following lines
+  // @font-face {
+  //   font-family: "Font Name";
+  //   src: font-url('FontFile.eot');
+  //   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
+  //        font-url('FontFile.woff') format('woff'),
+  //        font-url('FontFile.ttf') format('truetype')
+  // }
+  // $my-font: "Font Name";
