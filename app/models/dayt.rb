@@ -1,8 +1,8 @@
 class Dayt < ApplicationRecord
   belongs_to :user
   has_many :tags, through: :dayt_tags
-  has_many :tags, through: :dayt_tags
   has_many :reviews
+  has_many_attached :photos
 
   validates :title, presence: true, length: { minimum: 3 }
   validates :content, presence: true
@@ -12,4 +12,5 @@ class Dayt < ApplicationRecord
 
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
+
 end

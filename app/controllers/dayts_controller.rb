@@ -1,6 +1,5 @@
 class DaytsController < ApplicationController
 
-
   def index
     @dayts = Dayts.all
     @markers = @dayts.geocoded.map do |dayt|
@@ -33,12 +32,21 @@ class DaytsController < ApplicationController
     else
       render :new
     end
-
   end
 
   private
 
   def dayt_params
-    params.require(:dayt).permit(:title, :content, :location, :duration, :price, :opening_time, :closing_time, :booking_url)
+    params.require(:dayt).permit(
+      :title,
+      :content,
+      :location,
+      :duration,
+      :price,
+      :opening_time,
+      :closing_time,
+      :booking_url,
+      photos: []
+    )
   end
 end
