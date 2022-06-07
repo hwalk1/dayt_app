@@ -6,7 +6,7 @@
 // General style
 $font-family-sans-serif:  $body-font;
 $headings-font-family:    $headers-font;
-$body-bg:                 $blue-background;
+// $body-bg:                 $blue-background;
 $font-size-base: 1rem;
 
 // Colors
@@ -35,8 +35,6 @@ $border-radius-sm: 2px;
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
     .selector {
-      background-color: $blue-background;
+      // background-color: $blue-background;
     }
 }
-
-
