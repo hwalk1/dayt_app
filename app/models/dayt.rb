@@ -7,5 +7,9 @@ class Dayt < ApplicationRecord
   validates :title, presence: true, length: { minimum: 3 }
   validates :content, presence: true
   validates :duration, presence: true, numericality: true
+  validates :location, presence: true
   validates :price, presence: true, numericality: true
+
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
 end

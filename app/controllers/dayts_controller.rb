@@ -1,10 +1,24 @@
 class DaytsController < ApplicationController
-  
+
 
   def index
+    @dayts = Dayts.all
+    @markers = @dayts.geocoded.map do |dayt|
+      {
+        lat: dayt.latitude,
+        lng: dayt.longitude
+      }
   end
 
   def show
+
+    @dayt = Dayt.find(params :id)
+    
+    @markers =
+      [{
+        lat: @dayt.latitude,
+        lng: @dayt.longitude
+      }]
   end
 
   def new
