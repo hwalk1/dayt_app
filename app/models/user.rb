@@ -6,4 +6,7 @@ class User < ApplicationRecord
 
   has_many :dayts
   has_one_attached :avatar
+
+  validates :name, presence: true
+
 end

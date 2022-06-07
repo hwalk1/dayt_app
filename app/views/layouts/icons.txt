@@ -1,0 +1,23 @@
+<!-- CRUD ICONS -->
+  <!-- calendar add icon -->
+  <i class="fa-regular fa-calendar-circle-plus"></i>
+
+  <!-- a delete left flag (can be used for tags) -->
+  <i class="fa-solid fa-delete-left"></i>
+
+  <!-- solid trash can -->
+  <i class="fa-solid fa-trash"></i>
+
+<!-- stars for featured dayts (maybe) -->
+<i class="fa-solid fa-stars"></i>
+
+<!-- star for rating -->
+<i class="fa-solid fa-star"></i>
+
+<!-- location dot -->
+<i class="fa-solid fa-location-dot"></i>
+
+<!-- location with check mark (for open venues) -->
+<i class="fa-solid fa-location-check"></i>
+<!--  -->
+<!--  -->
