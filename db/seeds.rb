@@ -6,15 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
 Dayt.destroy_all
 User.destroy_all
 
 puts "Creating Users"
-aren = User.create(name:"Aren", password:"123456", email:"aren@gmail.com")
-hayden = User.create(name:"Hayden", password:"123456", email:"hayden@gmail.com")
-michael = User.create(name:"Michael", password:"123456", email:"michael@gmail.com")
-lea = User.create(name:"Lea", password:"123456", email:"lea@gmail.com")
+aren = User.new(name:"Aren", password:"123456", email:"aren@gmail.com")
+hayden = User.new(name:"Hayden", password:"123456", email:"hayden@gmail.com")
+michael = User.new(name:"Michael", password:"123456", email:"michael@gmail.com")
+lea = User.new(name:"Lea", password:"123456", email:"lea@gmail.com")
 
 file = URI.open('https://avatars.githubusercontent.com/u/72479887?v=4')
 aren.avatar.attach(io: file, filename: 'aren.png', content_type: 'image/png')
@@ -31,3 +30,23 @@ lea.save
 file = URI.open('https://avatars.githubusercontent.com/u/62589313?v=4')
 hayden.avatar.attach(io: file, filename: 'hayden.png', content_type: 'image/png')
 hayden.save
+
+puts 'creating Dayts'
+
+corner = Dayt.new(
+  title: 'Corner Hotel',
+  content: 'Popular landmark for local & international music acts, with a rooftop bar & pub grub menu.',
+  location: '57 Swan St, Richmond VIC 3121',
+  duration: 2,
+  price: 30,
+  opening_time: 12,
+  closing_time: 1,
+  booking_url: 'https://cornerhotel.com/'
+)
+
+file = URI.open('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.concreteplayground.com%2Fcontent%2Fuploads%2F2017%2F02%2FThe-Corner-Hotel-Richmond-rooftop1.jpeg&f=1&nofb=1')
+corner.photos.attach(io: file, filename: 'corner1.png', content_type: 'image/png')
+file = URI.open('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.newsapi.com.au%2Fimage%2Fv1%2F1434b69bbf3e3039420e795a80d4b60d%3Fwidth%3D1024&f=1&nofb=1')
+corner.photos.attach(io: file, filename: 'corner2.png', content_type: 'image/png')
+corner.user = hayden
+corner.save
