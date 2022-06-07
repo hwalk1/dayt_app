@@ -1,12 +1,85 @@
-.navbar-lewagon {
+// <========== Le wagon SCSS NAVBAR:  ===========>
+// .navbar-lewagon {
+//   justify-content: space-between;
+//   background: white;
+// }
+
+// .navbar-lewagon .navbar-collapse {
+//   flex-grow: 0;
+// }
+
+// .navbar-lewagon .navbar-brand img {
+//   width: 40px;
+// }
+
+// <========== BURGER NAVBAR:  ===========>
+
+.nav{
+  max-width: 896px;
+  height: 3rem;
+  display: flex;
   justify-content: space-between;
-  background: white;
+  align-items: center;
+  background-color: white;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.nav_logo,
+.nav_toggle{
+  color: $gray-titles;
+  font-weight: $font-open-regular;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.nav_logo:hover{
+  color: red;
+}
+
+.nav_toggle{
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.nav_toggle:hover{
+  color: $gray-subtitles;
+}
+
+.nav_list{
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  /* => total width divided & repeat nbre of columns (1fr, 1fr, 1fr) 3 times. 1fr = 1fraction unit of the available space. responsive. can add 10px for fixed size items */
+  /* keeps 2rem gap between when reducing / augmenting size */
+}
+
+.nav_link{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: $body-font;
+  color: $gray-titles;
+  font-weight: $font-open-medium;
+}
+
+.nav_link:hover{
+  color: red;
+}
+
+.nav_icon{
+  font-size: 1.2rem;
+}
+
+.nav_close{
+  position: absolute;
+  right: 1.3rem;
+  bottom: .5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: $gray-titles;
+}
+
+.nav_close:hover{
+  color: blue;
+}
+
+/* show menu */
+.show-menu{
+  bottom: 0;
 }
