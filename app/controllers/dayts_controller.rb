@@ -1,4 +1,5 @@
 class DaytsController < ApplicationController
+  
 
   def index
   end
