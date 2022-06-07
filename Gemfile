@@ -65,3 +65,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # to hide api keys
 gem 'dotenv-rails', groups: [:development, :test]
+
+# to store user uploaded images
+gem 'cloudinary', '~> 1.16.0'

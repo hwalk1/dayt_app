@@ -7,5 +7,6 @@
   <%= f.input :opening_time %>
   <%= f.input :closing_time %>
   <%= f.input :booking_url %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.submit class: 'btn btn-primary'%>
 <% end %>
