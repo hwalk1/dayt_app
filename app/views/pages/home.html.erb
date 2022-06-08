@@ -3,11 +3,16 @@
 <h1>home</h1>
 <%# <%= render "dayts/mapbox" %>
 
-<%= render "layouts/home_selection_cards" %>
+
 
 <div class="container">
-  <div>
-    <a href=""class="btn-primary">Create a trip</a>
+  <div class="home-content">
+    <h1>Welcome to Dayt</h1>
+    <div>
+      <%= button_to "Create a Trip", journey_path,
+      :class => "btn btn-primary", :method => :get %>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam repudiandae quae ad eos provident at, dolorem non eveniet porro beatae asperiores a unde veniam sapiente cum temporibus quaerat amet quia!</p>
   </div>
-</div>
 
+</div>
