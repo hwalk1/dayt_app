@@ -1,4 +1,4 @@
-.pref-content {
+.pre-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,5 +8,18 @@
       border-color: aquamarine;
       background-color: white;
     }
+}
 
+.preferences {
+  background-color: white;
+}
+
+.simple_form {
+  color: $gray-titles;
+}
+
+.form-control {
+  border-radius: 10px;
+  border: 2px solid $dark-blue;
+  background-color: white;
 }
