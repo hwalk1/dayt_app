@@ -15,8 +15,15 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
+
     <div class="container">
       <%= yield %>
     </div>
+
+    <%# render 'layouts/card' %>
+    <%# render 'layouts/footer' %>
+
+    <%= yield %>
+    <%= render 'shared/organise' %>     <%# this is to test sortablejs  %>
   </body>
 </html>

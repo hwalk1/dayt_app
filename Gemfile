@@ -65,6 +65,12 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+#fontawesome rails
+gem "font-awesome-rails"
 
 # to store user uploaded images
 gem 'cloudinary', '~> 1.16.0'
+
+# to help with seeds
+gem 'faker'
+
