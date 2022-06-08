@@ -76,7 +76,7 @@ puts 'faker time! 🤡'
   dayt = Dayt.new(
     title: Faker::Restaurant.name,
     content: Faker::Restaurant.description,
-    location: Faker::Address.street_address + 'Melbourne',
+    location: Faker::Address.street_address + ' Melbourne',
     duration: rand(3),
     price: rand(10..40),
     opening_time: rand(10..15),
