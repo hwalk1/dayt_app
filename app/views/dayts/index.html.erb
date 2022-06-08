@@ -1,6 +1,31 @@
+
+<div class="container">
+  <div class="swiper" data-controller='swiper'>
+    <div class="swiper-wrapper">
+      <% @dayts.each do |dayt|  %>
+        <div class="swiper-slide" data-controller="create-trip-dayt">
+          <% trip_dayt =  TripDayt.new %>
+            <%= simple_form_for [@trip, trip_dayt],
+                html: {
+                data: { action: "submit->create-trip-dayt#create", create_trip_dayt_target: "form" }
+                } do |f| %>
+                <%= f.hidden_field :dayt_id, value: dayt.id  %>
+            <%= f.submit %>
+          <% end %>
+          <%= dayt.title %>
+          <%= dayt.location %>
+          <%= dayt.duration %>
+          <%= dayt.price %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <%= render "mapbox" %>
+
 <div class='container'>
  <div >
         <%= link_to "Next", itinerary_path,
         :class => "btn next-btn", :method => :get %>
   </div>
+
 </div>
