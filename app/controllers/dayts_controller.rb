@@ -1,7 +1,8 @@
 class DaytsController < ApplicationController
-
   def index
     @dayts = Dayt.all
+    @trip_dayt = TripDayt.new
+    @trip = Trip.find(params[:trip_id])
     @markers = @dayts.geocoded.map do |dayt|
       {
         lat: dayt.latitude,

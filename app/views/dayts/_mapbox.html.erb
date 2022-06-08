@@ -1,7 +1,6 @@
 
 
-<div style="width: 100%; height: 300px;" #Need some width and height on it.
-  data-controller="mapbox" #Important to link the mapbox_controller
+<div style="width: 100%; height: 300px;"
+  data-controller="mapbox"
   data-mapbox-markers-value="<%= @markers.to_json %>"
-#Linked below to
   data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
