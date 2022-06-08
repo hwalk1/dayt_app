@@ -1,0 +1,12 @@
+<%= simple_form_for dayt do |f| %>
+  <%= f.input :title %>
+  <%= f.input :content %>
+  <%= f.input :location %>
+  <%= f.input :duration %>
+  <%= f.input :price %>
+  <%= f.input :opening_time %>
+  <%= f.input :closing_time %>
+  <%= f.input :booking_url %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <%= f.submit class: 'btn btn-primary'%>
+<% end %>
