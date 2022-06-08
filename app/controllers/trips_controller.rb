@@ -15,9 +15,11 @@ class TripsController < ApplicationController
   end
 
   def show
+    @trip = Trip.find(params[:id])
   end
 
   def itinerary
+    @trip = Trip.find(params[:trip_id])
   end
 
   private
