@@ -1,8 +1,8 @@
 class DaytsController < ApplicationController
   def index
-    @dayts = Dayt.all
-    @trip_dayt = TripDayt.new
     @trip = Trip.find(params[:trip_id])
+    @dayts = Dayt.where.not(id: @trip.dayts.pluck(:id))
+    @trip_dayt = TripDayt.new
     @markers = @dayts.geocoded.map do |dayt|
       {
         lat: dayt.latitude,
@@ -34,6 +34,10 @@ class DaytsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def remove
+
   end
 
   private

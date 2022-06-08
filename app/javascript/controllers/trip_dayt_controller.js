@@ -4,7 +4,7 @@ export default class extends Controller {
   static targets = ["form"];
 
   connect() {
-    console.log('Hello, create trip dayt!')
+    console.log('Hello, trip dayt!')
   }
 
   create (event) {

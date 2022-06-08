@@ -1,5 +1,4 @@
 class TripDaytsController < ApplicationController
-
   def index
   end
 
@@ -8,11 +7,15 @@ class TripDaytsController < ApplicationController
     @trip_dayt = TripDayt.new(trip_dayt_params)
     @trip_dayt.trip = @trip
     @trip_dayt.save
-    @dayt = Dayt.last
-
-    respond_to do |format|
-      format.html { redirect_to trip_dayts_path(@trip) }
-      format.text { render partial: "dayts/slide", locals: { trip: @trip, dayt: @dayt }, formats: [:html] }
+    @dayts = Dayt.where.not(id: @trip.dayts.pluck(:id))
+    @dayt = @dayts[5]
+    if @dayt
+      respond_to do |format|
+        format.html { redirect_to trip_dayts_path(@trip) }
+        format.text { render partial: "dayts/slide", locals: { trip: @trip, dayt: @dayt }, formats: [:html] }
+      end
+    else
+      redirect_to trip_dayts_path(@trip)
     end
   end
 
@@ -20,6 +23,6 @@ class TripDaytsController < ApplicationController
   end
 
   def trip_dayt_params
-    params.require(:trip_dayt).permit(:dayt_id)
+    params.require(:trip_dayt).permit(:dayt_id, :status)
   end
 end
