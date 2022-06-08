@@ -6,11 +6,16 @@
 // General style
 $font-family-sans-serif:  $body-font;
 $headings-font-family:    $headers-font;
-$body-bg:                 $light-gray;
+$body-bg:                 $blue;
+
 $font-size-base: 1rem;
 
 // Colors
-$body-color: $gray;
+
+//font:
+$body-color: $gray-titles;
+
+//buttons:
 $primary:    $blue;
 $success:    $green;
 $info:       $yellow;
@@ -21,5 +26,3 @@ $warning:    $orange;
 $border-radius:    2px;
 $border-radius-lg: 2px;
 $border-radius-sm: 2px;
-
-// Override other variables below!

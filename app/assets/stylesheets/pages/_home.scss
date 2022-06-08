@@ -1,1 +1,14 @@
 // Specific CSS for your home-page
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  // iphone 11 dimensions:
+   width: 414px;
+   height: 896px;
+   background-color: $blue;
+   color: $gray-titles;
+}
