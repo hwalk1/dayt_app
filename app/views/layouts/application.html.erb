@@ -13,11 +13,11 @@
   </head>
 
   <body>
- <% if current_page?(controller: "pages", action: "home") %>
-    <%= render 'shared/nav_home' %>
- <% else %>
-     <%= render 'shared/navbar' %>
- <% end %>
+ <%# <% if current_page?(controller: "pages", action: "home") %>
+    <%# render 'shared/nav_home' %>
+ <%# else %>
+    <%= render 'shared/navbar' %>
+ <%# end %>
 
     <%= render 'shared/flashes' %>
 
