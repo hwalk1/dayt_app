@@ -68,3 +68,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # to store user uploaded images
 gem 'cloudinary', '~> 1.16.0'
+
+# to help with seeds
+gem 'faker'
