@@ -14,3 +14,12 @@ ActiveStorage.start()
 
 import "controllers"
 import "bootstrap"
+
+// sortablejs
+
+import Sortable from 'sortablejs';
+
+// testing sortablejs
+// document.addEventListener('turbolinks:load', () => {
+//   console.log("Sortable: ", Sortable)
+// })
