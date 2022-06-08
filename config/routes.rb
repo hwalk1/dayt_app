@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get '/journey', to: 'pages#journey', as: 'journey'
-  get '/trips/:id/itinerary', to: 'trips#itinerary', as: 'itinerary'
+  get '/trips/:trip_id/itinerary', to: 'trips#itinerary', as: 'itinerary'
 
   resources :trips, only: [:new, :create, :show, :update] do
     resources :dayts, only: [:index]
