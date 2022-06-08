@@ -76,12 +76,14 @@ puts 'faker time! 🤡'
   dayt = Dayt.new(
     title: Faker::Restaurant.name,
     content: Faker::Restaurant.description,
-    location: Faker::Address.street_address + ' Melbourne',
+    location: "#{Faker::Address.street_address} #{Faker::Address.city}",
     duration: rand(3),
     price: rand(10..40),
     opening_time: rand(10..15),
     closing_time: rand(15..22),
-    user: users.sample
+    user: users.sample,
+    latitude: Faker::Address.latitude,
+    longitude: Faker::Address.longitude
   )
   file = URI.open("http://loremflickr.com/280/280/shop")
   dayt.photos.attach(io: file, filename: "#{dayt.title}.png", content_type: 'image/png')
