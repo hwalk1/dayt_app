@@ -4,5 +4,8 @@ class Trip < ApplicationRecord
   has_many :dayts, through: :trip_dayts
 
   validates :title, presence: true
+  validates :location, presence: true
+  validates :distance, presence: true
+  validates :date, presence: true, numericality: true
 
 end

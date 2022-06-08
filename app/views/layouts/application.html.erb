@@ -13,9 +13,22 @@
   </head>
 
   <body>
+ <% if current_page?(controller: "pages", action: "home") %>
+    <%= render 'shared/nav_home' %>
+ <% else %>
     <%= render 'shared/navbar' %>
+ <% end %>
+
     <%= render 'shared/flashes' %>
 
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <%# render 'layouts/card' %>
+    <%# render 'layouts/footer' %>
+
+    <%# render 'shared/organise' %>     <%# this is to test sortablejs  %>
+
   </body>
 </html>

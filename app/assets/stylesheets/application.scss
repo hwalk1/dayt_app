@@ -5,13 +5,15 @@
 
 // External libraries
 @import "bootstrap/scss/bootstrap";
-@import "font-awesome-sprockets";
 @import "font-awesome";
+@import "font-awesome-sprockets";
 @import "mapbox-gl/dist/mapbox-gl";
 @import 'swiper/swiper';
 @import 'swiper/modules/effect-cards/effect-cards';
 
-
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "components/home_selection_cards";
+@import "components/organise";
+@import "components/navbar";

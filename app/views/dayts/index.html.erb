@@ -1,3 +1,4 @@
+
 <div class="container">
   <div class="swiper" data-controller='swiper'>
     <div class="swiper-wrapper">
@@ -20,4 +21,11 @@
     </div>
   </div>
   <%= render "mapbox" %>
+
+<div class='container'>
+ <div >
+        <%= link_to "Next", itinerary_path,
+        :class => "btn next-btn", :method => :get %>
+  </div>
+
 </div>

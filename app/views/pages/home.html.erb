@@ -1,3 +1,17 @@
-<h1>Pages#home</h1>
+
 <p>Find me in app/views/pages/home.html.erb</p>
-<%= render "dayts/mapbox" %>
+<h1>home</h1>
+<%# <%= render "dayts/mapbox" %>
+
+
+
+<div class="container">
+  <div class="home-content">
+    <h1>Welcome to Dayt</h1>
+    <div>
+      <%= button_to "Create a Trip", journey_path,
+      :class => "btn btn-primary", :method => :get %>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam repudiandae quae ad eos provident at, dolorem non eveniet porro beatae asperiores a unde veniam sapiente cum temporibus quaerat amet quia!</p>
+  </div>
+</div>
