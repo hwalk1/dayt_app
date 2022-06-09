@@ -5,6 +5,7 @@
       <div class="slidee container">
         <h1>Organise Your Trip</h1>
         <p>DRAG to change your schedule</p>
+        <%= render "shared/organise", trip: @trip %>
       </div>
 
       <div class="slidee">
@@ -18,4 +19,5 @@
     <button class='btn map-btn' data-action='click->show-hide#toggle'>Map</button>
     <%= link_to "Confirm", trip_path(@trip), class: "btn next-btn" %>
   </footer>
+
 </div>
