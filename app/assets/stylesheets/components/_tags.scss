@@ -1,0 +1,7 @@
+.tags {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 7px;
+  grid-row-gap: 7px;
+  margin-bottom: 30px;
+}
