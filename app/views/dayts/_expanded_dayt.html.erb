@@ -38,11 +38,14 @@
     <div class=>
     <i class="m-3 fa-solid fa-clock"></i>
     </div>
-  <%= dayt.duration %>
+  <%= dayt.duration.to_i %>
 </div>
 <div class='d-flex mt-2 mb-2 align-items-center'>
     <div class=>
-    <i class="m-3 fa-solid fa-dollar"></i>
+    <i class="ms-3 fa-solid fa-dollar"></i>
     </div>
-  <%= dayt.price %>
+  <%= dayt.price.to_i %>
+</div>
+<div>
+<%= dayt.content %>
 </div>
