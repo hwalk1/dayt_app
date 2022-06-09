@@ -26,3 +26,9 @@
 .location-pos {
   position: absolute;
 }
+
+@for $height from 1 through 100 {
+  .card-height-#{$height} {
+    height: percentage($height / 100);
+  }
+}

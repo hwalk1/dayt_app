@@ -10,7 +10,9 @@ require 'json'
 require "open-uri"
 
 puts 'deleting everything 🤯'
+TripDayt.destroy_all
 Dayt.destroy_all
+Trip.destroy_all
 User.destroy_all
 
 puts "Creating Users 💃"
