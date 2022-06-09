@@ -1,3 +1,5 @@
+
+
 <%= cl_image_tag dayt.photos.first.key %>
 <% trip_dayt =  TripDayt.new %>
 <%= simple_form_for [trip, trip_dayt],
@@ -20,7 +22,9 @@ data: { action: "submit->trip-dayt#create", trip_dayt_target: "form" }
 <% end %>
 <div class="card-blue">
 <h2><%= dayt.title %></h2>
-<p><%= dayt.location %></p>
-<%= dayt.duration %>
-<%= dayt.price %>
+<div class="text_cards">
+  <p><i class="fa-solid fa-location-dot">&#8194;</i><%= dayt.location %></p>
+  <i class="fa-solid fa-clock">&#8194;</i><%= dayt.duration %>
+  <%= dayt.price %>
+</div>
 </div>
