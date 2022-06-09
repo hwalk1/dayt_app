@@ -40,3 +40,19 @@
 #calendar-container {
   height: calc(100vh - 58px - 56px - 106px);
 }
+
+.head-trip {
+  text-align: center;
+}
+
+.lock-card {
+  height: 100%;
+  box-shadow: 1px 1px 1px lightgrey;
+}
+
+.a-style {
+  a, a:hover, a:focus{
+    text-decoration: none;
+    color: inherit;
+  }
+}
