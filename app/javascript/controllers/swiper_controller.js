@@ -7,9 +7,13 @@ export default class extends Controller {
 
     const swiper = new Swiper(".swiper", {
       modules:[EffectCards],
-      loop: true,
       effect: "cards",
-      grabCursor: true
+      cardsEffect: {
+        slideShadows: false,
+      }
+      // preventClicks: false,
+      // preventClicksPropagation: false,
+      // grabCursor: true
     });
   }
 }
