@@ -9,13 +9,15 @@ class TripDaytsController < ApplicationController
     @trip_dayt.save
     @dayts = Dayt.where.not(id: @trip.dayts.pluck(:id))
     @dayt = @dayts[5]
-    if @dayt
-      respond_to do |format|
+
+    respond_to do |format|
+      if @dayt
         format.html { redirect_to trip_dayts_path(@trip) }
         format.text { render partial: "dayts/slide", locals: { trip: @trip, dayt: @dayt }, formats: [:html] }
+      else
+        format.html { redirect_to trip_dayts_path(@trip) }
+        format.text { render partial: "dayts/delete", formats: [:html] }
       end
-    else
-      redirect_to trip_dayts_path(@trip)
     end
   end
 

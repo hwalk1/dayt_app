@@ -18,7 +18,12 @@ export default class extends Controller {
     .then(response => response.text())
     .then((data) => {
       console.log(data)
-      this.element.innerHTML = data
+      if (data) {
+        this.element.innerHTML = data
+      } else {
+        this.element.remove()
+      }
+
     })
   }
 }
