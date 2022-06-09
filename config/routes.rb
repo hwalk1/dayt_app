@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/journey', to: 'pages#journey', as: 'journey'
   get '/trips/:trip_id/itinerary', to: 'trips#itinerary', as: 'itinerary'
 
-  resources :trips, only: [:new, :create, :show, :update] do
+  resources :trips, only: [:new, :create, :show, :update, :index] do
     resources :dayts, only: [:index]
     resources :trip_dayts, only: [:create]
   end
