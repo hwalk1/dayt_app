@@ -1,20 +1,27 @@
-<div class='container'>
-  <div class=>
-  <h1>Preferences</h1>
-   <div class='pre-form'>
-    <%= simple_form_for(@trip) do |f| %>
-      <%= f.input :title %>
-      <h2>Where?</h2>
-      <%= f.input :location %>
-      <h2>When?</h2>
-      <%= f.input :date %>
-      <h2>How Far?</h2>
-      <%= f.input :distance %>
+<div class= "preferences">
+  <div class='container'>
+    <h1>Preferences</h1>
+    <div class='pre-form'>
+      <%= simple_form_for(@trip) do |f| %>
+        <%= f.input :title %>
 
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur eligendi officiis sint aperiam quaerat, repellat, quibusdam commodi eaque rerum sed in adipisci dolor temporibus cupiditate rem optio voluptatibus. Ipsam, dolor.</p>
-      <h3>125 Dayts found</h3>
-      <%= f.submit class: "btn btn-primary" %>
-      <% end %>
+        <h2>Where?</h2>
+        <%= f.input :location %>
+
+        <h2>When?</h2>
+        <%= f.input :date %>
+
+        <h2>How Far?</h2>
+        <%= f.input :distance %>
+
+        <p>TAGS TAGS TAGS TAGS TAGS</p>
+        <p>TAGS TAGS TAGS TAGS TAGS</p>
+
+        <h3>125 Dayts found</h3>
+        <footer>
+          <%= f.submit class: "btn btn-next" %>
+        </footer>
+        <% end %>
     </div>
   </div>
 </div>

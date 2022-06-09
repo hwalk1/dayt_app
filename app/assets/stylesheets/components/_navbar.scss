@@ -2,6 +2,16 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: $blue;
+  
+  a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+  }
+
+  a:hover {
+    color: $green
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -14,18 +24,10 @@
 
 
 
-a {
-  text-decoration: none;
-  display: inline-block;
-  padding: 8px 16px;
-}
-
-a:hover {
-  color: $green
-}
-
 .previous {
   color: $gray-titles;
+  border: none;
+  background-color: $blue;
 }
 
 .dayt-logo {

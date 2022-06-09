@@ -2,5 +2,8 @@ class TripDayt < ApplicationRecord
   belongs_to :trip
   belongs_to :dayt
 
-  validates :order, presence: true
+  enum status: {
+    accepted: 0,
+    declined: 1
+  }
 end
