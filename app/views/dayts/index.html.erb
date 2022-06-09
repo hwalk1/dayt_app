@@ -1,18 +1,25 @@
 <div data-controller='show-hide'>
-  <div class="container overflow-hidden" data-show-hide-target='container'>
-    <div class="swiper" data-controller='swiper'>
-      <div class="swiper-wrapper">
-        <% @dayts.first(6).each do |dayt|  %>
-          <div class="swiper-slide" data-controller="trip-dayt">
+  <div class="slider-container" >
+    <div class="slider" data-show-hide-target="slider">
 
-          <%= render 'slide', dayt: dayt, trip: @trip %>
-
+      <div class="slidee">
+        <div class="swiper" data-controller='swiper'>
+          <div class="swiper-wrapper">
+            <% @dayts.first(6).each do |dayt|  %>
+              <div class="swiper-slide" data-controller="trip-dayt">
+              <%= render 'slide', dayt: dayt, trip: @trip %>
+              </div>
+            <% end %>
           </div>
-        <% end %>
+        </div>
       </div>
+
+      <div class="slidee">
+        <%= render "shared/hidden_mapbox" %>
+      </div>
+
     </div>
   </div>
-  <%= render "shared/hidden_mapbox" %>
 
   <footer>
     <button class='btn map-btn' data-action='click->show-hide#toggle'>Map</button>
