@@ -23,3 +23,14 @@
   border: 2px solid $dark-blue;
   background-color: white;
 }
+
+
+.dabutton {
+    background-color:rgb(255, 213, 142);
+    color: black;
+
+  .dabutton:focus {
+      background-color:yellow;
+      color: black;
+  }
+}

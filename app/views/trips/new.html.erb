@@ -14,12 +14,13 @@
         <h2>How Far?</h2>
         <%= f.input :distance %>
 
-        <p>TAGS TAGS TAGS TAGS TAGS</p>
-        <p>TAGS TAGS TAGS TAGS TAGS</p>
-        
-        <h3>125 Dayts found</h3>
-        <%= f.submit class: "btn btn-primary" %>
+        <p>TAGS:</p>
+        <%= render 'layouts/tags' %>
+
+        <div class="text-center">
+        <%= f.submit class: "full-btn" %>
         <% end %>
+        </div>
     </div>
   </div>
 </div>
