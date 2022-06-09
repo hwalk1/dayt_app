@@ -1,0 +1,37 @@
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.339);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  .btn {
+    font-weight: bold;
+    font-family: $headers-font;
+    font-size: 20px;
+    border-radius: 50px;
+    padding: 15px 40px;
+
+
+  }
+
+  .btn:visited, .btn:hover, .btn:active {
+    color: $white;
+  }
+}
+
+.next-btn {
+  background-color: $green;
+  color: $white;
+  box-shadow: 0px 5px 10px rgba($green, 0.35);
+}
+
+.map-btn {
+  color: $white;
+  background-color: $dark-blue;
+  border: $dark-blue 3px solid;
+  box-shadow: 0px 5px 10px rgba($dark-blue, 0.35);
+}

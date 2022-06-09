@@ -1,7 +1,13 @@
-<h1>Organise Your Trip</h1>
-<p>DRAG to change your schedule</p>
-
- <div >
-        <%= link_to "Confirm", trip_path(@trip),
-        :class => "btn next-btn", :method => :get %>
+<div data-controller='show-hide'>
+  <div class="container" data-show-hide-target='container'>
+      <h1>Organise Your Trip</h1>
+      <p>DRAG to change your schedule</p>
   </div>
+
+
+  <%= render "shared/hidden_mapbox" %>
+  <footer>
+    <button class='btn map-btn' data-action='click->show-hide#toggle'>Map</button>
+    <%= link_to "Confirm", trip_path(@trip), class: "btn next-btn" %>
+  </footer>
+</div>

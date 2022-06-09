@@ -2,6 +2,8 @@ class Dayt < ApplicationRecord
   belongs_to :user
   has_many :tags, through: :dayt_tags
   has_many :reviews
+  has_many :trip_dayts
+  has_many :trips, through: :trip_dayts
   has_many_attached :photos
 
   validates :title, presence: true, length: { minimum: 3 }

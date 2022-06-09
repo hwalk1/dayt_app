@@ -1,7 +1,7 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = ["form"];
+  // static targets = ["decline", "accept"];
 
   connect() {
     console.log('Hello, trip dayt!')
@@ -9,11 +9,11 @@ export default class extends Controller {
 
   create (event) {
     event.preventDefault()
-    const url = this.formTarget.action
+    const url = event.currentTarget.action
     fetch(url, {
       method: "POST",
       headers: { "Accept": "text/plain"},
-      body: new FormData(this.formTarget)
+      body: new FormData(event.currentTarget)
     })
     .then(response => response.text())
     .then((data) => {
