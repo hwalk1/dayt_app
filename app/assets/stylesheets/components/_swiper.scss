@@ -1,5 +1,9 @@
+.overflow-hidden {
+  overflow: hidden;
+}
 .container {
   background-color: white;
+
 }
 
 .swiper {
@@ -72,6 +76,11 @@
       font-weight: $font-kodchasan-semi-bold;
       color: $gray-titles;
     }
+  }
+  a {
+    padding: none;
+    color: black;
+    text-decoration: none;
   }
 }
 
