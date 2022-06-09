@@ -1,4 +1,34 @@
 #hello-list {
   list-style: none;
-  padding-left: 40;
+  padding-left: 0;
+}
+
+.dayt-details {
+  position: relative;
+  justify-content: space-between;
+}
+
+.dayt-time {
+  text-align: center;
+  justify-content: space-between;
+}
+
+.dayt-info {
+  border-radius: 5% 15% 5% 5% / 12% 30% 12% 15% ;
+}
+
+.delete-dayt {
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+}
+
+.location-pos {
+  position: absolute;
+}
+
+@for $height from 1 through 100 {
+  .card-height-#{$height} {
+    height: percentage($height / 100);
+  }
 }
