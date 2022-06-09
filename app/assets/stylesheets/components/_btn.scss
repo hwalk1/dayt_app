@@ -8,24 +8,24 @@
   font-weight: $font-kodchasan-semi-bold;
 
     &:hover {
-      background-color: $green;
+      background-color: $blue;
       border: 2px solid white;
     }
 
 }
 
-.btn-full {
+.full-btn {
   border-radius: 10px;
-  border: 1px solid $dark-blue;
+  border: 1px solid $blue;
   padding: 12px 20px;
-  background-color: $blue;
+  background-color: $dark-blue;
   font-family: $headers-font;
-  color: $gray-titles;
+  color: white;
   font-weight: $font-kodchasan-semi-bold;
   text-align: center;
 }
 
-.btn-next {
+.next-btn {
   background-color: $green;
   color: white;
   border-radius: 20px;
