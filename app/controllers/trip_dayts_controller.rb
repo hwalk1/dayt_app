@@ -24,6 +24,8 @@ class TripDaytsController < ApplicationController
   def destroy
   end
 
+  private
+
   def trip_dayt_params
     params.require(:trip_dayt).permit(:dayt_id, :status)
   end
