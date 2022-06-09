@@ -1,64 +1,63 @@
 <div data-controller='show-hide'>
-
-  <h1 class='pt-3 head-trip' style='text-center'><%= @trip.title %></h1>
-  <div data-show-hide-target='container'>
-  <div class="row justify-content-end" id="calendar-container">
-  <div class="calendar col-2 d-flex flex-column justify-content-around">
-    <p>9 am</p>
-    <p>10 am</p>
-    <p>11 am</p>
-    <p>12 pm</p>
-    <p>1 pm</p>
-    <p>2 pm</p>
-    <p>3 pm</p>
-    <p>4 pm</p>
-    <p>5 pm</p>
-  </div>
-
-
-  <div class="col-10">
-    <ul id="hello-list" class="h-100 a-style">
-      <% @trip.dayts.each do |dayt| %>
-        <%= link_to dayt_path(dayt) do %>
-        <li class="card-height-<%= ((dayt.duration / 10) * 100).to_i %>">
-          <div style="height: 100%">
-            <div class="dayt-info card justify-content-around text-center m-1 p-1 lock-card">
-              <h2><%= dayt.title %></h2>
-              <p class="d-flex dayt-details p-1">
-                <i class="fa-solid fa-location-dot"></i>
-                <%= dayt.location %>
-              </p>
-              <div class="location-pos">
-              </div>
-
-
-
-
-              <%# <div class="text-center">
-              </div> %>
-            </div>
-          </div>
-        </li>
-        <% end %>
-      <% end %>
-
-
-      <%# <li>
-        <div class="card align-items-center">
-          <div class="card-body">
-            <p><i class="fa-solid fa-grip-dots-vertical"></i>hello world</p>
-          </div>
-        </div>
-      </li> %>
-    </ul>
-  </div>
-</div>
-
   <div class="slider-container" >
     <div class="slider" data-show-hide-target="slider">
 
       <div class="slidee container">
-        <h1>Title:<%= @trip.title %></h1>
+
+          <h1 class='pt-3 head-trip' style='text-center'><%= @trip.title %></h1>
+          <div data-show-hide-target='container'>
+          <div class="row justify-content-end" id="calendar-container">
+          <div class="calendar col-2 d-flex flex-column justify-content-around">
+            <p>9 am</p>
+            <p>10 am</p>
+            <p>11 am</p>
+            <p>12 pm</p>
+            <p>1 pm</p>
+            <p>2 pm</p>
+            <p>3 pm</p>
+            <p>4 pm</p>
+            <p>5 pm</p>
+          </div>
+
+
+          <div class="col-10">
+            <ul id="hello-list" class="h-100 a-style">
+              <% @trip.dayts.each do |dayt| %>
+                <%= link_to dayt_path(dayt) do %>
+                <li class="card-height-<%= ((dayt.duration / 10) * 100).to_i %>">
+                  <div style="height: 100%">
+                    <div class="dayt-info card justify-content-around text-center m-1 p-1 lock-card">
+                      <h2><%= dayt.title %></h2>
+                      <p class="d-flex dayt-details p-1">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <%= dayt.location %>
+                      </p>
+                      <div class="location-pos">
+                      </div>
+
+
+
+
+                      <%# <div class="text-center">
+                      </div> %>
+                    </div>
+                  </div>
+                </li>
+                <% end %>
+              <% end %>
+
+
+              <%# <li>
+                <div class="card align-items-center">
+                  <div class="card-body">
+                    <p><i class="fa-solid fa-grip-dots-vertical"></i>hello world</p>
+                  </div>
+                </div>
+              </li> %>
+            </ul>
+          </div>
+        </div>
+
       </div>
 
       <div class="slidee">
