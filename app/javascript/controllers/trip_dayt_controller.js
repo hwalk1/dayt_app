@@ -1,7 +1,6 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  // static targets = ["decline", "accept"];
 
   connect() {
     console.log('Hello, trip dayt!')
@@ -23,7 +22,6 @@ export default class extends Controller {
       } else {
         this.element.remove()
       }
-
     })
   }
 }
