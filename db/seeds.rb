@@ -10,7 +10,9 @@ require 'json'
 require "open-uri"
 
 puts 'deleting everything 🤯'
+TripDayt.destroy_all
 Dayt.destroy_all
+Trip.destroy_all
 User.destroy_all
 
 puts "Creating Users 💃"
@@ -77,7 +79,7 @@ puts 'faker time! 🤡'
     title: Faker::Restaurant.name,
     content: Faker::Restaurant.description,
     location: "#{Faker::Address.street_address} #{Faker::Address.city}",
-    duration: rand(3),
+    duration: rand(1..3),
     price: rand(10..40),
     opening_time: rand(10..15),
     closing_time: rand(15..22),
