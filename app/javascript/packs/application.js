@@ -21,7 +21,9 @@ import Sortable from 'sortablejs';
 
 document.addEventListener('turbolinks:load', () => {
   var el = document.getElementById('hello-list');
-  var sortable = Sortable.create(el);
+  if (el) {
+    var sortable = Sortable.create(el);
+  }
 })
 
 // testing sortablejs

@@ -2,6 +2,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: $blue;
+  
   a {
     text-decoration: none;
     display: inline-block;
@@ -23,9 +24,10 @@
 
 
 
-
 .previous {
   color: $gray-titles;
+  border: none;
+  background-color: $blue;
 }
 
 .dayt-logo {
