@@ -13,7 +13,7 @@ class DaytsController < ApplicationController
 
   def show
 
-    @dayt = Dayt.find(params :id)
+    @dayt = Dayt.find(params[:id])
 
     @markers =
       [{
