@@ -15,6 +15,10 @@
 
 .dayt-info {
   border-radius: 5% 15% 5% 5% / 12% 30% 12% 15% ;
+
+  p, h2 {
+    margin: 0;
+  }
 }
 
 .delete-dayt {
@@ -31,4 +35,8 @@
   .card-height-#{$height} {
     height: percentage($height / 100);
   }
+}
+
+#calendar-container {
+  height: calc(100vh - 58px - 56px - 106px);
 }
