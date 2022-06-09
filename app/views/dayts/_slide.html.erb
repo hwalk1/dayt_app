@@ -1,8 +1,7 @@
-<%= cl_image_tag dayt.photos.first.key %>
 <% trip_dayt =  TripDayt.new %>
 <%= simple_form_for [trip, trip_dayt],
 html: {
-class: 'decline',
+  class: 'decline',
 data: { action: "submit->trip-dayt#create", trip_dayt_target: "form" }
 } do |f| %>
 <%= f.hidden_field :dayt_id, value: dayt.id  %>
@@ -11,16 +10,19 @@ data: { action: "submit->trip-dayt#create", trip_dayt_target: "form" }
 <% end %>
 <%= simple_form_for [trip, trip_dayt],
 html: {
-class: 'accept',
+  class: 'accept',
 data: { action: "submit->trip-dayt#create", trip_dayt_target: "form" }
 } do |f| %>
 <%= f.hidden_field :dayt_id, value: dayt.id  %>
 <%= f.hidden_field :status, value: 'accepted'  %>
 <button><i class="fa-regular fa-heart"></i></button>
 <% end %>
-<div class="card-blue">
-<h2><%= dayt.title %></h2>
-<p><%= dayt.location %></p>
-<%= dayt.duration %>
-<%= dayt.price %>
-</div>
+<%= link_to dayt_path(dayt) do %>
+  <%= cl_image_tag dayt.photos.first.key %>
+  <div class="card-blue">
+  <h2><%= dayt.title %></h2>
+  <p><%= dayt.location %></p>
+  <%= dayt.duration %>
+  <%= dayt.price %>
+  <% end %>
+  </div>
