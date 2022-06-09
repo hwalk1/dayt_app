@@ -13,6 +13,10 @@ class TripsController < ApplicationController
     end
   end
 
+  def index
+    @trips = Trip.where(user_id: current_user)
+  end
+
   def show
     @trip = Trip.find(params[:id])
     @dayts = Dayt.includes(trip_dayts: :trip).where(trip_dayts: { status: "accepted", trip: @trip })

@@ -54,7 +54,7 @@ corner = Dayt.new(
 
 file = URI.open('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.concreteplayground.com%2Fcontent%2Fuploads%2F2017%2F02%2FThe-Corner-Hotel-Richmond-rooftop1.jpeg&f=1&nofb=1')
 corner.photos.attach(io: file, filename: 'corner1.png', content_type: 'image/png')
-file = URI.open('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.newsapi.com.au%2Fimage%2Fv1%2F1434b69bbf3e3039420e795a80d4b60d%3Fwidth%3D1024&f=1&nofb=1')
+file = URI.open('htt.photops://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.newsapi.com.au%2Fimage%2Fv1%2F1434b69bbf3e3039420e795a80d4b60d%3Fwidth%3D1024&f=1&nofb=1')
 corner.photos.attach(io: file, filename: 'corner2.png', content_type: 'image/png')
 corner.user = hayden
 corner.save

@@ -1,0 +1,9 @@
+<div>
+<h1 style>Your Trips</h1>
+<% @trips.each do |trip| %>
+<li>
+  <%= link_to "#{trip.title}", trip_path(trip), class: 'trip-link'%>
+</li>
+
+<% end %>
+</div>
