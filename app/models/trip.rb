@@ -6,6 +6,6 @@ class Trip < ApplicationRecord
   validates :title, presence: true
   validates :location, presence: true
   validates :distance, presence: true
-  validates :date, presence: true, numericality: true
+  validates :date, presence: true
 
 end
