@@ -20,6 +20,16 @@ class TripsController < ApplicationController
 
   def itinerary
     @trip = Trip.find(params[:trip_id])
+    # @dayts = Trip.includes(trip_dayts: :dayt).where(id: @trip.id, trip_dayts: { status: "accepted" }).first
+    @dayts = Dayt.includes(trip_dayts: :trip).where(trip_dayts: { status: "accepted", trip: @trip })
+    unless @dayts.empty?
+      @markers = @dayts.geocoded.map do |dayt|
+        {
+          lat: dayt.latitude,
+          lng: dayt.longitude
+        }
+      end
+    end
   end
 
   private
