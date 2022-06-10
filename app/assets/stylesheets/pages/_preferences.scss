@@ -9,12 +9,12 @@
     //   background-color: white;
     // }
 
-    p {
-      color: $gray-titles;
-      font-family: $headers-font;
-      font-size: 1.25rem;
-    }
-
+  p {
+    color: $gray-titles;
+    font-family: $headers-font;
+    font-size: 1.25rem;
+  }
+}
 ::placeholder {
   color: rgb(177, 177, 177);
   font-family: $body-font;
