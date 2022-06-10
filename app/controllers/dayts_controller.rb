@@ -12,7 +12,6 @@ class DaytsController < ApplicationController
   end
 
   def show
-
     @dayt = Dayt.find(params[:id])
 
     @markers =
@@ -20,6 +19,26 @@ class DaytsController < ApplicationController
         lat: @dayt.latitude,
         lng: @dayt.longitude
       }]
+
+    if @dayt.opening_time
+      if @dayt.opening_time == 12
+        @opening_time = "#{@dayt.opening_time}pm"
+      elsif @dayt.opening_time > 12
+        @opening_time = "#{@dayt.opening_time - 12}pm"
+      else
+        @opening_time = "#{@dayt.opening_time}am"
+      end
+    end
+
+    if @dayt.closing_time
+      if @dayt.closing_time == 12
+        @closing_time = "#{@dayt.closing_time}pm"
+      elsif @dayt.closing_time > 12
+        @closing_time = "#{@dayt.closing_time - 12}pm"
+      else
+        @closing_time = "#{@dayt.closing_time}am"
+      end
+    end
   end
 
   def new
