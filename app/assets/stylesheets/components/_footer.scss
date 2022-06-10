@@ -19,9 +19,6 @@ footer {
 
   }
 
-  .btn:visited, .btn:hover, .btn:active {
-    color: $white;
-  }
 }
 
 .next-btn {
@@ -35,4 +32,25 @@ footer {
   background-color: $dark-blue;
   border: $dark-blue 3px solid;
   box-shadow: 0px 5px 10px rgba($dark-blue, 0.35);
+
+  &:visited {
+    color: $white;
+    background-color: $dark-blue;
+    border: $dark-blue 3px solid;
+    box-shadow: 0px 5px 10px rgba($dark-blue, 0.35);
+  }
+
+  &:hover {
+    color: $white;
+    background-color: $dark-blue;
+    border: $dark-blue 3px solid;
+    box-shadow: 0px 5px 10px rgba($dark-blue, 0.35);
+  }
+
+  &:active {
+    color: $white;
+    background-color: $dark-blue;
+    border: $dark-blue 3px solid;
+    box-shadow: 0px 5px 10px rgba($dark-blue, 0.35);
+  }
 }
