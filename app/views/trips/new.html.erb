@@ -3,23 +3,23 @@
     <h1>Preferences</h1>
     <div class='pre-form'>
       <%= simple_form_for(@trip) do |f| %>
-        <%= f.input :title %>
+        <%= f.input :title, label: false %>
 
         <h2>Where?</h2>
-        <%= f.input :location %>
+        <%= f.input :location, label: false %>
 
         <h2>When?</h2>
-        <%= f.input :date %>
+        <%= f.input :date, label: false %>
 
         <h2>How Far?</h2>
-        <%= f.input :distance %>
+        <%= f.input :distance, label: false %>
 
         <p>TAGS:</p>
-        <%= render 'layouts/tags' %>
+        <%= render 'layouts/tags', f: f %>
 
         <h3>125 Dayts found</h3>
         <footer>
-          <%= f.submit class: "full-btn" %>
+          <%= f.submit class: "next-btn" %>
         </footer>
 
         <% end %>
