@@ -176,7 +176,6 @@ rising.photos.attach(io: file, filename: 'rising.png', content_type: 'image/png'
 rising.user = aren
 rising.save
 
-
 # puts 'faker time! 🤡'
 # # faker time
 # 10.times do
