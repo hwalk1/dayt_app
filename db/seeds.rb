@@ -67,7 +67,7 @@ grotto = Dayt.new(
   price: 0
 )
 
-file = URI.open('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/78/61/50/photo2jpg.jpg?w=1100&h=-1&s=1')
+file = URI.open('https://citycollection.melbourne.vic.gov.au/wp-content/uploads/2021/09/1091165-5-1024x683.jpg')
 grotto.photos.attach(io: file, filename: 'grotto.png', content_type: 'image/png')
 grotto.user = aren
 grotto.save
