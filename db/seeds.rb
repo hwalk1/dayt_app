@@ -171,7 +171,7 @@ rising = Dayt.new(
   booking_url: 'https://rising.melbourne/'
 )
 
-file = URI.open('https://marrinergroup.com.au/uploads/Image-46-1533083252.jpg')
+file = URI.open('https://www.visitmelbourne.com/-/media/images/melbourne/events/rising_wilds-20210526-dsc1044_1150x863.jpg?ts=20220329440418')
 rising.photos.attach(io: file, filename: 'rising.png', content_type: 'image/png')
 rising.user = aren
 rising.save
