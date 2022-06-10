@@ -6,6 +6,7 @@
   font-family: $headers-font;
   color: $gray-titles;
   font-weight: $font-kodchasan-semi-bold;
+  text-decoration: none;
 
     &:hover {
       background-color: $blue;
@@ -23,22 +24,7 @@
   color: white;
   font-weight: $font-kodchasan-semi-bold;
   text-align: center;
+  text-decoration: none;
 }
 
-.next-btn {
-  background-color: $green;
-  color: white;
-  border-radius: 20px;
-  padding: 20px 30px;
-  font-family: $headers-font;
-  font-weight: $font-kodchasan-semi-bold;
-}
 
-.btn-map {
-  background-color: $dark-blue;
-  border-radius: 20px;
-  color: white;
-  padding: 20px 30px;
-  font-family: $headers-font;
-  font-weight: $font-kodchasan-semi-bold;
-}
