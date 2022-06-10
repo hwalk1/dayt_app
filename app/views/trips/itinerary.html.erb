@@ -1,7 +1,18 @@
 <div data-controller='show-hide'>
-  <div class="container" data-show-hide-target='container'>
-      <h1>Organise Your Trip</h1>
-      <p>DRAG to change your schedule</p>
+  <div class="slider-container" >
+    <div class="slider" data-show-hide-target="slider">
+
+      <div class="slidee container">
+        <h1>Organise Your Trip</h1>
+        <p>DRAG to change your schedule</p>
+        <%= render "shared/organise", trip: @trip %>
+      </div>
+
+      <div class="slidee slidee-map">
+        <%= render "shared/hidden_mapbox" %>
+      </div>
+
+    </div>
   </div>
 
 
@@ -11,4 +22,5 @@
     <button class='btn map-btn' data-action='click->show-hide#toggle'>Map</button>
     <%= link_to "Confirm", trip_path(@trip), class: "btn next-btn" %>
   </footer>
+
 </div>

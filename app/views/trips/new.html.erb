@@ -1,25 +1,25 @@
 <div class= "preferences">
   <div class='container'>
-    <h1>Preferences</h1>
+    <h1 class="text-center mb-4 pt-4">My Preferences</h1>
     <div class='pre-form'>
-      <%= simple_form_for(@trip) do |f| %>
-        <%= f.input :title %>
+      <%= simple_form_for @trip do |f| %>
+        <%= f.input :title, label: false, placeholder: "Name of my trip", input_html: { class: "text-center trip-name" } %>
 
-        <h2>Where?</h2>
-        <%= f.input :location %>
+        <h2 class="text-center preference-titles">Where?</h2>
+        <%= f.input :location, label: false, placeholder: "City", input_html: { class: "text-center" } %>
 
-        <h2>When?</h2>
-        <%= f.input :date %>
+        <h2 class="text-center preference-titles">When?</h2>
+        <%= f.input :date, label: false, input_html: { class: "text-center" } %>
 
-        <h2>How Far?</h2>
-        <%= f.input :distance %>
+        <h2 class="text-center preference-titles">How Far?</h2>
+        <%= f.input :distance, label: false, placeholder: "km", input_html: { class: "text-center" } %>
 
-        <p>TAGS:</p>
-        <%= render 'layouts/tags' %>
+        <p class="text-center preference-titles">My interests</p>
+        <%= render 'layouts/tags', f: f %>
 
         <h3>125 Dayts found</h3>
         <footer>
-          <%= f.submit class: "full-btn" %>
+          <%= f.submit class: "next-btn" %>
         </footer>
 
         <% end %>
