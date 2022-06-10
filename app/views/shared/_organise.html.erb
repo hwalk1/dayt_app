@@ -1,4 +1,4 @@
-<div class="row justify-content-end">
+<div class="row justify-content-end" id="calendar-container">
   <div class="calendar col-2 d-flex flex-column justify-content-around">
     <p>9 am</p>
     <p>10 am</p>
@@ -11,9 +11,9 @@
   </div>
 
   <div class="col-10">
-    <ul id="hello-list">
-      <% @trip.dayts.each do |dayt| %>
-        <li class="organise ">
+    <ul id="hello-list" class="h-100">
+      <% trip.dayts.each do |dayt| %>
+        <li class="organise card-height-<%= ((dayt.duration / 10) * 100).to_i %>">
           <div>
             <div class="dayt-info card justify-content-around text-center m-1 p-1">
               <h2><%= dayt.title %></h2>

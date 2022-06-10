@@ -1,14 +1,14 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = [ "container", 'map' ]
+  static targets = [ "slider" ]
 
   connect() {
     console.log('Hello, hide!')
   }
 
   toggle() {
-    this.containerTarget.classList.toggle('d-none')
-    this.mapTarget.classList.toggle('d-none')
+    console.log('sliding')
+    this.sliderTarget.classList.toggle('show-map')
   }
 }
