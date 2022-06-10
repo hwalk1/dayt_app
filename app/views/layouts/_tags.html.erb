@@ -1,13 +1,9 @@
-<div class="tags">
 
-  <button class="tag-button btn">Outdoor</button>
-  <button class="tag-button btn">Indoor</button>
-  <button class="tag-button btn">Nice walks</button>
-  <button class="tag-button btn">Nighlife</button>
-  <button class="tag-button btn">Museums</button>
-  <button class="tag-button btn">Horse Riding</button>
-  <button class="tag-button btn">Breakfast</button>
-  <button class="tag-button btn">Lunch</button>
-  <button class="tag-button btn">Dinner</button>
 
-</div>
+<%#  BACKEND FOR TAGS TO WORK ON if time =====> %>
+
+<%= f.input :search_tags,
+                  as: :check_boxes,
+                  input_html: { class: "tag-selector" },
+                  item_wrapper_class: 'tag-item',
+                  collection: ["Outdoor", "Indoor", "Lunch", "Brekky", "Nightlife", "Dinner", "Nice Walks", "Museums", "Getting plastered", "Maccas", "Stubby Shopping", "Barbie & Smoko", "Yoga", "Le Wagon awesome course"] %>

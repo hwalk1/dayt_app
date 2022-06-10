@@ -8,6 +8,12 @@
     //   border-color: aquamarine;
     //   background-color: white;
     // }
+
+    p {
+      color: $gray-titles;
+      font-family: $headers-font;
+      font-size: 1.25rem;
+    }
 }
 
 .preferences {
@@ -22,15 +28,4 @@
   border-radius: 10px;
   border: 2px solid $dark-blue;
   background-color: white;
-}
-
-
-.dabutton {
-    background-color:rgb(255, 213, 142);
-    color: black;
-
-  .dabutton:focus {
-      background-color:yellow;
-      color: black;
-  }
 }

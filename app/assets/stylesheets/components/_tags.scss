@@ -1,8 +1,29 @@
-.tags {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 7px;
-  grid-row-gap: 7px;
-  margin-bottom: 30px;
+// TAGS active when clicked: to use when BACKEND READY ====>
+
+.tag-item {
+  display: inline-block;
 }
 
+.tag-selector {
+  position: absolute;
+  transform: scale(0);
+}
+
+.tag-selector + label {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.2rem;
+  border-radius: 50rem;
+  padding: 0.4rem 0.8rem;
+  background-color: $blue;
+  font-family: $headers-font;
+  color: $gray-titles;
+  border: 1px solid $green;
+  margin-right: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.tag-selector:checked + label {
+  background-color: $dark-blue;
+  color: white;
+}
