@@ -16,15 +16,15 @@
 }
 
 .full-btn {
-  border-radius: 10px;
-  border: 1px solid $blue;
-  padding: 12px 20px;
-  background-color: $dark-blue;
-  font-family: $headers-font;
-  color: white;
+  border-radius: 30px;
+  border: 2px solid $dark-blue;
+  padding: 20px 30px;
+  background-color: $blue;
+  font-family:  $headers-font;
+  font-size: 1.5rem;
+  color: $dark-blue;
   font-weight: $font-kodchasan-semi-bold;
   text-align: center;
   text-decoration: none;
+  box-shadow: 3px 4px rgba(68, 68, 68, 0.549);
 }
-
-
