@@ -10,6 +10,8 @@
 @import "mapbox-gl/dist/mapbox-gl";
 @import 'swiper/swiper';
 @import 'swiper/modules/effect-cards/effect-cards';
+@import "flatpickr/dist/flatpickr";
+@import "flatpickr/dist/themes/material_green";
 
 // Your CSS partials
 @import "pages/index";
@@ -17,4 +19,3 @@
 @import "components/organise";
 @import "components/navbar";
 @import "components/index";
-
