@@ -1,7 +1,7 @@
 class DaytsController < ApplicationController
   def index
     @trip = Trip.find(params[:trip_id])
-    @dayts = Dayt.where.not(id: @trip.dayts.pluck(:id))
+    @dayts = Dayt.where.not(id: @trip.dayts.pluck(:id)).order(id: :asc)
     @trip_dayt = TripDayt.new
     @markers = @dayts.geocoded.map do |dayt|
       {
