@@ -42,3 +42,26 @@
     transform: translateY(-90vh);
   }
 }
+
+.mapboxgl-popup-content {
+  border-radius: 10px;
+  border: 2px #c3faf3 solid;
+  h2 {
+    font-family: $headers-font;
+    font-size: 1.6rem;
+    font-weight: $font-kodchasan-semi-bold;
+    color: $gray-titles;
+    margin-bottom: 30px;
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+}
+
+.mapboxgl-popup-close-button {
+  right: 5px;
+}
+.mapboxgl-popup-tip {
+  display: none;
+}
