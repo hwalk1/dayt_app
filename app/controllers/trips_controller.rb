@@ -24,7 +24,8 @@ class TripsController < ApplicationController
       @markers = @dayts.geocoded.map do |dayt|
         {
           lat: dayt.latitude,
-          lng: dayt.longitude
+          lng: dayt.longitude,
+          info_window: render_to_string(partial: "shared/info_window", locals: { dayt: dayt })
         }
       end
     end
@@ -38,7 +39,8 @@ class TripsController < ApplicationController
       @markers = @dayts.geocoded.map do |dayt|
         {
           lat: dayt.latitude,
-          lng: dayt.longitude
+          lng: dayt.longitude,
+          info_window: render_to_string(partial: "shared/info_window", locals: { dayt: dayt })
         }
       end
     end

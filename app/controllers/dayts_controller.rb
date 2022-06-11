@@ -6,7 +6,8 @@ class DaytsController < ApplicationController
     @markers = @dayts.geocoded.map do |dayt|
       {
         lat: dayt.latitude,
-        lng: dayt.longitude
+        lng: dayt.longitude,
+        info_window: render_to_string(partial: "shared/info_window", locals: { dayt: dayt })
       }
     end
   end
@@ -17,7 +18,8 @@ class DaytsController < ApplicationController
     @markers =
       [{
         lat: @dayt.latitude,
-        lng: @dayt.longitude
+        lng: @dayt.longitude,
+        info_window: render_to_string(partial: "shared/info_window", locals: { dayt: @dayt })
       }]
 
     if @dayt.opening_time
