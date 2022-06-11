@@ -7,7 +7,7 @@ class TripDaytsController < ApplicationController
     @trip_dayt = TripDayt.new(trip_dayt_params)
     @trip_dayt.trip = @trip
     @trip_dayt.save
-    @dayts = Dayt.where.not(id: @trip.dayts.pluck(:id)).order(id: :asc)
+    @dayts = Dayt.where.not(id: @trip.dayts.pluck(:id)).near(@trip.location, @trip.distance).order(id: :asc)
     @dayt = @dayts[5]
 
     respond_to do |format|
