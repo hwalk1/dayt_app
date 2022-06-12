@@ -65,3 +65,13 @@
 .mapboxgl-popup-tip {
   display: none;
 }
+
+.mapmarker {
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid $green;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 20px;
+  transform: translate(650px, 300px) translate(-50%, -50%) rotateX(0deg) rotateZ(0deg) translate(0px, 0px);
+}
