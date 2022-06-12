@@ -25,7 +25,8 @@ class TripsController < ApplicationController
         {
           lat: dayt.latitude,
           lng: dayt.longitude,
-          info_window: render_to_string(partial: "shared/info_window", locals: { dayt: dayt })
+          info_window: render_to_string(partial: "shared/info_window", locals: { dayt: dayt }),
+          map_marker: render_to_string(partial: "shared/map_marker", locals: { dayt: dayt })
         }
       end
     end
@@ -40,7 +41,8 @@ class TripsController < ApplicationController
         {
           lat: dayt.latitude,
           lng: dayt.longitude,
-          info_window: render_to_string(partial: "shared/info_window", locals: { dayt: dayt })
+          info_window: render_to_string(partial: "shared/info_window", locals: { dayt: dayt }),
+          map_marker: render_to_string(partial: "shared/map_marker", locals: { dayt: dayt })
         }
       end
     end
