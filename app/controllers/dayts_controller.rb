@@ -52,18 +52,24 @@ class DaytsController < ApplicationController
     @dayt = Dayt.new(dayt_params)
     @dayt.user = current_user
     if @dayt.save
-      redirect_to root_path
+      redirect_to mydayts_path
     else
       render :new
     end
   end
 
-  def remove
-
+  def destroy
+    @dayt = Dayt.find(params[:id])
+    @dayt.destroy
+    redirect_to mydayts_path
   end
 
   def mydayts
     @dayts = current_user.dayts
+  end
+
+  def edit
+    @dayt = Dayt.find(params[:id])
   end
 
   private

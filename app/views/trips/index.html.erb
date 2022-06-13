@@ -1,4 +1,4 @@
-<div class="container my-2 px-4">
+<div class="container my-2 px-4 padding-bottom">
   <h1 class="text-center pt-3 m-0">My Trips</h1>
   <div>
     <% @trips.each do |trip| %>
@@ -6,3 +6,6 @@
     <% end %>
   </div>
 </div>
+  <footer>
+    <%= link_to 'New Trip', new_trip_path, class: "btn next-btn" %>
+  </footer>
