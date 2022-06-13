@@ -62,6 +62,10 @@ class DaytsController < ApplicationController
 
   end
 
+  def mydayts
+    @dayts = current_user.dayts
+  end
+
   private
 
   def dayt_params
