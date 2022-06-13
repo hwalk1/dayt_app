@@ -69,6 +69,8 @@
   </div>
 
   <footer>
+
     <button class='btn map-btn btn-width' data-action='click->show-hide#toggle'>Map</button>
+    <%= button_to "Review", new_trip_mass_review_path(@trip), class:'btn', method: :get %>
   </footer>
 </div>

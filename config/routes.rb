@@ -8,8 +8,11 @@ Rails.application.routes.draw do
   resources :trips, only: [:new, :create, :show, :update, :index, :destroy] do
     resources :dayts, only: [:index]
     resources :trip_dayts, only: [:create]
+    resources :mass_reviews, only: [:new, :create]
   end
+
   resources :dayts, only: [:new, :create, :show, :edit, :update, :destroy]
+
   resources :trip_dayts, only: [:delete]
-  resources :reviews, only: [:new, :create]
+
 end
