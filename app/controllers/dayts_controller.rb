@@ -3,6 +3,8 @@ class DaytsController < ApplicationController
     @trip = Trip.find(params[:trip_id])
     @dayts = Dayt.where.not(id: @trip.dayts.pluck(:id)).near(@trip.location, @trip.distance).order(id: :asc)
     @trip_dayt = TripDayt.new
+    @trip_duration = 0
+    @trip.dayts.each { |dayt| @trip_duration += dayt.duration }
     @markers = @dayts.geocoded.map do |dayt|
       {
         lat: dayt.latitude,
