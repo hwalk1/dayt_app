@@ -27,7 +27,7 @@
       <p><i class="fa-solid fa-location-dot">&#8194;</i><%= dayt.location %></p>
       <div class="d-flex">
         <div class="w-50">
-          <i class="fa-solid fa-clock">&#8194;</i><%= dayt.duration.to_i %>&#8194;hours
+          <i class="fa-solid fa-clock">&#8194;</i><span data-trip-dayt-target='duration'><%= dayt.duration.to_i %></span>&#8194;hours
         </div>
         <div class="w-50">
           <i class="fa-solid fa-dollar-sign">&#8194;</i><%= dayt.price > 0 ? "#{dayt.price.to_i} per person" : 'Free' %>&#8194;

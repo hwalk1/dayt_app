@@ -6,6 +6,8 @@ class DaytsController < ApplicationController
                        .order(id: :asc)
     @dayts = @dayts.tagged_with(params[:tags], any: true) if params[:tags].present?
     @trip_dayt = TripDayt.new
+    @trip_duration = 0
+    @trip.dayts.each { |dayt| @trip_duration += dayt.duration }
     @markers = @dayts.geocoded.map do |dayt|
       {
         lat: dayt.latitude,

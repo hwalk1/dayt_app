@@ -25,7 +25,6 @@ export default class extends Controller {
 
       const customMarker = document.createElement("div")
       customMarker.innerHTML = marker.map_marker
-      console.log(customMarker)
       new mapboxgl.Marker(customMarker.firstChild)
         .setLngLat([ marker.lng, marker.lat ])
         .setPopup(popup)
