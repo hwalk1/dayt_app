@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/trips/:trip_id/itinerary', to: 'trips#itinerary', as: 'itinerary'
   get '/mydayts', to: 'dayts#mydayts', as: 'mydayts'
 
+
   resources :trips, only: [:new, :create, :show, :update, :index, :destroy] do
     resources :dayts, only: [:index]
     resources :trip_dayts, only: [:create]

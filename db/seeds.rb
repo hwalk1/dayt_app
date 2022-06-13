@@ -80,14 +80,13 @@ lewagon = Dayt.new(
   location: '41 Stewart St, Melbourne c/o Inspire9, Level1, Richmond VIC 3121',
   duration: 1,
   price: 0,
-  tag_list: ['Free', 'Le wagon awesome course']
+  tag_list: ['Free', 'Le Wagon awesome course']
 )
 
 file = URI.open('https://res.cloudinary.com/wagon/image/upload/c_fill,h_240,q_auto,w_520/v1622427318/w0tv5qudjqevpz1fzgb2.webp')
 lewagon.photos.attach(io: file, filename: 'lewagon.png', content_type: 'image/png')
 lewagon.user = aren
 lewagon.save
-
 
 mcg = Dayt.new(
   title: 'Melbourne Cricket Ground',
@@ -122,7 +121,7 @@ ngv.user = aren
 ngv.save
 
 fishbowl = Dayt.new(
-  title: 'FISHBOWL',
+  title: 'Fishbowl',
   content: 'At FISHBOWL, we want to deliver the food that nature provided with minimal intervention and maximum care in a fun and authentic way.',
   location: '89A Swan St, Richmond VIC 3121',
   duration: 1,
@@ -169,7 +168,6 @@ forum.photos.attach(io: file, filename: 'forum.png', content_type: 'image/png')
 forum.user = aren
 forum.save
 
-
 rising = Dayt.new(
   title: 'RISING: Melbourne',
   content: 'RISING is a surge of art, music, performance and ceremony in the heart of Melbourne.',
@@ -177,7 +175,7 @@ rising = Dayt.new(
   duration: 1,
   price: 20,
   booking_url: 'https://rising.melbourne/',
-  tag_list: ['Art', 'Nightlife', 'Music', 'Indoor', 'Lunch', 'Dinner', 'Drinks']
+  tag_list: ['Art', 'Nightlife', 'Music', 'Indoor', 'Outdoor', 'Lunch', 'Dinner', 'Drinks']
 )
 
 file = URI.open('https://www.visitmelbourne.com/-/media/images/melbourne/events/rising_wilds-20210526-dsc1044_1150x863.jpg?ts=20220329440418')
