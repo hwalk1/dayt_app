@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :dayts, only: [:index]
     resources :trip_dayts, only: [:create]
   end
-  resources :dayts, only: [:new, :create, :show]
+  resources :dayts, only: [:new, :create, :show, :edit, :update, :destroy]
   resources :trip_dayts, only: [:delete]
   resources :reviews, only: [:new, :create]
 end

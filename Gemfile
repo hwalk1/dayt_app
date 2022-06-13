@@ -74,3 +74,5 @@ gem 'cloudinary', '~> 1.16.0'
 # to help with seeds
 gem 'faker'
 
+# TAGS
+gem 'acts-as-taggable-on', '~> 9.0'

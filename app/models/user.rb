@@ -10,4 +10,8 @@ class User < ApplicationRecord
 
   validates :name, presence: true
 
+  # TAGS ===>
+  acts_as_taggable_on :tags
+  acts_as_taggable_on :dayts
+
 end

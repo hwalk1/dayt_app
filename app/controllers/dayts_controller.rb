@@ -1,7 +1,10 @@
 class DaytsController < ApplicationController
   def index
     @trip = Trip.find(params[:trip_id])
-    @dayts = Dayt.where.not(id: @trip.dayts.pluck(:id)).near(@trip.location, @trip.distance).order(id: :asc)
+    @dayts = Dayt.where.not(id: @trip.dayts.pluck(:id))
+                       .near(@trip.location, @trip.distance)
+                       .order(id: :asc)
+    @dayts = @dayts.tagged_with(params[:tags], any: true) if params[:tags].present?
     @trip_dayt = TripDayt.new
     @trip_duration = 0
     @trip.dayts.each { |dayt| @trip_duration += dayt.duration }
@@ -54,18 +57,24 @@ class DaytsController < ApplicationController
     @dayt = Dayt.new(dayt_params)
     @dayt.user = current_user
     if @dayt.save
-      redirect_to root_path
+      redirect_to mydayts_path
     else
       render :new
     end
   end
 
-  def remove
-
+  def destroy
+    @dayt = Dayt.find(params[:id])
+    @dayt.destroy
+    redirect_to mydayts_path
   end
 
   def mydayts
     @dayts = current_user.dayts
+  end
+
+  def edit
+    @dayt = Dayt.find(params[:id])
   end
 
   private
@@ -80,6 +89,7 @@ class DaytsController < ApplicationController
       :opening_time,
       :closing_time,
       :booking_url,
+      tag_list: [],
       photos: []
     )
   end

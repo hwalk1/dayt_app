@@ -49,7 +49,8 @@ corner = Dayt.new(
   price: 30,
   opening_time: 12,
   closing_time: 1,
-  booking_url: 'https://cornerhotel.com/'
+  booking_url: 'https://cornerhotel.com/',
+  tag_list: ['Nightlife', 'Music', 'Indoor', 'Lunch', 'Dinner', 'Drinks']
 )
 
 file = URI.open('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.concreteplayground.com%2Fcontent%2Fuploads%2F2017%2F02%2FThe-Corner-Hotel-Richmond-rooftop1.jpeg&f=1&nofb=1')
@@ -64,7 +65,8 @@ grotto = Dayt.new(
   content: 'A secluded spot close to the city to take you away',
   location: 'Alexandra Ave, Melbourne VIC 3004',
   duration: 1,
-  price: 0
+  price: 0,
+  tag_list: ['Free', 'Outdoor', 'Nice Walk']
 )
 
 file = URI.open('https://citycollection.melbourne.vic.gov.au/wp-content/uploads/2021/09/1091165-5-1024x683.jpg')
@@ -78,6 +80,7 @@ lewagon = Dayt.new(
   location: '41 Stewart St, Melbourne c/o Inspire9, Level1, Richmond VIC 3121',
   duration: 1,
   price: 0,
+  tag_list: ['Free', 'Le wagon awesome course']
 )
 
 file = URI.open('https://res.cloudinary.com/wagon/image/upload/c_fill,h_240,q_auto,w_520/v1622427318/w0tv5qudjqevpz1fzgb2.webp')
@@ -92,7 +95,8 @@ mcg = Dayt.new(
   location: 'Brunton Ave, Richmond VIC 3002',
   duration: 1,
   price: 35,
-  booking_url: 'https://www.mcg.org.au/'
+  booking_url: 'https://www.mcg.org.au/',
+  tag_list: ['Outdoor', 'Sport', 'Drinks']
 )
 
 file = URI.open('https://www.austadiums.com/news/images/mcg-aerial-pic1.jpg')
@@ -108,7 +112,8 @@ ngv = Dayt.new(
   price: 0,
   opening_time: 10,
   closing_time: 5,
-  booking_url: 'https://connect.ngv.vic.gov.au/events'
+  booking_url: 'https://connect.ngv.vic.gov.au/events',
+  tag_list: ['Art', 'Indoor']
 )
 
 file = URI.open('https://content.ngv.vic.gov.au/col-images/api-access/INST048987/1280')
@@ -124,7 +129,8 @@ fishbowl = Dayt.new(
   price: 17,
   opening_time: 11,
   closing_time: 9,
-  booking_url: 'https://food.google.com/chooseprovider?restaurantId=/g/11qmy7pkn6&g2lbs&sei'
+  booking_url: 'https://food.google.com/chooseprovider?restaurantId=/g/11qmy7pkn6&g2lbs&sei',
+  tag_list: ['Indoor', 'Lunch', 'Dinner']
 )
 
 file = URI.open('https://media.timeout.com/images/105558062/image.jpg')
@@ -139,7 +145,8 @@ bdl = Dayt.new(
   duration: 1,
   price: 20,
   opening_time: 6,
-  closing_time: 1
+  closing_time: 1,
+  tag_list: ['Nightlife', 'Music', 'Indoor', 'Drinks']
 )
 
 file = URI.open('https://whatson.melbourne.vic.gov.au/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWt5TjJRMk56STJPQzFqTVRrd0xUUXlNV1V0T1RCa05pMDVOVGRsTkdZME5qYzJZekVHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--137e9040a0d98fc519b4ebefdb14e5e2d93531b9/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VY21WemFYcGxYM1J2WDJ4cGJXbDBXd2RwQXE0Q2FRTE1BUT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--6b649797a60ed07e66abb743103d0e385829f44a/beneath-20driver-201.jpg')
@@ -153,7 +160,8 @@ forum = Dayt.new(
   location: '154 Flinders St, Melbourne VIC 3000',
   duration: 2,
   price: 40,
-  booking_url: 'https://forummelbourne.com.au/'
+  booking_url: 'https://forummelbourne.com.au/',
+  tag_list: ['Nightlife', 'Music', 'Indoor', 'Drinks']
 )
 
 file = URI.open('https://marrinergroup.com.au/uploads/Image-46-1533083252.jpg')
@@ -168,7 +176,8 @@ rising = Dayt.new(
   location: 'Level 2/377 Lonsdale St, Melbourne VIC 3000',
   duration: 1,
   price: 20,
-  booking_url: 'https://rising.melbourne/'
+  booking_url: 'https://rising.melbourne/',
+  tag_list: ['Art', 'Nightlife', 'Music', 'Indoor', 'Lunch', 'Dinner', 'Drinks']
 )
 
 file = URI.open('https://www.visitmelbourne.com/-/media/images/melbourne/events/rising_wilds-20210526-dsc1044_1150x863.jpg?ts=20220329440418')
