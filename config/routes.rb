@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get '/journey', to: 'pages#journey', as: 'journey'
   get '/trips/:trip_id/itinerary', to: 'trips#itinerary', as: 'itinerary'
+  get '/mydayts', to: 'dayts#mydayts', as: 'mydayts'
 
   resources :trips, only: [:new, :create, :show, :update, :index] do
     resources :dayts, only: [:index]
