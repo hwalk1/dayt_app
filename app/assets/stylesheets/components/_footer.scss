@@ -26,6 +26,11 @@ footer {
   color: $white;
   box-shadow: 0px 5px 10px rgba($green, 0.35);
 }
+.btn-width {
+  width: 150px;
+}
+
+
 
 .map-btn {
   color: $white;
@@ -53,4 +58,9 @@ footer {
     border: $dark-blue 3px solid;
     box-shadow: 0px 5px 10px rgba($dark-blue, 0.35);
   }
+}
+
+.btn-map-show {
+  color: $dark-blue!important;
+  background-color: $white!important;
 }
