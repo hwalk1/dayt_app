@@ -1,5 +1,5 @@
 class Dayt < ApplicationRecord
-  TAGS = ["Outdoor", "Indoor", "Brekky", "Lunch", "Dinner", "Nightlife", "Nice Walks", "Art", "Sport", "Music", "Maccas", "Drinks", "Barbie & Smoko", "Le Wagon awesome course"]
+  TAGS = ["Outdoor", "Indoor", "Brekky", "Lunch", "Dinner", "Nightlife", "Nice Walks", "Art", "Sport", "Music", "Maccas", "Drinks", "Barbie & Smoko", "Free", "Le Wagon awesome course"]
 
   belongs_to :user
   acts_as_taggable_on :tags
