@@ -7,7 +7,7 @@ class TripsController < ApplicationController
     @trip = Trip.new(trip_params)
     @trip.user = current_user
     if @trip.save
-      redirect_to trip_dayts_path(@trip)
+      redirect_to trip_dayts_path(@trip, tags: params[:trip][:search_tags])
     else
       render :new
     end

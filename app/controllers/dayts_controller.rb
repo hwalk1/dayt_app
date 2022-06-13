@@ -1,7 +1,10 @@
 class DaytsController < ApplicationController
   def index
     @trip = Trip.find(params[:trip_id])
-    @dayts = Dayt.where.not(id: @trip.dayts.pluck(:id)).near(@trip.location, @trip.distance).order(id: :asc)
+    @dayts = Dayt.where.not(id: @trip.dayts.pluck(:id))
+                       .near(@trip.location, @trip.distance)
+                       .order(id: :asc)
+    @dayts = @dayts.tagged_with(params[:tags], any: true) if params[:tags].present?
     @trip_dayt = TripDayt.new
     @markers = @dayts.geocoded.map do |dayt|
       {
@@ -84,6 +87,7 @@ class DaytsController < ApplicationController
       :opening_time,
       :closing_time,
       :booking_url,
+      tag_list: [],
       photos: []
     )
   end
