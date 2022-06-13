@@ -1,9 +1,11 @@
-<div>
-<h1 style>Your Trips</h1>
-<% @trips.each do |trip| %>
-<li>
-  <%= link_to "#{trip.title}", trip_path(trip), class: 'trip-link'%>
-</li>
-
-<% end %>
+<div class="container my-2 px-4 padding-bottom">
+  <h1 class="text-center pt-3 m-0">My Trips</h1>
+  <div>
+    <% @trips.each do |trip| %>
+      <%= render 'trip', trip: trip %>
+    <% end %>
+  </div>
 </div>
+  <footer>
+    <%= link_to 'New Trip', new_trip_path, class: "btn next-btn" %>
+  </footer>

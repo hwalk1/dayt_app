@@ -7,7 +7,7 @@ class TripsController < ApplicationController
     @trip = Trip.new(trip_params)
     @trip.user = current_user
     if @trip.save
-      redirect_to trip_dayts_path(@trip)
+      redirect_to trip_dayts_path(@trip, tags: params[:trip][:search_tags])
     else
       render :new
     end
@@ -46,6 +46,12 @@ class TripsController < ApplicationController
         }
       end
     end
+  end
+
+  def destroy
+    @trip = Trip.find(params[:id])
+    @trip.destroy
+    redirect_to trips_path
   end
 
   private
