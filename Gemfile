@@ -74,3 +74,5 @@ gem 'cloudinary', '~> 1.16.0'
 # to help with seeds
 gem 'faker'
 
+# for the organise page
+gem 'acts_as_list'

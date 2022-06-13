@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 <div class="row justify-content-end">
+=======
+<div class="row justify-content-end" id="calendar-container" data-controller="sortable" >
+>>>>>>> Stashed changes
   <div class="calendar col-2 d-flex flex-column justify-content-around">
     <p>9 am</p>
     <p>10 am</p>
@@ -11,15 +15,24 @@
   </div>
 
   <div class="col-10">
+<<<<<<< Updated upstream
     <ul id="hello-list">
       <% @trip.dayts.each do |dayt| %>
         <li class="organise ">
           <div>
             <div class="dayt-info card justify-content-around text-center m-1 p-1">
               <h2><%= dayt.title %></h2>
+=======
+    <ul data-sortable-target="list" class="h-100" id="hello-list">
+      <% trip.trip_dayts.each_with_index do |trip_dayt, index| %>
+        <li data-sortable-target="card" data-index-value=<%= index %> class="organise card-height-<%= ((trip_dayt.dayt.duration / 10) * 100).to_i %>">
+          <div style="height: 100%">
+            <div class="dayt-info card justify-content-around text-center m-1 p-1 lock-card">
+              <h2><%= trip_dayt.dayt.title %></h2>
+>>>>>>> Stashed changes
               <p class="d-flex dayt-details p-1">
                 <i class="fa-solid fa-location-dot"></i>
-                <%= dayt.location %>
+                <%= trip_dayt.dayt.location %>
               </p>
               <div class="location-pos">
               </div>
@@ -37,6 +50,8 @@
       <% end %>
 
 
+
+
       <%# <li>
         <div class="card align-items-center">
           <div class="card-body">
@@ -46,4 +61,10 @@
       </li> %>
     </ul>
   </div>
+  <%= form_with url: update_all_trip_dayts_path(trip), method: :patch, class: "my-5" do |f| %>
+    <% trip.dayts.each_with_index do |dayt, index| %>
+      <%= f.text_field "dayt_ids[]", id: nil, placeholder: "Email Address", data: { sortable_target: "input"}, value: index %>
+    <% end %>
+    <%= f.submit %>
+  <% end %>
 </div>

@@ -4,8 +4,22 @@
       <p>DRAG to change your schedule</p>
   </div>
 
+<<<<<<< Updated upstream
 
   <%= render "shared/hidden_mapbox" %>
+=======
+      <% @trip_dayts.each do |trip_dayt| %>
+        <p><%= trip_dayt.dayt.title %></p>
+      <% end %>
+
+      <div class="slidee slidee-map">
+        <%= render "shared/hidden_mapbox" %>
+      </div>
+
+    </div>
+  </div>
+
+>>>>>>> Stashed changes
   <footer>
     <button class='btn map-btn' data-action='click->show-hide#toggle'>Map</button>
     <%= link_to "Confirm", trip_path(@trip), class: "btn next-btn" %>
