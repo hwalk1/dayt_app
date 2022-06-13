@@ -13,6 +13,10 @@ class TripsController < ApplicationController
     end
   end
 
+  def edit
+    @trip = Trip.find(params[:id])
+  end
+
   def index
     @trips = Trip.where(user_id: current_user)
   end
