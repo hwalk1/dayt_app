@@ -3,7 +3,7 @@
 
   <div class="d-flex container-fluid justify-content-between">
 
-      <% if current_page?(:controller => 'pages', :action => 'home') %>
+      <% if current_page?(root_path) %>
         <button class="previous">
           <i class="fa fa-angle-left fa-2x transparent"></i>
         </button>
