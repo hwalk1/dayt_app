@@ -9,6 +9,7 @@ export default class extends Controller {
   static targets = ["list", "card", "input"]
 
   connect() {
+    console.log("hello");
     Sortable.create(this.listTarget, {
       animation: 150,
       onEnd: (event) => {
