@@ -11,20 +11,27 @@ export default class extends Controller {
     event.preventDefault()
     const url = event.currentTarget.action
 
-
     if (event.currentTarget.classList.contains('accept')) {
       this.buttonTarget = this.acceptButtonTarget
       this.iconTarget = this.acceptIconTarget
       this.iconTarget.classList.add('fa-solid')
+      this.element.classList.add('add')
 
       this.progressBar()
     } else {
       this.buttonTarget = this.declineButtonTarget
       this.iconTarget = this.declineIconTarget
+      this.element.classList.add('remove')
     }
 
     this.buttonTarget.disabled = true
     this.iconTarget.classList.add('fa-solid')
+
+    this.parent = this.element.parentElement
+
+    setTimeout(() => {
+      this.element.remove()
+    }, 700);
 
     fetch(url, {
       method: "POST",
@@ -33,12 +40,8 @@ export default class extends Controller {
     })
     .then(response => response.text())
     .then((data) => {
-
-
       if (data) {
-        this.element.innerHTML = data
-      } else {
-        this.element.remove()
+        this.parent.insertAdjacentHTML('beforeend', data)
       }
     })
   }
@@ -48,7 +51,7 @@ export default class extends Controller {
 
     const progressBar = document.querySelector('.progress-bar')
     const currentProgress = parseInt(progressBar.style.width.slice(0, -1))
-    const newProgress = parseInt(this.durationTarget.innerText) * 10
+    const newProgress = parseInt(this.durationTarget.innerText) * 12.5
     const totalProgress = currentProgress + newProgress
 
     progressBar.style.width = `${totalProgress}%`
