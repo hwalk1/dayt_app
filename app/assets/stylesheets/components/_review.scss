@@ -21,5 +21,162 @@
     justify-content: center;
     align-content: center;
     flex-direction: column;
+    border-radius: 15px;
+    font-size: 22px;
+    box-shadow: 0px 10px 20px #00000025;
+    transition: 0.5s;
   }
+
+
+
+
+}
+
+.review-form {
+  height:100%;
+  text-align: center;
+
+  h1, h2 {
+    text-align: center;
+    padding: 10px;
+    margin: 0px;
+  }
+
+}
+
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center
+}
+
+.rating>input {
+  display: none
+}
+
+.rating>label {
+  position: relative;
+  width: 1em;
+  font-size: 30px;
+  font-weight: 300;
+  color: #FFD600;
+  cursor: pointer
+}
+
+.rating>label::before {
+  content: "\2605";
+  position: absolute;
+  opacity: 0
+}
+
+.rating>label:hover:before,
+.rating>label:hover~label:before {
+  opacity: 1 !important
+}
+
+.rating>input:checked~label:before {
+  opacity: 1
+}
+
+.rating:hover>input:checked~label:before {
+  opacity: 0.4
+}
+
+
+.buttons{
+top: 36px;
+  position: relative;
+}
+
+
+.rating-submit{
+border-radius: 15px;
+color: #fff;
+    height: 49px;
+}
+
+
+.rating-submit:hover{
+
+color: #fff;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  top: 25%;
+  bottom: 30%;
+  align-items: start;
+  opacity: 1;
+
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+
+input[type=range]::-webkit-slider-thumb {
+    background: rgb(51, 51, 51);
+}
+input[type=range]::-moz-range-thumb {
+    background: rgb(51, 51, 51);
+}
+input[type=range]::-ms-thumb {
+    background: rgb(51, 51, 51);
+  }
+
+  .radiobtn {
+    position: relative;
+    display: block;
+
+    input[type="radio"] {
+      display: none;
+      position: absolute;
+      width: 100%;
+      appearance: none;
+    }
+    input[type="radio"]:checked + label {
+      background:grey;
+      animation-name: blink;
+      animation-duration: 1s;
+      border-color: rgb(55, 55, 55);
+    }
+    input[type="radio"]:checked + label:after {
+    background: transparent;
+
+    }
+    input[type="radio"]:checked + label:before {
+      width: 20px;
+      height: 20px;
+    }
+}
+.radiobtn label {
+  background: rgba(0, 0, 0, 0.2);
+  color: #000;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: 2px solid grey;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.radiobtn label:after, .radiobtn label:before {
+  content: "";
+  background: transparent;
+  position: absolute;
+  right: 11px;
+  top: 11px;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+}
+.radiobtn label:before {
+  background: transparent;
+  transition: 0.1s width cubic-bezier(0.075, 0.82, 0.165, 1) 0s, 0.3s height cubic-bezier(0.075, 0.82, 0.165, 2) 0.1s;
+  z-index: 2;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: 13px;
+  background-position: center;
+  width: 0;
+  height: 0;
 }
