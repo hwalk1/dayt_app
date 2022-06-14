@@ -23,13 +23,15 @@
 }
 
 .fa-angle-left {
-  width: 54px;
+  margin-left: 12px;
 }
 
 .previous {
   color: $gray-titles;
   border: none;
   background-color: $blue;
+  width: 60px;
+  display: flex;
 }
 
 .dayt-logo {
@@ -38,4 +40,13 @@
 
 .navbar-toggler {
   border: none;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+.fa-bars {
+  color: black;
+  font-size: 27px;
 }

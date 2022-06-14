@@ -3,9 +3,15 @@
 
   <div class="d-flex container-fluid justify-content-between">
 
-      <button onclick="history.go(-1)" class="previous">
-        <i class="fa fa-angle-left fa-2x"></i>
-      </button>
+      <% if current_page?(:controller => 'pages', :action => 'home') %>
+        <button class="previous">
+          <i class="fa fa-angle-left fa-2x transparent"></i>
+        </button>
+      <% else %>
+        <button onclick="history.go(-1)" class="previous">
+          <i class="fa fa-angle-left fa-2x"></i>
+        </button>
+      <% end %>
 
     <div class="logo">
       <%= link_to root_path do %>
@@ -13,7 +19,7 @@
       <% end %>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <i class="fa-solid fa-bars"></i>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
