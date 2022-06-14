@@ -19,7 +19,7 @@ export default class extends Controller {
       }, intervalDuration);
     };
 
-    animateText(text, title, 150);
+    animateText(text, title, 100);
   }
 
 }
