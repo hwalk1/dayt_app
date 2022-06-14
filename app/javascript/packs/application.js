@@ -17,15 +17,6 @@ import "bootstrap"
 
 // sortablejs
 
-import Sortable from 'sortablejs';
-
-document.addEventListener('turbolinks:load', () => {
-  var el = document.getElementById('hello-list');
-  if (el) {
-    var sortable = Sortable.create(el);
-  }
-})
-
 // testing sortablejs
 // document.addEventListener('turbolinks:load', () => {
 //   console.log("Sortable: ", Sortable)
