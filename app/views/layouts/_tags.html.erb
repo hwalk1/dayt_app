@@ -2,6 +2,6 @@
 <%= f.input :search_tags, label: ' ', # ==> removes 'Search Tags'
                   as: :check_boxes,
                   input_html: { class: "tag-selector" },
-                  item_wrapper_class: 'tag-item',
+                  item_wrapper_class: 'tag-item waves-flat',
                   collection: Dayt::TAGS,
                   include_hidden: false %>

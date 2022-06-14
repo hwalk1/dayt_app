@@ -33,8 +33,8 @@ class TripDaytsController < ApplicationController
 
   def update_all
     @trip = Trip.find(params[:trip_id])
-    @trip.trip_dayts.each_with_index do |trip_dayt, index|
-      trip_dayt.update(order: params[:dayt_ids][index])
+    @trip.trip_dayts.where(status: "accepted").each_with_index do |trip_dayt, index|
+      trip_dayt.update!(order: params[:dayt_ids][index])
     end
     redirect_to trip_path(@trip)
   end
