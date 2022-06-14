@@ -1,8 +1,6 @@
 
 
-<%#  BACKEND FOR TAGS TO WORK ON if time =====> %>
-
-<%= f.input :search_tags,
+<%= f.input :search_tags, label: ' ', # ==> removes 'Search Tags'
                   as: :check_boxes,
                   input_html: { class: "tag-selector" },
                   item_wrapper_class: 'tag-item',

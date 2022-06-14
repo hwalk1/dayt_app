@@ -27,3 +27,15 @@
   background-color: $dark-blue;
   color: white;
 }
+
+.badge {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  pointer-events: none;  //disables button from clicking
+  border-radius: 20px;
+  font-family: $headers-font;
+}
+
+.check_boxes {
+  align-items: center;
+}

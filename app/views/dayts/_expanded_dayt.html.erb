@@ -1,7 +1,7 @@
 
 <div class='container py-3 expanded'>
   <% if dayt.photos.size == 1 %>
-      <img class="d-block w-100 expanded-photo" src="<%= cl_image_path dayt.photos.first.key %>" alt="photo" >
+      <img class="d-block w-100 expanded-photo" src="<%= cl_image_path dayt.photos.first.key %>" alt="photo">
 
   <% elsif dayt.photos.size > 1 %>
       <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -12,6 +12,7 @@
             </div>
           <% end %>
         </div>
+
 
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -27,6 +28,14 @@
 
   <div class='pt-3 title-expanded' >
     <%= cl_image_tag dayt.user.avatar.key, class: 'avatar-dayt' %>
+
+<%# Display TAGS ===> %>
+  <p>
+    <% dayt.tag_list.each do |tag| %>
+      <%= link_to tag, tagged_path(tag: tag), class: "badge #{tag_class(tag)}" %>
+    <% end %>
+  </p>
+
     <h1 class='exp-title'><%= dayt.title %></h1>
   </div>
   <div class="content-expanded mx-3">
