@@ -2,6 +2,10 @@
 
 .tag-item {
   display: inline-block;
+  padding: 0px;
+  margin-right: 0.6rem;
+  margin-bottom: 0.4rem;
+  border-radius: 50rem!important;
 }
 
 .tag-selector {
@@ -13,14 +17,13 @@
   cursor: pointer;
   display: inline-block;
   font-size: 1.2rem;
-  border-radius: 50rem;
-  padding: 0.4rem 0.8rem;
+  border-radius: 50rem!important;
+  padding: 0.4rem 0.8rem!important;
   background-color: $blue;
   font-family: $headers-font;
   color: $gray-titles;
   border: 1px solid $green;
-  margin-right: 0.6rem;
-  margin-bottom: 0.4rem;
+  transition: 0.3s;
 }
 
 .tag-selector:checked + label {
