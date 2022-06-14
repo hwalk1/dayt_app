@@ -29,5 +29,5 @@
 </div>
 
 <div class="progress shadow-lg">
-  <div class="progress-bar <%= 'bg-warning' if @trip_duration * 10 >= 70 %> <%= 'bg-danger' if @trip_duration * 10 == 100 %>" role="progressbar" style="width: <%= @trip_duration * 10 %>%"></div>
+  <div class="progress-bar <%= 'bg-secondary' if @trip_duration * 10 >= 70 %> <%= 'bg-danger' if @trip_duration * 10 == 100 %>" role="progressbar" style="width: <%= @trip_duration * 10 %>%"></div>
 </div>

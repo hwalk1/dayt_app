@@ -19,7 +19,7 @@
     <button data-trip-dayt-target='acceptButton'><i class="fa-regular fa-heart" data-trip-dayt-target='acceptIcon'></i></button>
 <% end %>
 
-<%= link_to dayt_path(dayt) do %>
+<%= link_to dayt_path(dayt, trip: trip) do %>
   <%= cl_image_tag dayt.photos.first.key %>
   <div class="card-blue">
 

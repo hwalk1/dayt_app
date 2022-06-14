@@ -19,6 +19,9 @@ class DaytsController < ApplicationController
   end
 
   def show
+    @trip = Trip.find(params[:trip]) if params[:trip]
+    @trip_dayt = TripDayt.new
+
     @dayt = Dayt.find(params[:id])
 
     @markers =
