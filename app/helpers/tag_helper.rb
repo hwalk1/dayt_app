@@ -4,7 +4,7 @@ module TagHelper
     "Indoor" => "bg-dark",
     "Brekky" => "bg-danger",
     "Lunch" => "bg-danger",
-    "Dinner" => "bg-dark",
+    "Dinner" => "bg-danger",
     "Nightlife" => "bg-success",
     "Nice Walk" => "bg-secondary",
     "Art" => "bg-light",

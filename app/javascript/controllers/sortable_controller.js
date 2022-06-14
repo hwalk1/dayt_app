@@ -12,12 +12,11 @@ export default class extends Controller {
     Sortable.create(this.listTarget, {
       animation: 150,
       onEnd: (event) => {
-        alert(`${event.oldIndex} moved to ${event.newIndex}`)
-        this.cardTargets[event.oldIndex].dataset.indexValue = event.newIndex;
-        this.cardTargets[event.newIndex].dataset.indexValue = event.oldIndex;
         let i = 0;
+        console.log(this.cardTargets);
         this.cardTargets.forEach((card) => {
-          this.inputTargets[i].value = card.dataset.indexValue;
+          console.log(card.dataset.indexValue);
+          this.inputTargets[parseInt(card.dataset.indexValue)].value = i;
           i++;
         })
       }
