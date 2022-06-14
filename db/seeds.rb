@@ -80,7 +80,7 @@ lewagon = Dayt.new(
   location: '41 Stewart St, Melbourne c/o Inspire9, Level1, Richmond VIC 3121',
   duration: 1,
   price: 0,
-  tag_list: ['Free', 'Le Wagon awesome course']
+  tag_list: ['Free', 'Le Wagon awesome course', 'Indoor']
 )
 
 file = URI.open('https://res.cloudinary.com/wagon/image/upload/c_fill,h_240,q_auto,w_520/v1622427318/w0tv5qudjqevpz1fzgb2.webp')

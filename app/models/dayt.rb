@@ -1,8 +1,9 @@
 class Dayt < ApplicationRecord
-  TAGS = ["Outdoor", "Indoor", "Brekky", "Lunch", "Dinner", "Nightlife", "Nice Walks", "Art", "Sport", "Music", "Maccas", "Drinks", "Barbie & Smoko", "Free", "Le Wagon awesome course"]
+  TAGS = ["Outdoor", "Indoor", "Brekky", "Lunch", "Dinner", "Nightlife", "Nice Walk", "Art", "Sport", "Music", "Drinks", "Barbie & Smoko", "Free", "Le Wagon awesome course"]
 
   belongs_to :user
   acts_as_taggable_on :tags
+  acts_as_taggable_on :dayts
   has_many :reviews
   has_many :trip_dayts
   has_many :trips, through: :trip_dayts

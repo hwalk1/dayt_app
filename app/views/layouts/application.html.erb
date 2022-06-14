@@ -13,19 +13,13 @@
 
   </head>
 
-  <body>
- <%# <% if current_page?(controller: "pages", action: "home") %>
-    <%# render 'shared/nav_home' %>
- <%# else %>
+  <body data-controller='waves'>
+
     <%= render 'shared/navbar' %>
- <%# end %>
 
     <%= render 'shared/flashes' %>
 
-      <%= yield %>
-
-    <%# render 'layouts/card' %>
-    <%# render 'layouts/footer' %>
+    <%= yield %>
 
     <%# render 'shared/organise' %>     <%# this is to test sortablejs  %>
   <script src="https://kit.fontawesome.com/7b8fdf30c4.js" crossorigin="anonymous"></script>

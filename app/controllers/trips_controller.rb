@@ -24,6 +24,7 @@ class TripsController < ApplicationController
   def show
     @trip = Trip.find(params[:id])
     @dayts = Dayt.includes(trip_dayts: :trip).where(trip_dayts: { status: "accepted", trip: @trip })
+    @trip_dayts = @trip.trip_dayts.where(status: "accepted").order(:order)
     unless @dayts.empty?
       @markers = @dayts.geocoded.map do |dayt|
         {
@@ -39,6 +40,7 @@ class TripsController < ApplicationController
   def itinerary
     @trip = Trip.find(params[:trip_id])
     @dayts = Dayt.includes(trip_dayts: :trip).where(trip_dayts: { status: "accepted", trip: @trip })
+    @trip_dayts = @trip.trip_dayts.where(status: "accepted")
     # @total_time = @dayts.sum(:duration).to_f
     unless @dayts.empty?
       @markers = @dayts.geocoded.map do |dayt|
@@ -61,6 +63,7 @@ class TripsController < ApplicationController
   private
 
   def trip_params
-    params.require(:trip).permit(:title, :location, :distance, :date )
+
+    params.require(:trip).permit(:title, :location, :distance, :date, tag_list: [])
   end
 end
