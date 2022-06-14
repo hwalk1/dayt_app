@@ -24,6 +24,7 @@ class TripsController < ApplicationController
   def show
     @trip = Trip.find(params[:id])
     @dayts = Dayt.includes(trip_dayts: :trip).where(trip_dayts: { status: "accepted", trip: @trip })
+    @trip_dayts = @trip.trip_dayts.where(status: "accepted").order(:order)
     unless @dayts.empty?
       @markers = @dayts.geocoded.map do |dayt|
         {
