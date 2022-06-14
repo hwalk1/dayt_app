@@ -4,14 +4,30 @@
   align-items: center;
   justify-content: flex-start;
   height: 100vh;
-    .btn {
-      border-color: aquamarine;
-      background-color: white;
-    }
+    // .btn {
+    //   border-color: aquamarine;
+    //   background-color: white;
+    // }
+
+  p {
+    color: $gray-titles;
+    font-family: $headers-font;
+    font-size: 1.25rem;
+  }
+}
+::placeholder {
+  color: rgb(177, 177, 177);
+  font-family: $body-font;
+  font-size: 0.8rem;
 }
 
 .preferences {
   background-color: white;
+  padding-bottom: 80px;
+  h1 {
+    color: $green;
+    font-size: 1.5rem;
+  }
 }
 
 .simple_form {
@@ -22,4 +38,12 @@
   border-radius: 10px;
   border: 2px solid $dark-blue;
   background-color: white;
+}
+
+.preference-titles {
+  margin-top: 35px;
+}
+
+.trip-name {
+  border: 2px solid $green;
 }

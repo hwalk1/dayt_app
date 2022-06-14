@@ -1,10 +1,22 @@
-<div class="container">
+<div class="container home-p">
   <div class="home-content">
-    <h1>Welcome to Dayt</h1>
-    <div>
-      <%= button_to "Create a Trip", journey_path,
-      :class => "btn btn-primary", :method => :get %>
-    </div>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam repudiandae quae ad eos provident at, dolorem non eveniet porro beatae asperiores a unde veniam sapiente cum temporibus quaerat amet quia!</p>
+      <h1>Welcome to Dayt</h1>
+
+      <div>
+        <%= button_to "Create a Trip", journey_path,
+        :class => "full-btn", :method => :get %>
+      </div >
+
+      <p><span data-controller='scroll' id="title"></span>
+      <div class='home-text'>
+        <div >
+          <h2 class ='text-home'>Community Sourced Information</h2>
+          <p>Locals are incentivised to share their favourite spots, bars, restaurants, landmarks, viewpoints and other hidden gems for travellers.</p>
+        </div>
+        <div >
+        <h2 class ='text-home'>Personalised Recomendations</h2>
+          <p>Thanks to filtering based on interests, length of stay, price, specific location, dislikes etc. </p>
+        </div>
+      </div>
   </div>
 </div>

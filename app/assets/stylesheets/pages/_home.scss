@@ -17,12 +17,24 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 60vh;
+  height: 70vh;
   justify-content: space-around;
-    .btn {
-      border-color: aquamarine;
-      background-color: white;
-    }
+  margin-top: 70px;
+
 
 }
 
+.home-p {
+  height: 100%;
+  display: flex;
+  background-image: url('https://wp.technologyreview.com/wp-content/uploads/2019/10/marc-ruaix-j1kcxiciv9w-unsplash-10.jpg');
+  background-size: cover;
+
+}
+
+.home-text {
+  text-align: center;
+}
+.text-home {
+
+}

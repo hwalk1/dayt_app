@@ -1,4 +1,6 @@
-<div class='mt-3 expanded'>
+
+<div class='container py-3 expanded'>
+
   <% if dayt.photos.size == 1 %>
       <img class="d-block w-100 expanded-photo" src="<%= cl_image_path dayt.photos.first.key %>" alt="photo" >
 
@@ -12,6 +14,18 @@
           <% end %>
         </div>
 
+<% trip_dayt =  TripDayt.new %>
+  <%= simple_form_for [trip, trip_dayt],
+  html: {
+  class: 'accept',
+  data: { action: "submit->trip-dayt#create" }
+  } do |f| %>
+    <%= f.hidden_field :dayt_id, value: dayt.id %>
+    <%= f.hidden_field :status, value: 'accepted' %>
+    <button data-trip-dayt-target='acceptButton'><i class="fa-regular fa-heart" data-trip-dayt-target='acceptIcon'></i></button>
+<% end %>
+
+
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
@@ -23,26 +37,50 @@
 
       </div>
   <% end %>
-</div>
-<div class='pt-3' >
-  <h1 class='exp-title'><%= dayt.title %></h1>
-</div>
 
-<div class='d-flex mt-2 mb-2 align-items-center'>
-    <div class=>
-    <i class="m-3 fa-solid fa-location-dot"></i>
+  <div class='pt-3 title-expanded' >
+    <%= cl_image_tag dayt.user.avatar.key, class: 'avatar-dayt' %>
+    <h1 class='exp-title'><%= dayt.title %></h1>
+  </div>
+  <div class="content-expanded mx-3">
+    <div class='d-flex my-3 align-items-center'>
+        <div>
+        <i class="me-3 fa-solid fa-location-dot"></i>
+        </div>
+      <%= dayt.location %>
     </div>
-  <%= dayt.location %>
-</div>
-<div class='d-flex mt-2 mb-2 align-items-center'>
-    <div class=>
-    <i class="m-3 fa-solid fa-clock"></i>
+    <div class='d-flex my-3'>
+      <div class='d-flex align-items-center w-50'>
+          <div >
+          <i class="me-3 fa-solid fa-clock"></i>
+          </div>
+        <%= dayt.duration.to_i %> h
+      </div>
+      <% if opening_time && closing_time %>
+      <div class='d-flex align-items-center w-50'>
+        <div>
+        <i class="me-3 fa-solid fa-calendar"></i>
+        </div>
+        <%= opening_time%> - <%= closing_time %>
+      </div>
+      <% end %>
     </div>
-  <%= dayt.duration %>
-</div>
-<div class='d-flex mt-2 mb-2 align-items-center'>
-    <div class=>
-    <i class="m-3 fa-solid fa-dollar"></i>
+
+    <div class="d-flex">
+      <div class='d-flex w-50'>
+          <div>
+          <i class="me-3 ms-1 fa-solid fa-dollar"></i>
+          </div>
+        <%= dayt.price.to_i > 0 ? dayt.price.to_i : 'Free' %>
+      </div>
+      <%= link_to 'Book Now', dayt.booking_url, class: 'btn w-50' if dayt.booking_url %>
     </div>
-  <%= dayt.price %>
+
+    <div class="py-4 text-expanded">
+    <%= dayt.content %>
+    </div>
+  </div>
+
+
+  <%= render 'mapbox' %>
 </div>

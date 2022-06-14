@@ -1,21 +1,33 @@
-<div data-controller='show-hide'>
-  <div class="container overflow-hidden" data-show-hide-target='container'>
-    <div class="swiper" data-controller='swiper'>
-      <div class="swiper-wrapper">
-        <% @dayts.first(6).each do |dayt|  %>
-          <div class="swiper-slide" data-controller="trip-dayt">
+<div data-controller='show-hide' class='bg-index'>
+  <div class="slider-container" >
+    <div class="slider" data-show-hide-target="slider">
 
-          <%= render 'slide', dayt: dayt, trip: @trip %>
-
+      <div class="slidee">
+        <div class="swiper" data-controller='swiper'>
+          <div class="swiper-wrapper">
+            <% @dayts.first(6).each do |dayt|  %>
+              <div class="swiper-slide" data-controller="trip-dayt">
+              <%= render 'slide', dayt: dayt, trip: @trip %>
+              </div>
+            <% end %>
           </div>
-        <% end %>
+        </div>
       </div>
+
+      <div class="slidee slidee-map">
+        <%= render "shared/hidden_mapbox" %>
+      </div>
+
     </div>
   </div>
-  <%= render "shared/hidden_mapbox" %>
+
 
   <footer>
-    <button class='btn map-btn' data-action='click->show-hide#toggle'>Map</button>
-    <%= link_to "Next", itinerary_path(@trip), class: "btn next-btn" %>
+    <button class='btn map-btn btn-width' data-action='click->show-hide#toggle'>Map</button>
+    <%= link_to "Next", itinerary_path(@trip), class: "btn next-btn btn-width" %>
   </footer>
+</div>
+
+<div class="progress shadow-lg">
+  <div class="progress-bar <%= 'bg-warning' if @trip_duration * 10 >= 70 %> <%= 'bg-danger' if @trip_duration * 10 == 100 %>" role="progressbar" style="width: <%= @trip_duration * 10 %>%"></div>
 </div>

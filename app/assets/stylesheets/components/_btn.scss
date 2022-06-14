@@ -6,39 +6,25 @@
   font-family: $headers-font;
   color: $gray-titles;
   font-weight: $font-kodchasan-semi-bold;
+  text-decoration: none;
 
     &:hover {
-      background-color: $green;
+      background-color: $blue;
       border: 2px solid white;
     }
 
 }
 
-.btn-full {
-  border-radius: 10px;
-  border: 1px solid $dark-blue;
-  padding: 12px 20px;
+.full-btn {
+  border-radius: 30px;
+  border: 2px solid $dark-blue;
+  padding: 20px 30px;
   background-color: $blue;
-  font-family: $headers-font;
-  color: $gray-titles;
+  font-family:  $headers-font;
+  font-size: 1.5rem;
+  color: $dark-blue;
   font-weight: $font-kodchasan-semi-bold;
   text-align: center;
-}
-
-.btn-next {
-  background-color: $green;
-  color: white;
-  border-radius: 20px;
-  padding: 20px 30px;
-  font-family: $headers-font;
-  font-weight: $font-kodchasan-semi-bold;
-}
-
-.btn-map {
-  background-color: $dark-blue;
-  border-radius: 20px;
-  color: white;
-  padding: 20px 30px;
-  font-family: $headers-font;
-  font-weight: $font-kodchasan-semi-bold;
+  text-decoration: none;
+  box-shadow: 3px 4px rgba(68, 68, 68, 0.549);
 }

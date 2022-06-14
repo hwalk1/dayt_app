@@ -1,0 +1,7 @@
+
+<%= f.input :search_tags,
+                  as: :check_boxes,
+                  input_html: { class: "tag-selector" },
+                  item_wrapper_class: 'tag-item',
+                  collection: Dayt::TAGS,
+                  include_hidden: false %>

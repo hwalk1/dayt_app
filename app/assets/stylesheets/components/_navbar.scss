@@ -22,7 +22,9 @@
   width: 40px;
 }
 
-
+.fa-angle-left {
+  width: 54px;
+}
 
 .previous {
   color: $gray-titles;
@@ -32,4 +34,8 @@
 
 .dayt-logo {
   height: 35px;
+}
+
+.navbar-toggler {
+  border: none;
 }

@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 <div data-controller='show-hide'>
 <<<<<<< Updated upstream
   <div class="container" data-show-hide-target='container'>
 <h1>Title:<%= @trip.title %></h1>
 =======
+=======
+<div data-controller='show-hide confetti'>
+>>>>>>> be4504b699166998c5aed331ecee6fb1919d4b3a
   <div class="slider-container" >
     <div class="slider" data-show-hide-target="slider">
 
@@ -28,7 +32,11 @@
             <ul id="hello-list" class="h-100 a-style">
               <% @trip.dayts.each do |dayt| %>
                 <%= link_to dayt_path(dayt) do %>
+<<<<<<< HEAD
                 <li class="card-height-<%= ((dayt.duration / 10) * 100).to_i %>" data-arrange="">
+=======
+                <li class="card-height-<%= ((dayt.duration / 10) * 100).to_i %>">
+>>>>>>> be4504b699166998c5aed331ecee6fb1919d4b3a
                   <div style="height: 100%">
                     <div class="dayt-info card justify-content-around text-center m-1 p-1 lock-card">
                       <h2><%= dayt.title %></h2>
@@ -70,11 +78,15 @@
 
     </div>
 
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> be4504b699166998c5aed331ecee6fb1919d4b3a
   </div>
-  <%= render 'shared/hidden_mapbox' %>
 
   <footer>
-    <button class='btn map-btn' data-action='click->show-hide#toggle'>Map</button>
+
+    <button class='btn map-btn btn-width' data-action='click->show-hide#toggle'>Map</button>
+    <%= button_to "Review", new_trip_mass_review_path(@trip), class:'btn', method: :get %>
   </footer>
 </div>

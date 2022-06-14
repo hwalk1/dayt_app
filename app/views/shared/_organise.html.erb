@@ -1,11 +1,16 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <div class="row justify-content-end">
 =======
 <div class="row justify-content-end" id="calendar-container" data-controller="sortable" >
 >>>>>>> Stashed changes
+=======
+<div class="row justify-content-end" id="calendar-container">
+>>>>>>> be4504b699166998c5aed331ecee6fb1919d4b3a
   <div class="calendar col-2 d-flex flex-column justify-content-around">
     <p>9 am</p>
     <p>10 am</p>
+    <p>11 am</p>
     <p>12 pm</p>
     <p>1 pm</p>
     <p>2 pm</p>
@@ -15,12 +20,20 @@
   </div>
 
   <div class="col-10">
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     <ul id="hello-list">
       <% @trip.dayts.each do |dayt| %>
         <li class="organise ">
           <div>
             <div class="dayt-info card justify-content-around text-center m-1 p-1">
+=======
+    <ul id="hello-list" class="h-100">
+      <% trip.dayts.each do |dayt| %>
+        <li class="organise card-height-<%= ((dayt.duration / 10) * 100).to_i %>">
+          <div style="height: 100%">
+            <div class="dayt-info card justify-content-around text-center m-1 p-1 lock-card">
+>>>>>>> be4504b699166998c5aed331ecee6fb1919d4b3a
               <h2><%= dayt.title %></h2>
 =======
     <ul data-sortable-target="list" class="h-100" id="hello-list">
@@ -36,14 +49,8 @@
               </p>
               <div class="location-pos">
               </div>
-              <p class="d-flex dayt-time p-1">
-                <i class="fa-solid fa-clock"></i><%= dayt.duration %> hours
-
-              <%# <div class="text-center">
-              </div> %>
-              <div class="d-flex delete-dayt">
-                <i class="fa-solid fa-xmark"></i>
-              </div>
+              <%# <p class="d-flex dayt-time p-1">
+              <i class="fa-solid fa-clock"></i><%= dayt.duration %>
             </div>
           </div>
         </li>

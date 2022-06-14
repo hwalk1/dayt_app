@@ -10,6 +10,7 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+
   </head>
 
   <body>
@@ -23,14 +24,13 @@
 
     <%= render 'shared/flashes' %>
 
-    <div class="container">
       <%= yield %>
-    </div>
 
     <%# render 'layouts/card' %>
     <%# render 'layouts/footer' %>
 
     <%# render 'shared/organise' %>     <%# this is to test sortablejs  %>
   <script src="https://kit.fontawesome.com/7b8fdf30c4.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
   </body>
 </html>

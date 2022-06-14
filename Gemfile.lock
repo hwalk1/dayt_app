@@ -68,8 +68,13 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
+<<<<<<< HEAD
     acts_as_list (1.0.4)
       activerecord (>= 4.2)
+=======
+    acts-as-taggable-on (9.0.1)
+      activerecord (>= 6.0, < 7.1)
+>>>>>>> be4504b699166998c5aed331ecee6fb1919d4b3a
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
     autoprefixer-rails (10.2.5.0)
@@ -281,7 +286,11 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+<<<<<<< HEAD
   acts_as_list
+=======
+  acts-as-taggable-on (~> 9.0)
+>>>>>>> be4504b699166998c5aed331ecee6fb1919d4b3a
   autoprefixer-rails (= 10.2.5)
   bootsnap (>= 1.4.4)
   byebug

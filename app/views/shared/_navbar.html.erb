@@ -3,24 +3,10 @@
 
   <div class="d-flex container-fluid justify-content-between">
 
-  <%# <div class="container-fluid">
-
-      <a href="#" class="previous">
+      <button onclick="history.go(-1)" class="previous">
         <i class="fa fa-angle-left fa-2x"></i>
-      </a>
+      </button>
 
-    <%= link_to root_path, class: "navbar-brand" do %>
-      <%# <%= image_tag "DAYT-thick.png", height: 30 %>
-
-    <%# <% end %>
-    <button onclick="history.go(-1)" class="previous">
-      <i class="fa fa-angle-left fa-2x"></i>
-    </button>
-
-    <%# <a href="#" class="previous">
-      <i class="fa fa-angle-left fa-2x"></i>
-    </a> %>
-    
     <div class="logo">
       <%= link_to root_path do %>
         <%= image_tag "DAYT-thick.png", class:"dayt-logo" %>
@@ -34,21 +20,18 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
+            <%= link_to "Home", root_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "My Trips", "#", class: "nav-link" %>
+            <%= link_to "My Trips", trips_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Log out", "#", class: "nav-link" %>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-            </div>
+
+            <%= cl_image_tag current_user.avatar.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+
           </li>
         <% else %>
           <li class="nav-item">
