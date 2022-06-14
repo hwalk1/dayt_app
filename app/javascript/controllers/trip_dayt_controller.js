@@ -14,7 +14,6 @@ export default class extends Controller {
     if (event.currentTarget.classList.contains('accept')) {
       this.buttonTarget = this.acceptButtonTarget
       this.iconTarget = this.acceptIconTarget
-      this.iconTarget.classList.add('fa-solid')
       this.element.classList.add('add')
 
       this.progressBar()
