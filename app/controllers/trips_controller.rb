@@ -39,6 +39,7 @@ class TripsController < ApplicationController
   def itinerary
     @trip = Trip.find(params[:trip_id])
     @dayts = Dayt.includes(trip_dayts: :trip).where(trip_dayts: { status: "accepted", trip: @trip })
+    @trip_dayts = @trip.trip_dayts.where(status: "accepted")
     # @total_time = @dayts.sum(:duration).to_f
     unless @dayts.empty?
       @markers = @dayts.geocoded.map do |dayt|

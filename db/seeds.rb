@@ -88,7 +88,6 @@ lewagon.photos.attach(io: file, filename: 'lewagon.png', content_type: 'image/pn
 lewagon.user = aren
 lewagon.save
 
-
 mcg = Dayt.new(
   title: 'Melbourne Cricket Ground',
   content: 'The Melbourne Cricket Ground, also known locally as "The \'G", is an Australian sports stadium located in Yarra Park, Melbourne, Victoria.',
@@ -122,7 +121,7 @@ ngv.user = aren
 ngv.save
 
 fishbowl = Dayt.new(
-  title: 'FISHBOWL',
+  title: 'Fishbowl',
   content: 'At FISHBOWL, we want to deliver the food that nature provided with minimal intervention and maximum care in a fun and authentic way.',
   location: '89A Swan St, Richmond VIC 3121',
   duration: 1,
@@ -176,7 +175,7 @@ rising = Dayt.new(
   duration: 1,
   price: 20,
   booking_url: 'https://rising.melbourne/',
-  tag_list: ['Art', 'Nightlife', 'Music', 'Indoor', 'Lunch', 'Dinner', 'Drinks']
+  tag_list: ['Art', 'Nightlife', 'Music', 'Indoor', 'Outdoor', 'Lunch', 'Dinner', 'Drinks']
 )
 
 file = URI.open('https://www.visitmelbourne.com/-/media/images/melbourne/events/rising_wilds-20210526-dsc1044_1150x863.jpg?ts=20220329440418')

@@ -17,14 +17,32 @@
 
 .full-btn {
   border-radius: 30px;
-  border: 2px solid $dark-blue;
+  border: 2px solid $dark-blue!important;
   padding: 20px 30px;
-  background-color: $blue;
+  background-color: $blue!important;
   font-family:  $headers-font;
   font-size: 1.5rem;
-  color: $dark-blue;
+  color: $dark-blue!important;
   font-weight: $font-kodchasan-semi-bold;
   text-align: center;
   text-decoration: none;
-  box-shadow: 3px 4px rgba(68, 68, 68, 0.549);
+  box-shadow: 0px 5px 10px rgba(black, 0.35);
+}
+
+.next-btn {
+  background-color: $green!important;
+  color: $white!important;
+  box-shadow: 0px 5px 10px rgba($green, 0.35);
+}
+
+.waves {
+  font-weight: bold;
+  font-family: $headers-font;
+  font-size: 20px!important;
+  border-radius: 50px;
+  padding: 15px 40px;
+}
+
+.btn-big {
+  padding: 30px 40px;
 }

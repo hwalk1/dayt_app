@@ -3,8 +3,7 @@
       <h1>Welcome to Dayt</h1>
 
       <div>
-        <%= button_to "Create a Trip", journey_path,
-        :class => "full-btn", :method => :get %>
+        <%= link_to "Create a Trip", journey_path, class: "full-btn waves btn-big" %>
       </div >
 
       <p><span data-controller='scroll' id="title"></span>
@@ -20,3 +19,4 @@
       </div>
   </div>
 </div>
+<% render 'layouts/footer' %>

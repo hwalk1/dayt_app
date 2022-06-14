@@ -9,8 +9,8 @@
 
 .banner {
   background-size: cover;
-  background-position: center;
-  padding: 150px 0;
+  background-position: top;
+  padding: 130px 0;
 }
 
 .banner h1 {
@@ -30,7 +30,8 @@
 
 .tourist_card {
   border-radius: 15px;
-  margin: 15px 15px;
+  margin: 0px 15px;
+  margin-bottom: 40px;
 }
 
 .local_card {

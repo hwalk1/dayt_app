@@ -14,6 +14,7 @@
     "flatpickr": "^4.6.13",
     "jquery": "^3.6.0",
     "mapbox-gl": "^2.8.2",
+    "node-waves": "^0.7.6",
     "sortablejs": "^1.15.0",
     "stimulus": "^3.0.1",
     "swiper": "^8.2.2",

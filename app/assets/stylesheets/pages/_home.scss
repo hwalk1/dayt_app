@@ -27,14 +27,11 @@ body {
 .home-p {
   height: 100%;
   display: flex;
-  background-image: url('https://wp.technologyreview.com/wp-content/uploads/2019/10/marc-ruaix-j1kcxiciv9w-unsplash-10.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 1),rgba(255, 255, 255, 0)), url('https://wp.technologyreview.com/wp-content/uploads/2019/10/marc-ruaix-j1kcxiciv9w-unsplash-10.jpg');
   background-size: cover;
 
 }
 
 .home-text {
   text-align: center;
-}
-.text-home {
-
 }
