@@ -4303,9 +4303,6 @@ jest-worker@^26.5.0:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
 jquery-ui@^1.13.1:
   version "1.13.1"
   resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.13.1.tgz#d0b7a42e73a04c31bb5706adf86f6f8942f64eaa"
@@ -4314,17 +4311,11 @@ jquery-ui@^1.13.1:
     jquery ">=1.8.0 <4.0.0"
 
 "jquery@>=1.8.0 <4.0.0", jquery@^3.6.0:
-=======
 jquery@^3.6.0:
->>>>>>> be4504b699166998c5aed331ecee6fb1919d4b3a
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.6.0.tgz#c72a09f15c1bdce142f49dbf1170bdf8adac2470"
   integrity sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==
 
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> be4504b699166998c5aed331ecee6fb1919d4b3a
 js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"

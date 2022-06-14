@@ -39,15 +39,8 @@ class TripsController < ApplicationController
   def itinerary
     @trip = Trip.find(params[:trip_id])
     @dayts = Dayt.includes(trip_dayts: :trip).where(trip_dayts: { status: "accepted", trip: @trip })
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
     @trip_dayts = @trip.trip_dayts.where(status: "accepted")
     # @total_time = @dayts.sum(:duration).to_f
->>>>>>> Stashed changes
-=======
-    # @total_time = @dayts.sum(:duration).to_f
->>>>>>> be4504b699166998c5aed331ecee6fb1919d4b3a
     unless @dayts.empty?
       @markers = @dayts.geocoded.map do |dayt|
         {

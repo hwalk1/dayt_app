@@ -74,10 +74,7 @@ gem 'cloudinary', '~> 1.16.0'
 # to help with seeds
 gem 'faker'
 
-<<<<<<< HEAD
 # for the organise page
 gem 'acts_as_list'
-=======
 # TAGS
 gem 'acts-as-taggable-on', '~> 9.0'
->>>>>>> be4504b699166998c5aed331ecee6fb1919d4b3a

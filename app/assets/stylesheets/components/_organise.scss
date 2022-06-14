@@ -1,15 +1,12 @@
 #hello-list {
   list-style: none;
   padding-left: 0;
-<<<<<<< HEAD
   li {
     cursor: grab;
     &:active {
       cursor: grabbing;
     }
   }
-=======
->>>>>>> be4504b699166998c5aed331ecee6fb1919d4b3a
 }
 
 .dayt-details {
@@ -24,13 +21,10 @@
 
 .dayt-info {
   border-radius: 5% 15% 5% 5% / 12% 30% 12% 15% ;
-<<<<<<< HEAD
-=======
 
   p, h2 {
     margin: 0;
   }
->>>>>>> be4504b699166998c5aed331ecee6fb1919d4b3a
 }
 
 .delete-dayt {
@@ -47,8 +41,6 @@
   .card-height-#{$height} {
     height: percentage($height / 100);
   }
-<<<<<<< HEAD
-=======
 }
 
 #calendar-container {
@@ -69,5 +61,4 @@
     text-decoration: none;
     color: inherit;
   }
->>>>>>> be4504b699166998c5aed331ecee6fb1919d4b3a
 }

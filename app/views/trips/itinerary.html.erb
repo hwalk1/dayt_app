@@ -15,11 +15,8 @@
     </div>
   </div>
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-
   <%= render "shared/hidden_mapbox" %>
-=======
+
       <% @trip_dayts.each do |trip_dayt| %>
         <p><%= trip_dayt.dayt.title %></p>
       <% end %>
@@ -31,9 +28,6 @@
     </div>
   </div>
 
->>>>>>> Stashed changes
-=======
->>>>>>> be4504b699166998c5aed331ecee6fb1919d4b3a
   <footer>
     <button class='btn map-btn btn-width' data-action='click->show-hide#toggle'>Map</button>
     <%= link_to "Confirm", trip_path(@trip), class: "btn next-btn btn-width" %>
