@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/trips/:trip_id/itinerary', to: 'trips#itinerary', as: 'itinerary'
   patch '/trips/:trip_id/update_all', to: 'trip_dayts#update_all', as: "update_all_trip_dayts"
   get '/mydayts', to: 'dayts#mydayts', as: 'mydayts'
+  get '/tagged', to: "dayts#tagged", as: :tagged
 
 
   resources :trips, only: [:new, :create, :show, :update, :index, :destroy] do

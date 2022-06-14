@@ -40,6 +40,21 @@
 
 .navbar-toggler {
   border: none;
+  font-size: 28px;
+}
+
+.navbar-nav {
+  font-size: 1.2rem;
+  padding-top: 20px;
+}
+
+.nav-item {
+  padding-top: 10px;
+  font-family: $headers-font;
+}
+
+.dropdown-toggle {
+  border: 1px solid rgb(125, 125, 125);
 }
 
 .transparent {
