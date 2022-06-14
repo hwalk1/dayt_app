@@ -14,7 +14,10 @@
               <%= f.input :date, as: :string, label: false, placeholder: "Today", required: false, input_html: {class: "datepicker text-center"} %>
 
         <h2 class="text-center preference-titles">How Far?</h2>
-        <%= f.input :distance, label: false, placeholder: "km", input_html: { class: "text-center" } %>
+        <%= f.input :distance, label: false, placeholder: "km", input_html: { class: "text-center" }, collection: User::DISTANCE do %>
+        <%= f.select :distance, User::DISTANCE_KM, include_blank: 'Select a distance' %>
+        <% end %>
+
 
         <p class="text-center preference-titles">My interests</p>
         <%= render 'layouts/tags', f: f %>

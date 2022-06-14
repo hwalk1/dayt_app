@@ -21,6 +21,13 @@ class TripDaytsController < ApplicationController
     end
   end
 
+  # def save_extended_card
+  #   @trip = Trip.find(params[:trip_id])
+  #   @trip_dayt = TripDayt.new(trip_dayt_params)
+  #   @trip_dayt.trip = @trip
+  #   @trip_dayt.save
+  # end
+
   def destroy
   end
 
