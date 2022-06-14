@@ -37,10 +37,11 @@
     <% trip.dayts.each_with_index do |dayt, index| %>
       <%= f.text_field "dayt_ids[]", id: nil, placeholder: "Email Address", data: { sortable_target: "input"}, value: index, class: "opacity-0 pe-none" %>
     <% end %>
-    <%= f.submit class: "btn next-btn btn-width", id: "dayt-order-form-btn" %>
-  <% end %>
 </div>
-    <%# <footer> %>
-    <%# <button class='btn map-btn btn-width' data-action='click->show-hide#toggle'>Map</button> %>
-    <%# link_to "Confirm", trip_path(@trip), class: "btn next-btn btn-width" %>
-  <%# </footer> %>
+  <footer style="position: fixed;
+    bottom: 950px;">
+      <button class='btn map-btn btn-width' data-action='click->show-hide#toggle'>Map</button>
+      <%# link_to "Confirm", trip_path(@trip), class: "btn next-btn btn-width" %>
+    <%= f.submit class: "btn next-btn btn-width", id: "dayt-order-form-btn" %>
+    <% end %>
+  </footer>
