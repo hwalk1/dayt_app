@@ -1,9 +1,10 @@
 <div class='container review-form'>
-  <h1><%= @trip.title %></h1>
-  <h1>Did you have a good day?</h1>
+  <div class='title-head'>
+    <h1>Did you have a good day?</h1>
+  </div>
     <%= simple_form_for @trip, url:trip_mass_reviews_path(@trip), method: :post do |f|%>
 
-  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false" data-bs-touch="false">
             <div class="carousel-inner">
             <% @index = 0 %>
               <%= f.simple_fields_for :reviews do |fr|%>
@@ -13,10 +14,18 @@
                     <div class="card-blue">
                       <div class="text_cards">
                           <%= cl_image_tag fr.object.dayt.photos.first.key %>
-                          <%= fr.object.dayt.title %>
-                          <%= fr.input :title %>
-                          <%= fr.input :content %>
-                          <%= fr.input :rating %>
+                          <h1><%= fr.object.dayt.title %></h2>
+                            <div class="rating">
+                              <%= fr.collection_radio_buttons :rating, [[5], [4], [3], [2], [1]], :first, :last, item_wrapper_tag: false do |b| %>
+                                <%= b.radio_button + b.label {'☆'}%>
+                              <% end %>
+                            </div>
+                          <h2>Was it busy?</h2>
+                          <%= fr.input :busy, as: :range, collection: 1..10, input_html: {class:"form-range busy-slide"}, label: false%>
+                          <h2>Would you recommend this?</h2>
+                          <div class=radiobtn>
+                            <%= fr.collection_radio_buttons :recommended, [[true,'Yes'], [false, 'No']], :first, :last %>
+                          </div>
                           <%= fr.hidden_field :trip_dayt_id, value: fr.object.trip_dayt.id %>
                       </div>
                     </div>
@@ -36,6 +45,12 @@
 
 
 
-      <%= f.submit "Submit your Review", class: "btn next-btn" %>
+
+
+
+
+ <footer>
+    <%= f.submit "Submit your Review", class: "btn next-btn" %>
     <% end %>
+  </footer>
 </div>

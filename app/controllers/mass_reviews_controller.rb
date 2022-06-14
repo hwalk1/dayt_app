@@ -20,6 +20,6 @@ class MassReviewsController < ApplicationController
   private
 
   def reviews_params
-    params.require(:trip).permit(reviews_attributes:[:title, :content, :rating, :trip_dayt_id])
+    params.require(:trip).permit(reviews_attributes:[:recommended, :rating, :busy, :trip_dayt_id])
   end
 end
