@@ -20,8 +20,10 @@
 }
 
 .dayt-info {
-  border-radius: 5% 15% 5% 5% / 12% 30% 12% 15% ;
   position: relative;
+  border-radius: 15px ;
+  background-color: $blue;
+  box-shadow: 8px 5px 5px #478f85;
 
   p, h2 {
     margin: 0;
