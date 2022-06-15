@@ -14,8 +14,8 @@
 
   <div class="col-10">
     <ul data-sortable-target="list" class="h-100" id="hello-list">
-      <% trip.trip_dayts.each_with_index do |trip_dayt, index| %>
-        <li data-sortable-target="card" data-index-value=<%= index %> class="organise card-height-<%= ((trip_dayt.dayt.duration / 10) * 100).to_i %>">
+      <% @trip_dayts.order(:order).each do |trip_dayt| %>
+        <li data-sortable-target="card" data-index-value=<%= trip_dayt.id %> class="organise card-height-<%= ((trip_dayt.dayt.duration / 10) * 100).to_i %>">
           <div style="height: 100%">
             <div class="dayt-info card justify-content-around text-center m-1 p-1 lock-card">
               <h2><%= trip_dayt.dayt.title %></h2>

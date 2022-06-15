@@ -1,8 +1,9 @@
 <div class= "preferences" data-controller="index">
   <div class='container'>
-    <h1 class="text-center mb-4 pt-4">My Preferences</h1>
+    <h1 class="text-center pt-4">My Preferences</h1>
     <div class='pre-form' data-controller='flatpickr'>
       <%= simple_form_for @trip do |f| %>
+        <h2 class="text-center preference-titles">Trip Name?</h2>
         <%= f.input :title, label: false, placeholder: "Name of my trip", input_html: { class: "text-center trip-name" } %>
 
         <h2 class="text-center preference-titles">Where?</h2>
