@@ -37,13 +37,22 @@
 
   <div class='pt-3 title-expanded' >
     <%= cl_image_tag dayt.user.avatar.key, class: 'avatar-dayt' %>
+
     <%# Display TAGS ===> %>
     <p>
       <% dayt.tag_list.each do |tag| %>
         <%= link_to tag, tagged_path(tag: tag), class: "badge #{tag_class(tag)}" %>
       <% end %>
     </p>
+
     <h1 class='exp-title'><%= dayt.title %></h1>
+    <% if @dayt.reviews.count.zero? %>
+      <p>No Rating</p>
+    <% else %>
+      <% @dayt.reviews.average(:rating).round.times do %>
+        <i class="fas fa-star"></i>
+      <% end %>
+    <% end %>
   </div>
   <div class="content-expanded mx-3">
     <div class='d-flex my-3 align-items-center'>
