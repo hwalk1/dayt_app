@@ -1,39 +1,41 @@
-<% trip_dayt =  TripDayt.new %>
-<%= simple_form_for [trip, trip_dayt],
-  html: {
-  class: 'decline',
-  data: { action: "submit->trip-dayt#create" }
-  } do |f| %>
-    <%= f.hidden_field :dayt_id, value: dayt.id  %>
-    <%= f.hidden_field :status, value: 'declined' %>
-    <button data-trip-dayt-target='declineButton'><i class="fas fa-regular fa-xmark" data-trip-dayt-target='declineIcon'></i></button>
+<div class="swiper-slide" data-controller="trip-dayt" data-action='click->swiper#index'>
+  <% trip_dayt =  TripDayt.new %>
+  <%= simple_form_for [trip, trip_dayt],
+    html: {
+    class: 'decline',
+    data: { action: "submit->trip-dayt#create" }
+    } do |f| %>
+      <%= f.hidden_field :dayt_id, value: dayt.id  %>
+      <%= f.hidden_field :status, value: 'declined' %>
+      <button data-trip-dayt-target='declineButton'><i class="fas fa-regular fa-xmark" data-trip-dayt-target='declineIcon'></i></button>
+    <% end %>
+
+    <%= simple_form_for [trip, trip_dayt],
+    html: {
+    class: 'accept',
+    data: { action: "submit->trip-dayt#create" }
+    } do |f| %>
+      <%= f.hidden_field :dayt_id, value: dayt.id %>
+      <%= f.hidden_field :status, value: 'accepted' %>
+      <button data-trip-dayt-target='acceptButton'><i class="fa-regular fa-heart" data-trip-dayt-target='acceptIcon'></i></button>
   <% end %>
 
-  <%= simple_form_for [trip, trip_dayt],
-  html: {
-  class: 'accept',
-  data: { action: "submit->trip-dayt#create" }
-  } do |f| %>
-    <%= f.hidden_field :dayt_id, value: dayt.id %>
-    <%= f.hidden_field :status, value: 'accepted' %>
-    <button data-trip-dayt-target='acceptButton'><i class="fa-regular fa-heart" data-trip-dayt-target='acceptIcon'></i></button>
-<% end %>
-
-<%= link_to dayt_path(dayt) do %>
+<%= link_to dayt_path(dayt, trip: trip), data_action: 'click->swiper#index' do %>
   <%= cl_image_tag dayt.photos.first.key %>
   <div class="card-blue">
 
-    <h2><%= dayt.title %></h2>
-    <div class="text_cards">
-      <p><i class="fa-solid fa-location-dot">&#8194;</i><%= dayt.location %></p>
-      <div class="d-flex">
-        <div class="w-50">
-          <i class="fa-solid fa-clock">&#8194;</i><span data-trip-dayt-target='duration'><%= dayt.duration.to_i %></span>&#8194;hours
-        </div>
-        <div class="w-50">
-          <i class="fa-solid fa-dollar-sign">&#8194;</i><%= dayt.price > 0 ? "#{dayt.price.to_i} per person" : 'Free' %>&#8194;
+      <h2><%= dayt.title %></h2>
+      <div class="text_cards">
+        <p><i class="fa-solid fa-location-dot">&#8194;</i><%= dayt.location %></p>
+        <div class="d-flex">
+          <div class="w-50">
+            <i class="fa-solid fa-clock">&#8194;</i><span data-trip-dayt-target='duration'><%= dayt.duration.to_i %></span>&#8194;hours
+          </div>
+          <div class="w-50">
+            <i class="fa-solid fa-dollar-sign">&#8194;</i><%= dayt.price > 0 ? "#{dayt.price.to_i} per person" : 'Free' %>&#8194;
+          </div>
         </div>
       </div>
+      <% end %>
     </div>
-    <% end %>
-  </div>
+</div>

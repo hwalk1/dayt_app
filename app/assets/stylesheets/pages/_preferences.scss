@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 100vh;
     // .btn {
     //   border-color: aquamarine;
     //   background-color: white;
@@ -16,7 +15,7 @@
   }
 }
 ::placeholder {
-  color: rgb(177, 177, 177);
+  color: $gray-subtitles;
   font-family: $body-font;
   font-size: 0.8rem;
 }
@@ -46,4 +45,22 @@
 
 .trip-name {
   border: 2px solid $green;
+}
+
+#trip_distance {
+  border-radius: 10px;
+  border: 2px solid $dark-blue;
+  background-color: white;
+  padding: 6px 12px;
+  width: 390px;
+  height: 40px;
+  text-align: center;
+  color: $gray-subtitles;
+  font-family: $body-font;
+  font-size: 0.8rem;
+
+  #trip_distance:dropdown {
+    width: 390px;
+    text-align: center;
+  }
 }
