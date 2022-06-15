@@ -122,3 +122,13 @@
   top: -90vh!important;
   transition: all 0.7s!important;
 }
+
+.time-left {
+  position: absolute;
+  right: 6px;
+  top: 0px;
+}
+
+.progress {
+  position: relative;
+}
