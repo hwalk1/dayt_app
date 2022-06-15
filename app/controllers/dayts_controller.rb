@@ -58,7 +58,7 @@ class DaytsController < ApplicationController
     #Iterate through each trip_dayt to find matching dayts
     # Select all reviews that have params[:id] == review.trip_dayt.dayt
 
-    
+
   end
 
   def new

@@ -40,22 +40,24 @@ export default class extends Controller {
     .then(response => response.text())
     .then((data) => {
       if (data) {
+        console.log(data.classList)
         this.parent.insertAdjacentHTML('beforeend', data)
       }
     })
   }
 
   progressBar () {
-    console.log(this.durationTarget.innerText)
     const addedTime = parseInt(this.durationTarget.innerText)
-    const timeLeftContainer = document.querySelector('.time-left')
-
     const timeAdded = document.querySelector('#time-added')
     const timeLeft = document.querySelector('#time-left')
-    console.log(timeAdded, timeLeft) + addedTime
 
-    timeAdded.innerText = parseInt(timeAdded.innerText) + addedTime
-    timeLeft.innerText = parseInt(timeLeft.innerText) - addedTime
+    if (timeLeft) {
+      this.timeLeftContainer = document.querySelector('.time-left')
+
+
+      timeAdded.innerText = parseInt(timeAdded.innerText) + addedTime
+      timeLeft.innerText = parseInt(timeLeft.innerText) - addedTime
+    }
 
     const progressBar = document.querySelector('.progress-bar')
     const currentProgress = parseInt(progressBar.style.width.slice(0, -1))
@@ -63,7 +65,7 @@ export default class extends Controller {
 
     const totalProgress = currentProgress + newProgress
 
-    if (totalProgress >= 100) timeLeftContainer.remove()
+    if (totalProgress >= 99 && timeLeft) this.timeLeftContainer.remove()
 
     progressBar.style.width = `${totalProgress}%`
 

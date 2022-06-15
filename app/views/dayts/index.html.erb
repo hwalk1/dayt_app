@@ -3,6 +3,10 @@
     <div class="slider" data-show-hide-target="slider">
 
       <div class="slidee">
+        <div class="text-background">
+          <h3>Out of dayts...</h3>
+          <h3>Press next to organise</h3>
+        </div>
         <div class="swiper" data-controller='swiper'>
           <div class="swiper-wrapper">
             <% @dayts.first(6).each do |dayt|  %>
@@ -35,7 +39,7 @@
    style="width: <%= @trip_duration * 12.5 %>%">
     <div><span id='time-added'><%= @trip_duration.to_i %></span>h</div>
   </div>
-  
+
   <% if @trip_duration.to_i < 8 %>
   <div class="w-100 d-flex justify-content-end pe-1 time-left"><span id='time-left'><%= 8 - @trip_duration.to_i %></span>h left</div>
   <% end %>
