@@ -20,22 +20,29 @@
       <button data-trip-dayt-target='acceptButton'><i class="fa-regular fa-heart" data-trip-dayt-target='acceptIcon'></i></button>
   <% end %>
 
+
 <%= link_to dayt_path(dayt, trip: trip), data_action: 'click->swiper#index' do %>
+  <span class="img_cards">
   <%= cl_image_tag dayt.photos.first.key %>
-  <div class="card-blue">
+  </span>
+  
+  <div class="card-blue d-flex flex-column justify-content-between text-center">
 
       <h2><%= dayt.title %></h2>
       <div class="text_cards">
         <% distance = Geocoder::Calculations.distance_between([dayt.latitude, dayt.longitude], [trip.latitude, trip.longitude]) %>
-        <p><i class="fa-solid fa-location-dot">&#8194;</i><%= distance >= 1 ? "#{distance.round(1)}km" : "#{(distance.round(1) * 1000).to_i}m" %> from <%= trip.location.match(/^\w*/) %></p>
+        <p class="card_text_content"><i class="fa-solid fa-location-dot icon_card">&#8194;</i><%= distance >= 1 ? "#{distance.round(1)}km" : "#{(distance.round(1) * 1000).to_i}m" %> from <%= trip.location.match(/^\w*/) %></p>
         <div class="d-flex">
           <div class="w-50">
-            <i class="fa-solid fa-clock">&#8194;</i><span data-trip-dayt-target='duration'><%= dayt.duration.to_i %></span>&#8194;hours
+            <i class="fa-solid fa-stopwatch icon_card">&#8194;</i><span data-trip-dayt-target='duration'><%= dayt.duration.to_i %></span>&#8194;hours
           </div>
-          <div class="w-50">
-            <i class="fa-solid fa-dollar-sign">&#8194;</i><%= dayt.price > 0 ? "#{dayt.price.to_i} per person" : 'Free' %>&#8194;
+          <div>
+            <i class="fa-solid fa-dollar-sign icon_card">&#8194;</i>
+            <p class="card_text_content">
+            <%= dayt.price > 0 ? "#{dayt.price.to_i} per person" : 'Free' %>&#8194;
+            </p>
           </div>
-        </div>
+
       </div>
       <% end %>
     </div>
