@@ -137,6 +137,59 @@ fishbowl.photos.attach(io: file, filename: 'fishbowl.png', content_type: 'image/
 fishbowl.user = aren
 fishbowl.save
 
+Pidapipo = Dayt.new(
+  title: 'Pidapipo',
+  content: 'Bustling shop selling traditional gelato in classic & creative seasonal flavours.',
+  location: '8 Degraves St, Melbourne VIC 3000',
+  duration: 1,
+  price: 7,
+  opening_time: 12,
+  closing_time: 10,
+  booking_url: 'https://pidapipo.com/',
+  tag_list: ['Indoor', 'Lunch', 'Dinner']
+)
+
+file = URI.open('https://whatson.melbourne.vic.gov.au/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWt6TURGallqQmtOQzAyWkRJd0xUUmhZbUl0T1RCa015MHlOV1poWlRReVpEVmhNREFHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--68874eb615dd0f9232590035f5db1489fda2b514/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VY21WemFYcGxYM1J2WDJ4cGJXbDBXd2RwQXE0Q2FRTE1BUT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--6b649797a60ed07e66abb743103d0e385829f44a/pidapipo%20carlton%201.jpg')
+pidapipo.photos.attach(io: file, filename: 'pidapipo.png', content_type: 'image/png')
+pidapipo.user = aren
+pidapipo.save
+
+
+Cinema_nova = Dayt.new(
+  title: 'Cinema Nova',
+  content: 'Cinema Nova was among the first cinemas in the country to start screening stage productions and art from around the world, and we now draw thousands to see New York’s Met Opera, London’s National Theatre and go behind-the-scenes with the world’s best art galleries and museums.',
+  location: '380 Lygon Street, Melbourne Victoria 3053',
+  duration: 2,
+  price: 20,
+  opening_time: 10,
+  closing_time: 10,
+  booking_url: 'https://www.cinemanova.com.au/',
+  tag_list: ['Indoor', 'Art']
+)
+
+file = URI.open('https://whatson.melbourne.vic.gov.au/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWsxWkRFMk9EZ3paaTAxTW1aakxUUXlaVEF0WWpBNFpDMHpPRGMxWmpBd09UQXdOMlVHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--8308fb824c7173cb6197193e0e902d59c5315ff9/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VY21WemFYcGxYM1J2WDJ4cGJXbDBXd2RwQXE0Q2FRTE1BUT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--6b649797a60ed07e66abb743103d0e385829f44a/google_place_photo.jpg')
+Cinema_nova.photos.attach(io: file, filename: 'Cinema_nova.png', content_type: 'image/png')
+Cinema_nova.user = michael
+Cinema_nova.save
+
+Bartronica = Dayt.new(
+  title: 'Bartronica',
+  content: 'Australia`s coolest Arcade Bar! Featuring great beer, tasty cocktails and rare video games.',
+  location: '335 Flinders Ln, Melbourne VIC 3000',
+  duration: 2,
+  price: 30,
+  opening_time: 3,
+  closing_time: 11,
+  booking_url: 'https://bartronica.com.au/',
+  tag_list: ['Nightlife', 'Music', 'Indoor', 'Drinks']
+)
+
+file = URI.open('https://i0.wp.com/socialeventsmelbourne.com.au/wp-content/uploads/2021/11/retro-arcade-bar-bartronica-in-melbourne-1.jpg')
+Bartronica.photos.attach(io: file, filename: 'Bartronica.png', content_type: 'image/png')
+Bartronica.user = michael
+Bartronica.save
+
+
 bdl = Dayt.new(
   title: 'Beneath Driver Lane',
   content: 'Beneath Driver Lane wants to take you away from the world above and into another place and time. You could be anywhere; a basement in Paris, New Orleans, New York or San Fran – the blues is always deep and you’re greeted with a smile, true hospitality!',
