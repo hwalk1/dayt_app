@@ -110,7 +110,7 @@ ngv = Dayt.new(
   duration: 2,
   price: 0,
   opening_time: 10,
-  closing_time: 5,
+  closing_time: 17,
   booking_url: 'https://connect.ngv.vic.gov.au/events',
   tag_list: ['Art', 'Indoor']
 )
@@ -127,7 +127,7 @@ fishbowl = Dayt.new(
   duration: 1,
   price: 17,
   opening_time: 11,
-  closing_time: 9,
+  closing_time: 21,
   booking_url: 'https://food.google.com/chooseprovider?restaurantId=/g/11qmy7pkn6&g2lbs&sei',
   tag_list: ['Indoor', 'Lunch', 'Dinner']
 )
@@ -144,7 +144,7 @@ pidapipo = Dayt.new(
   duration: 1,
   price: 7,
   opening_time: 12,
-  closing_time: 10,
+  closing_time: 22,
   booking_url: 'https://pidapipo.com/',
   tag_list: ['Indoor', 'Lunch', 'Dinner']
 )
@@ -162,7 +162,7 @@ Cinema_nova = Dayt.new(
   duration: 2,
   price: 20,
   opening_time: 10,
-  closing_time: 10,
+  closing_time: 22,
   booking_url: 'https://www.cinemanova.com.au/',
   tag_list: ['Indoor', 'Art']
 )
@@ -179,7 +179,7 @@ Bartronica = Dayt.new(
   duration: 2,
   price: 30,
   opening_time: 3,
-  closing_time: 11,
+  closing_time: 23,
   booking_url: 'https://bartronica.com.au/',
   tag_list: ['Nightlife', 'Music', 'Indoor', 'Drinks']
 )
@@ -196,7 +196,7 @@ bdl = Dayt.new(
   location: '3, Driver Ln, Melbourne VIC 3000',
   duration: 1,
   price: 20,
-  opening_time: 6,
+  opening_time: 18,
   closing_time: 1,
   tag_list: ['Nightlife', 'Music', 'Indoor', 'Drinks']
 )
