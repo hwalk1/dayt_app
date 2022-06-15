@@ -137,7 +137,7 @@ fishbowl.photos.attach(io: file, filename: 'fishbowl.png', content_type: 'image/
 fishbowl.user = aren
 fishbowl.save
 
-Pidapipo = Dayt.new(
+pidapipo = Dayt.new(
   title: 'Pidapipo',
   content: 'Bustling shop selling traditional gelato in classic & creative seasonal flavours.',
   location: '8 Degraves St, Melbourne VIC 3000',
@@ -184,7 +184,7 @@ Bartronica = Dayt.new(
   tag_list: ['Nightlife', 'Music', 'Indoor', 'Drinks']
 )
 
-file = URI.open('https://i0.wp.com/socialeventsmelbourne.com.au/wp-content/uploads/2021/11/retro-arcade-bar-bartronica-in-melbourne-1.jpg')
+file = URI.open('https://media-cdn.tripadvisor.com/media/photo-s/0d/78/cc/eb/massive-pinball-machine.jpg')
 Bartronica.photos.attach(io: file, filename: 'Bartronica.png', content_type: 'image/png')
 Bartronica.user = michael
 Bartronica.save
