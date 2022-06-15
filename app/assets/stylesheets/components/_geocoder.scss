@@ -15,6 +15,7 @@
 
 .mapboxgl-ctrl-geocoder {
   position: relative;
+  z-index: 2;
 }
 
 .mapboxgl-ctrl-geocoder--powered-by {
