@@ -1,5 +1,10 @@
-<div class="container my-2 px-4 padding-bottom">
+<div class="container px-4 padding-bottom">
   <h1 class="text-center pt-3 m-0">Upcoming Trips</h1>
+  <% if @next_trips.empty? && @past_trips.empty? %>
+    <h3 class='text-notice'>
+      Looks like theres nothing here, select create a Trip to get started!
+    </h3>
+  <% end %>
   <div>
     <% @next_trips.each do |trip| %>
       <%= render 'trip', trip: trip %>

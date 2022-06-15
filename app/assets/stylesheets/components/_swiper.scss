@@ -132,3 +132,18 @@
 .progress {
   position: relative;
 }
+
+.move {
+  transition: all 0.5s!important;
+}
+
+
+.text-background {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  color: $gray-subtitles;
+  text-align: center;
+  top: 35%;
+  left: 26%;
+}

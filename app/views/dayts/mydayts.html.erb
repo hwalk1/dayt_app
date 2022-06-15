@@ -1,5 +1,11 @@
-<div class="container my-2 px-4 padding-bottom">
+<div class="container px-4 padding-bottom">
   <h1 class="text-center pt-3 m-0">My Dayts</h1>
+  <% if @dayts.empty? %>
+    <h3 class='text-notice'>
+      Looks like theres nothing here, select create a dayt to get started!
+    </h3>
+  <% end %>
+
   <% @dayts.each do |dayt| %>
     <%= link_to dayt_path(dayt), class: 'trip-link' do %>
     <div class="card-trip shadow" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= dayt.photos.first ? dayt.photos.first.url : 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1635&q=80' %>)">

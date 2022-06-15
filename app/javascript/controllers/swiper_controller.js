@@ -23,5 +23,8 @@ export default class extends Controller {
   index() {
     localStorage.setItem("index", this.swiper.activeIndex);
   }
-  
+
+  move() {
+    // this.swiper.slides[this.swiper.activeIndex + 1].classList.add('move');
+  }
 }
