@@ -33,6 +33,7 @@
       <h2><%= dayt.title %></h2>
 
 <%# RATINGS stars or ' No rating ' ========= > %>
+ <div class="d-inline p2 rating_star_style">
     <% if dayt.reviews.count.zero? %>
           <p>No Rating yet ...</p>
         <% else %>
@@ -40,12 +41,7 @@
             <i class="fas fa-star"></i>
           <% end %>
         <% end %>
-
-<%# DISTANCE location ========= > %>
-          <i class="fa-solid fa-location-dot icon_card">&#8194;</i>
-          <% distance = Geocoder::Calculations.distance_between([dayt.latitude, dayt.longitude], [trip.latitude, trip.longitude]) %>
-          <p class="card_text_content"><%= distance >= 1 ? "#{distance.round(1)}km" : "#{(distance.round(1) * 1000).to_i}m" %> from <%= trip.location.match(/^\w*/) %></p>
-
+ </div>
 
 <%# TIME + PRICE ========= > %>
         <div class="d-flex justify-content-around">
@@ -61,6 +57,13 @@
             <p class="card_text_content"><%= dayt.price > 0 ? "#{dayt.price.to_i} pp" : 'Free' %>&#8194;</p>
           </div>
         </div>
+
+
+<%# DISTANCE location ========= > %>
+          <i class="fa-solid fa-location-dot icon_card">&#8194;</i>
+          <% distance = Geocoder::Calculations.distance_between([dayt.latitude, dayt.longitude], [trip.latitude, trip.longitude]) %>
+          <p class="card_text_content"><%= distance >= 1 ? "#{distance.round(1)}km" : "#{(distance.round(1) * 1000).to_i}m" %> from <%= trip.location.match(/^\w*/) %></p>
+
     </div>
 
       <% end %>

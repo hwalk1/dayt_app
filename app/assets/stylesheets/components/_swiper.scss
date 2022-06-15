@@ -99,7 +99,6 @@
       color: $gray-titles;
       margin-bottom: 10px;
       text-align: center;
-      height: 62px;
       text-decoration: underline;
     }
 
@@ -178,4 +177,9 @@
 
 .rating_style {
   font-size: 0.8rem;
+}
+
+.rating_star_style{
+  margin-bottom: 10px;
+  margin-top: -5px;
 }
