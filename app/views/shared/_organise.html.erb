@@ -1,4 +1,4 @@
-<div class="row justify-content-end" id="calendar-container" data-controller="sortable">
+<div class="row justify-content-end" id="calendar-container">
 
   <div class="calendar col-2 d-flex flex-column justify-content-around">
     <p>9 am</p>
@@ -33,15 +33,4 @@
       <% end %>
     </ul>
   </div>
-  <%= form_with url: update_all_trip_dayts_path(trip), method: :patch do |f| %>
-    <% trip.dayts.each_with_index do |dayt, index| %>
-      <%= f.text_field "dayt_ids[]", id: nil, placeholder: "Email Address", data: { sortable_target: "input"}, value: index, class: "opacity-0 pe-none" %>
-    <% end %>
 </div>
-  <footer style="position: fixed;
-    bottom: 950px;">
-      <button class='btn map-btn btn-width' data-action='click->show-hide#toggle'>Map</button>
-      <%# link_to "Confirm", trip_path(@trip), class: "btn next-btn btn-width" %>
-    <%= f.submit class: "btn next-btn btn-width", id: "dayt-order-form-btn" %>
-    <% end %>
-  </footer>
