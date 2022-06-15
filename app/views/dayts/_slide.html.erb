@@ -32,23 +32,36 @@
 
       <h2><%= dayt.title %></h2>
 
+<%# RATINGS stars or ' No rating ' ========= > %>
+    <% if dayt.reviews.count.zero? %>
+          <p>No Rating yet ...</p>
+        <% else %>
+          <% dayt.reviews.average(:rating).round.times do %>
+            <i class="fas fa-star"></i>
+          <% end %>
+        <% end %>
 
+<%# DISTANCE location ========= > %>
+          <i class="fa-solid fa-location-dot icon_card">&#8194;</i>
           <% distance = Geocoder::Calculations.distance_between([dayt.latitude, dayt.longitude], [trip.latitude, trip.longitude]) %>
-          <p class="card_text_content"><i class="fa-solid fa-location-dot icon_card">&#8194;</i><%= distance >= 1 ? "#{distance.round(1)}km" : "#{(distance.round(1) * 1000).to_i}m" %> from <%= trip.location.match(/^\w*/) %></p>
+          <p class="card_text_content"><%= distance >= 1 ? "#{distance.round(1)}km" : "#{(distance.round(1) * 1000).to_i}m" %> from <%= trip.location.match(/^\w*/) %></p>
 
 
-         <div class="d-flex justify-content-around">
-            <p class="card_text_content">
-            <i class="fa-solid fa-stopwatch icon_card">&#8194;</i><span data-trip-dayt-target='duration'><%= dayt.duration.to_i %></span>&#8194;hours
+<%# TIME + PRICE ========= > %>
+        <div class="d-flex justify-content-around">
+
+          <div>
+            <i class="fa-solid fa-stopwatch icon_card">&#8194;</i>
+            <p class="card_text_content"><span data-trip-dayt-target='duration'><%= dayt.duration.to_i %></span>&#8194;h</p>
+          </div>
 
 
-
+          <div>
             <i class="fa-solid fa-dollar-sign icon_card">&#8194;</i>
-            <p class="card_text_content">
-            <%= dayt.price > 0 ? "#{dayt.price.to_i} per person" : 'Free' %>&#8194;
-            </p>
-            </div>
-         </div>
+            <p class="card_text_content"><%= dayt.price > 0 ? "#{dayt.price.to_i} pp" : 'Free' %>&#8194;</p>
+          </div>
+        </div>
+    </div>
 
       <% end %>
 
