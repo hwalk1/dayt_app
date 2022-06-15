@@ -47,7 +47,7 @@
 
     <h1 class='exp-title'><%= dayt.title %></h1>
     <% if @dayt.reviews.count.zero? %>
-      <p>No Rating</p>
+      <p class="me-3 ms-1">No Rating</p>
     <% else %>
       <% @dayt.reviews.average(:rating).round.times do %>
         <i class="fas fa-star"></i>
@@ -57,7 +57,7 @@
   <div class="content-expanded mx-3">
     <div class='d-flex my-3 align-items-center'>
       <div>
-        <i class="me-3 fa-solid fa-location-dot"></i>
+        <i class="me-3 ms-1 fa-solid fa-location-dot"></i>
       </div>
       <% if @trip %>
         <%= @distance >= 1 ? "#{@distance.round(1)}km" : "#{(@distance.round(1) * 1000).to_i}m" %> from <%= @trip.location.match(/^\w*/) %>
@@ -68,14 +68,14 @@
     <div class='d-flex my-3'>
       <div class='d-flex align-items-center w-50'>
           <div >
-          <i class="me-3 fa-solid fa-clock"></i>
+          <i class="me-3 ms-1 fa-solid fa-stopwatch"></i>
           </div>
         <%= dayt.duration.to_i %> h
       </div>
       <% if opening_time && closing_time %>
       <div class='d-flex align-items-center w-50'>
         <div>
-        <i class="me-3 fa-solid fa-calendar"></i>
+        <i class="me-3 ms-1 fa-solid fa-calendar"></i>
         </div>
         <%= opening_time%> - <%= closing_time %>
       </div>
@@ -89,7 +89,7 @@
           </div>
         <%= dayt.price.to_i > 0 ? dayt.price.to_i : 'Free' %>
       </div>
-      <%= link_to 'Their website', dayt.booking_url, class: 'w-50 link-booking' if dayt.booking_url %>
+      <%= link_to 'Their website', dayt.booking_url, target: "_blank", class: 'w-50 link-booking' if dayt.booking_url %>
     </div>
 
     <div class="py-4 text-expanded">

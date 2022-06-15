@@ -92,8 +92,6 @@
     height: 250px;
     border-radius: 10px;
 
-
-
     h2 {
       font-family: $headers-font;
       font-size: 1.6rem;
@@ -102,13 +100,18 @@
       margin-bottom: 10px;
       text-align: center;
       height: 62px;
+      text-decoration: underline;
     }
 
     .card_text_content {
         color: $dark-blue;
         font-size: 1rem;
-        margin-bottom: 30px;
-        font-family: $body-font;
+        font-family:  $font-kodchasan-semi-bold;
+    }
+
+    p {
+      font-size: 0.8rem;
+      color: rgb(175, 175, 175);
     }
   }
 
@@ -171,4 +174,8 @@
   text-align: center;
   top: 35%;
   left: 26%;
+}
+
+.rating_style {
+  font-size: 0.8rem;
 }
