@@ -5,7 +5,7 @@ class Trip < ApplicationRecord
   has_many :trip_dayts, dependent: :destroy
 
   has_many :dayts, through: :trip_dayts
-  has_many :reviews, through: :trip_dayts
+  has_many :reviews, -> { distinct }, through: :trip_dayts
 
   validates :title, presence: true
   validates :location, presence: true

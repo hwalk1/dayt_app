@@ -40,22 +40,36 @@ export default class extends Controller {
     .then(response => response.text())
     .then((data) => {
       if (data) {
+        console.log(data.classList)
         this.parent.insertAdjacentHTML('beforeend', data)
       }
     })
   }
 
   progressBar () {
-    console.log(this.durationTarget.innerText)
+    const addedTime = parseInt(this.durationTarget.innerText)
+    const timeAdded = document.querySelector('#time-added')
+    const timeLeft = document.querySelector('#time-left')
+
+    if (timeLeft) {
+      this.timeLeftContainer = document.querySelector('.time-left')
+
+
+      timeAdded.innerText = parseInt(timeAdded.innerText) + addedTime
+      timeLeft.innerText = parseInt(timeLeft.innerText) - addedTime
+    }
 
     const progressBar = document.querySelector('.progress-bar')
     const currentProgress = parseInt(progressBar.style.width.slice(0, -1))
-    const newProgress = parseInt(this.durationTarget.innerText) * 12.5
+    const newProgress = addedTime * 12.5
+
     const totalProgress = currentProgress + newProgress
+
+    if (totalProgress >= 99 && timeLeft) this.timeLeftContainer.remove()
 
     progressBar.style.width = `${totalProgress}%`
 
     totalProgress >= 70 && progressBar.classList.add('bg-warning')
-    totalProgress >= 100 && progressBar.classList.add('bg-danger', 'shake')
+    totalProgress >= 100 && progressBar.classList.add('bg-danger')
   }
 }

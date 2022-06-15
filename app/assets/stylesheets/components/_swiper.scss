@@ -139,7 +139,32 @@
   transition: all 0.7s!important;
 }
 
+
 .icon_card {
   color: $dark-blue;
   font-size: 19px;
+
+.time-left {
+  position: absolute;
+  right: 6px;
+  top: 0px;
+}
+
+.progress {
+  position: relative;
+}
+
+.move {
+  transition: all 0.5s!important;
+}
+
+
+.text-background {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  color: $gray-subtitles;
+  text-align: center;
+  top: 35%;
+  left: 26%;
 }

@@ -54,6 +54,11 @@ class DaytsController < ApplicationController
         @closing_time = "#{@dayt.closing_time}am"
       end
     end
+
+    #Iterate through each trip_dayt to find matching dayts
+    # Select all reviews that have params[:id] == review.trip_dayt.dayt
+
+
   end
 
   def new
@@ -83,6 +88,8 @@ class DaytsController < ApplicationController
   def edit
     @dayt = Dayt.find(params[:id])
   end
+
+
 
   private
 

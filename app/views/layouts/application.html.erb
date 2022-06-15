@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DaytApp</title>
+    <title><%= meta_title %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,11 +10,26 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-    <%# <link rel="manifest" href="assets/images/site.webmanifest"> %>
+
     <%= favicon_link_tag %>
+
+    <meta name="description" content="<%= meta_description %>">
+
+    <!-- Facebook Open Graph data -->
+    <meta property="og:title" content="<%= meta_title %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= request.original_url %>" />
+    <meta property="og:image" content="<%= meta_image %>" />
+    <meta property="og:description" content="<%= meta_description %>" />
+    <meta property="og:site_name" content="<%= meta_title %>" />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="<%= DEFAULT_META["twitter_account"] %>">
+    <meta name="twitter:title" content="<%= meta_title %>">
+    <meta name="twitter:description" content="<%= meta_description %>">
+    <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
+    <meta name="twitter:image:src" content="<%= meta_image %>">
 
   </head>
 

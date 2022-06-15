@@ -4,8 +4,8 @@ class Dayt < ApplicationRecord
   belongs_to :user
   acts_as_taggable_on :tags
   acts_as_taggable_on :dayts
-  has_many :reviews
   has_many :trip_dayts
+  has_many :reviews, through: :trip_dayts
   has_many :trips, through: :trip_dayts
   has_many_attached :photos
 
