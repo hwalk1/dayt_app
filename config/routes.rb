@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   patch '/trips/:trip_id/update_all', to: 'trip_dayts#update_all', as: "update_all_trip_dayts"
   get '/mydayts', to: 'dayts#mydayts', as: 'mydayts'
   get '/tagged', to: "dayts#tagged", as: :tagged
+  patch '/trip_dayt/:id/remove', to: 'trip_dayts#remove', as: 'remove_trip_dayt'
   # get '/dayts/:trip_id', to: 'trip_dayts#save_extended_card', as: 'save_extended_card'
 
 

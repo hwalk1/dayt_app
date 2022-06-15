@@ -31,6 +31,14 @@ class TripDaytsController < ApplicationController
   def destroy
   end
 
+  def remove
+    @trip_dayt = TripDayt.find(params[:id])
+    @trip_dayt.declined!
+    @trip_dayt.save
+    @trip = @trip_dayt.trip
+    redirect_to itinerary_path(@trip)
+  end
+
   def update_all
     @trip = Trip.find(params[:trip_id])
     params[:dayt_ids].each_with_index do |id, index|
