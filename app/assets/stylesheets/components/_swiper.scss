@@ -89,7 +89,8 @@
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
     background-color: $blue;
-    height: 100%;
+    height: 250px;
+    border-radius: 10px;
 
 
 
@@ -143,6 +144,7 @@
 .icon_card {
   color: $dark-blue;
   font-size: 19px;
+}
 
 .time-left {
   position: absolute;

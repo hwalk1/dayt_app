@@ -1,3 +1,4 @@
+<%# REMOVE CARD button ' X ' ========= > %>
 <div class="swiper-slide" data-controller="trip-dayt" data-action='click->swiper#index'>
   <% trip_dayt =  TripDayt.new %>
   <%= simple_form_for [trip, trip_dayt],
@@ -10,6 +11,7 @@
       <button data-trip-dayt-target='declineButton'><i class="fas fa-regular fa-xmark" data-trip-dayt-target='declineIcon'></i></button>
     <% end %>
 
+<%# ADD CARD button ' heart ' ========= > %>
     <%= simple_form_for [trip, trip_dayt],
     html: {
     class: 'accept',
@@ -20,30 +22,34 @@
       <button data-trip-dayt-target='acceptButton'><i class="fa-regular fa-heart" data-trip-dayt-target='acceptIcon'></i></button>
   <% end %>
 
-
+<%# PHOTOS card swipper ========= > %>
 <%= link_to dayt_path(dayt, trip: trip), data_action: 'click->swiper#index' do %>
-  <span class="img_cards">
   <%= cl_image_tag dayt.photos.first.key %>
-  </span>
-  
+
+
+<%# CARD TEXT infos ========= > %>
   <div class="card-blue d-flex flex-column justify-content-between text-center">
 
       <h2><%= dayt.title %></h2>
-      <div class="text_cards">
-        <% distance = Geocoder::Calculations.distance_between([dayt.latitude, dayt.longitude], [trip.latitude, trip.longitude]) %>
-        <p class="card_text_content"><i class="fa-solid fa-location-dot icon_card">&#8194;</i><%= distance >= 1 ? "#{distance.round(1)}km" : "#{(distance.round(1) * 1000).to_i}m" %> from <%= trip.location.match(/^\w*/) %></p>
-        <div class="d-flex">
-          <div class="w-50">
+
+
+          <% distance = Geocoder::Calculations.distance_between([dayt.latitude, dayt.longitude], [trip.latitude, trip.longitude]) %>
+          <p class="card_text_content"><i class="fa-solid fa-location-dot icon_card">&#8194;</i><%= distance >= 1 ? "#{distance.round(1)}km" : "#{(distance.round(1) * 1000).to_i}m" %> from <%= trip.location.match(/^\w*/) %></p>
+
+
+         <div class="d-flex justify-content-around">
+            <p class="card_text_content">
             <i class="fa-solid fa-stopwatch icon_card">&#8194;</i><span data-trip-dayt-target='duration'><%= dayt.duration.to_i %></span>&#8194;hours
-          </div>
-          <div>
+
+
+
             <i class="fa-solid fa-dollar-sign icon_card">&#8194;</i>
             <p class="card_text_content">
             <%= dayt.price > 0 ? "#{dayt.price.to_i} per person" : 'Free' %>&#8194;
             </p>
-          </div>
+            </div>
+         </div>
 
-      </div>
       <% end %>
-    </div>
+
 </div>
