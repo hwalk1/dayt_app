@@ -24,6 +24,10 @@ class DaytsController < ApplicationController
 
     @dayt = Dayt.find(params[:id])
 
+    if @trip
+      @distance = Geocoder::Calculations.distance_between([@dayt.latitude, @dayt.longitude], [@trip.latitude, @trip.longitude])
+    end
+
     @markers =
       [{
         lat: @dayt.latitude,
