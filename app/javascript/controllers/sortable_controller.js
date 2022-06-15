@@ -16,7 +16,7 @@ export default class extends Controller {
         console.log(this.cardTargets);
         this.cardTargets.forEach((card) => {
           console.log(card.dataset.indexValue);
-          this.inputTargets[parseInt(card.dataset.indexValue)].value = i;
+          this.inputTargets[i].value = parseInt(card.dataset.indexValue);
           i++;
         })
       }
