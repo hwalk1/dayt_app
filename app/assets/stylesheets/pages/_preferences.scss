@@ -58,4 +58,9 @@
   color: $gray-subtitles;
   font-family: $body-font;
   font-size: 0.8rem;
+
+  #trip_distance:dropdown {
+    width: 390px;
+    text-align: center;
+  }
 }
