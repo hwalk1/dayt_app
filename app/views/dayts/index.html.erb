@@ -34,13 +34,12 @@
 
 <div class="progress shadow-lg">
   <div role="progressbar" class="progress-bar
-  <%= 'bg-warning' if @trip_duration * 12.5 >= 70 %>
-  <%= 'bg-danger' if @trip_duration * 12.5 == 100 %>"
+  <%= 'bg-warning' if @trip_duration * 12.5 >= 70 %>"
    style="width: <%= @trip_duration * 12.5 %>%">
     <div><span id='time-added'><%= @trip_duration.to_i %></span>h</div>
   </div>
 
   <% if @trip_duration.to_i < 8 %>
-  <div class="w-100 d-flex justify-content-end pe-1 time-left"><span id='time-left'><%= 8 - @trip_duration.to_i %></span>h left</div>
+  <div class="w-100 d-flex justify-content-end pe-1 time-left"><span id='time-left'><%= 8 - @trip_duration.to_i %></span>h to go</div>
   <% end %>
 </div>
