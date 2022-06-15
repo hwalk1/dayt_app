@@ -41,7 +41,7 @@ class TripDaytsController < ApplicationController
 
   def update_all
     @trip = Trip.find(params[:trip_id])
-    params[:dayt_ids].each_with_index do |id, index|
+    params[:dayt_ids]&.each_with_index do |id, index|
       TripDayt.find(id).update!(order: index)
     end
     # @trip.trip_dayts.where(status: "accepted", id: params[:dayt_ids]).each_with_index do |trip_dayt, index|

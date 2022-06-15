@@ -3,8 +3,7 @@
 .tag-item {
   display: inline-block;
   padding: 0px;
-  margin-right: 0.6rem;
-  margin-bottom: 0.4rem;
+  margin: 0.2rem 0.3rem;
   border-radius: 50rem!important;
 }
 
@@ -40,5 +39,7 @@
 }
 
 .check_boxes {
-  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
