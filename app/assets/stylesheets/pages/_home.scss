@@ -19,17 +19,21 @@ body {
   align-items: center;
   height: 70vh;
   justify-content: space-around;
-  margin-top: 70px;
+  margin-top: 20px;
 
 
 }
 
 .home-p {
-  height: 100%;
+  height: 94.16%;
   display: flex;
-  background-image: linear-gradient(rgba(255, 255, 255, 1),rgba(255, 255, 255, 0)), url('https://wp.technologyreview.com/wp-content/uploads/2019/10/marc-ruaix-j1kcxiciv9w-unsplash-10.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 1) 60%,rgba(255, 255, 255, 0)), url('home.jpeg');
   background-size: cover;
+  background-position: top;
 
+  .p-scroll {
+    height: 21.5px;
+  }
 }
 
 .home-text {
