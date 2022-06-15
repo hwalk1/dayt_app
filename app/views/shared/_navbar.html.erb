@@ -1,7 +1,7 @@
 
 <div class="navbar navbar-expand-sm navbar-light navbar-dayt">
 
-  <div class="d-flex container-fluid justify-content-between">
+
 
       <% if current_page?(root_path) %>
         <button class="previous">
@@ -13,12 +13,13 @@
           <i class="fa fa-angle-left fa-2x"></i>
         </button>
       <%# <% end %>
-
+<% end %>
     <div class="logo">
       <%= link_to root_path do %>
         <%= image_tag "DAYT-thick.png", class:"dayt-logo" %>
       <% end %>
     </div>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fa-solid fa-bars"></i>
     </button>
@@ -47,5 +48,5 @@
         <% end %>
       </ul>
     </div>
-  </div>
+ 
 </div>

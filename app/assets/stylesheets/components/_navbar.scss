@@ -45,7 +45,8 @@
 
 .navbar-nav {
   font-size: 1.2rem;
-  padding-top: 20px;
+
+
 }
 
 .nav-item {
@@ -64,4 +65,16 @@
 .fa-bars {
   color: black;
   font-size: 27px;
+}
+
+.navbar {
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.20);
+  width: 100%;
+  background-color: $blue;
+  z-index: 1;
+
+
 }

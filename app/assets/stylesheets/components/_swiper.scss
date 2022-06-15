@@ -4,9 +4,11 @@
 }
 
 
+
 .swiper {
   height: 600px;
   width: 300px;
+  margin-top: 55px;
 }
 
 .swiper-slide {
@@ -20,7 +22,6 @@
   background-color: rgba(255, 255, 255, 1);
   position: relative;
   box-shadow: 0px 10px 20px #00000025;
-  margin-top: 30px;
   transition: 0.5s;
 
   form {
