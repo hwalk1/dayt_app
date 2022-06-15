@@ -1,5 +1,5 @@
 meta_product_name: "Dayt"
 meta_title: "Dayt - Personalised Itinerary Builder for Travel"
 meta_description: "Personalised Itinerary Builder for Travellers "
-meta_image: "dayt-full.png" # should exist in `app/assets/images/`
+meta_image: "Dayt-Large-logo.png" # should exist in `app/assets/images/`
 twitter_account: "@product_twitter_account"   # required for Twitter Cards
