@@ -18,7 +18,8 @@ class TripsController < ApplicationController
   end
 
   def index
-    @trips = Trip.where(user_id: current_user)
+    @next_trips = Trip.where(user_id: current_user, date: Date.today..).order(date: :desc)
+    @past_trips = Trip.where(user_id: current_user, date: ...Date.today).order(date: :desc)
   end
 
   def show

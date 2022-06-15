@@ -1,11 +1,11 @@
 <div class='container py-3 expanded'>
 
   <% if params[:trip] %>
-    <%= simple_form_for [@trip, @trip_dayt], html: { class: 'accept-expanded-dayt' } do |f| %>
+    <%= simple_form_for [@trip, @trip_dayt], html: { class: 'accept-expanded-dayt', data: {controller: 'heart', action: 'submit->heart#fill'} } do |f| %>
       <%= f.hidden_field :dayt_id, value: dayt.id %>
       <%= f.hidden_field :status, value: 'accepted' %>
       <%= button_tag type: 'submit' do %>
-        <i class="fa-regular fa-heart"></i>
+        <i class="fa-regular fa-heart" data-heart-target='heart'></i>
       <% end %>
     <% end %>
   <% end %>
@@ -70,7 +70,7 @@
           </div>
         <%= dayt.price.to_i > 0 ? dayt.price.to_i : 'Free' %>
       </div>
-      <%= link_to 'Book Now', dayt.booking_url, class: 'btn w-50' if dayt.booking_url %>
+      <%= link_to 'Their website', dayt.booking_url, class: 'w-50 link-booking' if dayt.booking_url %>
     </div>
 
     <div class="py-4 text-expanded">

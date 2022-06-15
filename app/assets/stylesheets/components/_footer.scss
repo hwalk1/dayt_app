@@ -9,6 +9,7 @@ footer {
   bottom: 0;
   left: 0;
   background-color: $blue;
+  z-index: 10;
   .btn {
     font-weight: bold;
     font-family: $headers-font;

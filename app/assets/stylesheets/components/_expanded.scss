@@ -42,9 +42,16 @@
     color: $heart-pink;
     background: none;
     border: none;
+    font-size: 35px;
+    text-shadow: 0px 2px 5px #00000067;
   }
 
-  i {
-    font-size: 2rem;
+  i:active {
+    transition: 0.5s;
+    font-size: 40px;
   }
+}
+
+.link-booking {
+  color: $gray-subtitles;
 }
