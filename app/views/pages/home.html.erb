@@ -1,22 +1,47 @@
+
 <div class="container home-p">
   <div class="home-content">
       <h1>Welcome to Dayt</h1>
 
       <div>
-        <%= link_to "Create a Trip", journey_path, class: "full-btn waves btn-big" %>
+        <%= link_to "Plan a Trip", journey_path, class: "full-btn waves btn-big home_button" %>
       </div >
 
       <p class="p-scroll"><span data-controller='scroll' id="title"></span>
-      <div class='home-text'>
-        <div >
-          <h2 class ='text-home'>Experiences Curated by Locals</h2>
-          <p>Locals share their favourite spots, bars, restaurants, landmarks, viewpoints and other hidden gems for travellers.</p>
+      <div class='home-text text-center'>
+
+        <div class="d-flex justify-content-around home_word">
+
+            <div class='text-home'>
+              <h2>Anywhere</h2>
+              <i class="fa-solid fa-plane home_icon"></i>
+            </div>
+
+            <div class='text-home'>
+              <h2>Personalised Recommendations</h2>
+              <i class="fa-solid fa-user-check home_icon"></i>
+            </div>
+
+            <div class='text-home'>
+              <h2>Anytime</h2>
+              <i class="fa-solid fa-calendar-check home_icon"></i>
+            </div>
         </div>
-        <div >
-        <h2 class ='text-home'>Personalised Recomendations</h2>
-          <p>Thanks to filtering based on location, distance and personal preferences </p>
+
+        <div class='text-home dayt_word'>
+          <h2>It's a DAYT !</h2>
+          <i class="fa-solid fa-face-laugh-wink home_icon"></i>
         </div>
+
+      </div>
+
+
+
       </div>
   </div>
-</div>
+
+  <%# <div class="alien" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://res.cloudinary.com/dmcsijvtd/image/upload/v1655298030/development/00alien_planet_june22_dl5wfl.jpg);"> %>
+
+
+
 <% render 'layouts/footer' %>
