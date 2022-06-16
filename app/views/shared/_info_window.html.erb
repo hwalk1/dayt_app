@@ -4,10 +4,10 @@
     <p><i class="fa-solid fa-location-dot">&#8194;</i><%= dayt.location %></p>
     <div class="d-flex">
       <div class="w-50">
-        <i class="fa-solid fa-clock">&#8194;</i><%= dayt.duration.to_i %>&#8194;hours
+        <i class="fa-solid fa-clock">&#8194;</i>&#8194;<%= dayt.duration.to_i %> h
       </div>
       <div class="w-50">
-        <i class="fa-solid fa-dollar-sign">&#8194;</i><%= dayt.price > 0 ? "#{dayt.price.to_i} per person" : 'Free' %>&#8194;
+        <i class="fa-solid fa-dollar-sign">&#8194;</i><%= dayt.price > 0 ? "#{dayt.price.to_i} pp" : 'Free' %>&#8194;
       </div>
     </div>
   </div>

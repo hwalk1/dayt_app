@@ -10,11 +10,8 @@ class MassReviewsController < ApplicationController
   def create
     @trip = Trip.find(params[:trip_id])
     @trip.assign_attributes(reviews_params)
-    if @trip.reviews.all?(&:save)
-      redirect_to trips_path
-    else
-      render :new
-    end
+    @trip.reviews.each(&:save)
+    redirect_to trips_path
   end
 
 

@@ -14,11 +14,12 @@
   </div>
 
   <div class="col-10">
-    <ul data-sortable-target="list" class="h-100" id="hello-list">
+    <ul data-sortable-target="list" class="h-100" id="hello-list" >
+      <i class="fa-regular fa-hand-pointer" data-controller='animate'></i>
       <% @trip_dayts.order(:order).each do |trip_dayt| %>
         <li data-sortable-target="card" data-index-value=<%= trip_dayt.id %> class="my-2 organise card-height-<%= ((trip_dayt.dayt.duration / 10) * 100).to_i %>">
           <div style="height: 100%">
-            <div class="dayt-info card justify-content-around text-center m-1 p-1 lock-card">
+            <div class="dayt-info card justify-content-around text-center m-1 p-1 lock-card " >
               <%= link_to remove_trip_dayt_path(trip_dayt), method: :patch do %>
                 <i class='fa-solid fa-xmark'></i>
               <% end %>
