@@ -238,6 +238,22 @@ rising.photos.attach(io: file, filename: 'rising.png', content_type: 'image/png'
 rising.user = aren
 rising.save
 
+donut = Dayt.new(
+  title: 'The American Donut Kitchen',
+  content: 'Hot jam doughnuts made fresh right before your eyes. Melbourne\'s freshest and iconic doughnuts are available every market day',
+  location: 'Victoria Market, Queen, Queen St, Melbourne VIC 3000',
+  duration: 1,
+  price: 5,
+  tag_list: ['Outdoor', 'Lunch']
+)
+
+file = URI.open('https://cdn.concreteplayground.com/content/uploads/2020/06/HZN-angle-1.jpg')
+donut.photos.attach(io: file, filename: 'donut.png', content_type: 'image/png')
+donut.user = aren
+donut.save
+
+
+
 # puts 'faker time! 🤡'
 # # faker time
 # 10.times do

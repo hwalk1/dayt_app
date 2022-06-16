@@ -26,11 +26,10 @@
     transition: 0.5s;
   }
 
+
   .review_icons {
     align-items: baseline;
   }
-
-
 }
 
 .review-form {
@@ -43,6 +42,9 @@
     margin: 0px;
   }
 
+  .carousel-control-prev, .carousel-control-next {
+    align-items: start;
+  }
 }
 
 
@@ -85,6 +87,13 @@
 }
 
 
+.carousel-control-prev, .carousel-control-next {
+  top: 25%;
+  bottom: 30%;
+  opacity: 1;
+}
+
+
 .buttons{
 top: 36px;
   position: relative;
@@ -103,13 +112,6 @@ color: #fff;
 color: #fff;
 }
 
-.carousel-control-prev, .carousel-control-next {
-  top: 25%;
-  bottom: 30%;
-  align-items: start;
-  opacity: 1;
-
-}
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
   width: 3rem;
