@@ -80,7 +80,7 @@ lewagon = Dayt.new(
   location: '41 Stewart St, Melbourne c/o Inspire9, Level1, Richmond VIC 3121',
   duration: 1,
   price: 0,
-  tag_list: ['Free', 'Le Wagon awesome course', 'Indoor']
+  tag_list: ['Free', 'Awesome courses', 'Indoor']
 )
 
 file = URI.open('https://res.cloudinary.com/wagon/image/upload/c_fill,h_240,q_auto,w_520/v1622427318/w0tv5qudjqevpz1fzgb2.webp')
@@ -95,7 +95,7 @@ mcg = Dayt.new(
   duration: 1,
   price: 35,
   booking_url: 'https://www.mcg.org.au/',
-  tag_list: ['Outdoor', 'Sport', 'Drinks']
+  tag_list: ['Outdoor', 'Sport', 'Drinks', 'Snacks', 'Entertainment']
 )
 
 file = URI.open('https://www.austadiums.com/news/images/mcg-aerial-pic1.jpg')
@@ -112,7 +112,7 @@ ngv = Dayt.new(
   opening_time: 10,
   closing_time: 17,
   booking_url: 'https://connect.ngv.vic.gov.au/events',
-  tag_list: ['Art', 'Indoor']
+  tag_list: ['Art', 'Indoor', 'Snacks', 'Entertainment']
 )
 
 file = URI.open('https://content.ngv.vic.gov.au/col-images/api-access/INST048987/1280')
@@ -146,7 +146,7 @@ pidapipo = Dayt.new(
   opening_time: 12,
   closing_time: 22,
   booking_url: 'https://pidapipo.com/',
-  tag_list: ['Indoor', 'Lunch', 'Dinner']
+  tag_list: ['Indoor', 'Snacks']
 )
 
 file = URI.open('https://whatson.melbourne.vic.gov.au/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWt6TURGallqQmtOQzAyWkRJd0xUUmhZbUl0T1RCa015MHlOV1poWlRReVpEVmhNREFHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--68874eb615dd0f9232590035f5db1489fda2b514/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VY21WemFYcGxYM1J2WDJ4cGJXbDBXd2RwQXE0Q2FRTE1BUT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--6b649797a60ed07e66abb743103d0e385829f44a/pidapipo%20carlton%201.jpg')
@@ -164,7 +164,7 @@ Cinema_nova = Dayt.new(
   opening_time: 10,
   closing_time: 22,
   booking_url: 'https://www.cinemanova.com.au/',
-  tag_list: ['Indoor', 'Art']
+  tag_list: ['Indoor', 'Art', 'Snacks', 'Entertainment']
 )
 
 file = URI.open('https://whatson.melbourne.vic.gov.au/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWsxWkRFMk9EZ3paaTAxTW1aakxUUXlaVEF0WWpBNFpDMHpPRGMxWmpBd09UQXdOMlVHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--8308fb824c7173cb6197193e0e902d59c5315ff9/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VY21WemFYcGxYM1J2WDJ4cGJXbDBXd2RwQXE0Q2FRTE1BUT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--6b649797a60ed07e66abb743103d0e385829f44a/google_place_photo.jpg')
@@ -178,10 +178,10 @@ Bartronica = Dayt.new(
   location: '335 Flinders Ln, Melbourne VIC 3000',
   duration: 2,
   price: 30,
-  opening_time: 3,
+  opening_time: 15,
   closing_time: 23,
   booking_url: 'https://bartronica.com.au/',
-  tag_list: ['Nightlife', 'Music', 'Indoor', 'Drinks']
+  tag_list: ['Nightlife', 'Music', 'Indoor', 'Drinks', 'Entertainment']
 )
 
 file = URI.open('https://media-cdn.tripadvisor.com/media/photo-s/0d/78/cc/eb/massive-pinball-machine.jpg')
@@ -198,8 +198,10 @@ bdl = Dayt.new(
   price: 20,
   opening_time: 18,
   closing_time: 1,
-  tag_list: ['Nightlife', 'Music', 'Indoor', 'Drinks']
+  booking_url: 'https://www.driverlanebar.com/',
+  tag_list: ['Nightlife', 'Music', 'Indoor', 'Drinks', 'Snacks']
 )
+
 
 file = URI.open('https://whatson.melbourne.vic.gov.au/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWt5TjJRMk56STJPQzFqTVRrd0xUUXlNV1V0T1RCa05pMDVOVGRsTkdZME5qYzJZekVHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--137e9040a0d98fc519b4ebefdb14e5e2d93531b9/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VY21WemFYcGxYM1J2WDJ4cGJXbDBXd2RwQXE0Q2FRTE1BUT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--6b649797a60ed07e66abb743103d0e385829f44a/beneath-20driver-201.jpg')
 bdl.photos.attach(io: file, filename: 'bdl.png', content_type: 'image/png')

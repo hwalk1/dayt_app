@@ -10,11 +10,11 @@ module TagHelper
     "Art" => "bg-light",
     "Sport" => "bg-light",
     "Music" => "bg-warning",
-    "Maccas" => "bg-danger",
     "Drinks" => "bg-info",
-    "Barbie & Smoko" => "bg-danger",
     "Free" => "bg-dark",
-    "Le Wagon awesome course" => "bg-light"
+    "Awesome courses" => "bg-light",
+    "Snacks" => "bg-danger",
+    "Entertainment" => "bg-warning",
   }
 
   def tag_class(tag_name)
