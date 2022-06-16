@@ -1,6 +1,7 @@
 <div class="row justify-content-end" id="calendar-container">
 
   <div class="calendar col-2 d-flex flex-column justify-content-between">
+    <p>8am</p>
     <p>9am</p>
     <p>10am</p>
     <p>11am</p>
@@ -15,7 +16,7 @@
   <div class="col-10">
     <ul data-sortable-target="list" class="h-100" id="hello-list">
       <% @trip_dayts.order(:order).each do |trip_dayt| %>
-        <li data-sortable-target="card" data-index-value=<%= trip_dayt.id %> class="organise card-height-<%= ((trip_dayt.dayt.duration / 10) * 100).to_i %>">
+        <li data-sortable-target="card" data-index-value=<%= trip_dayt.id %> class="my-2 organise card-height-<%= ((trip_dayt.dayt.duration / 10) * 100).to_i %>">
           <div style="height: 100%">
             <div class="dayt-info card justify-content-around text-center m-1 p-1 lock-card">
               <%= link_to remove_trip_dayt_path(trip_dayt), method: :patch do %>
@@ -23,7 +24,7 @@
               <% end %>
 
               <h2><%= trip_dayt.dayt.title %></h2>
-              <p class="d-flex dayt-details p-1">
+              <p class="dayt-details p-1">
                 <i class="fa-solid fa-location-dot"></i>
                 <%= trip_dayt.dayt.location %>
               </p>
