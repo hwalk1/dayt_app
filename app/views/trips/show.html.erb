@@ -26,7 +26,7 @@
 
 
           <div class="col-10">
-            <ul id="hello-list" class="h-100 a-style">
+            <ul id="hello-list" data-controller='animate' class="h-100 a-style ">
               <% @trip_dayts.each do |trip_dayt| %>
                 <%= link_to dayt_path(trip_dayt.dayt) do %>
                 <li class=" my-2 card-height-<%= ((trip_dayt.dayt.duration / 10) * 100).to_i %>">
