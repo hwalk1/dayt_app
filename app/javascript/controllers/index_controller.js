@@ -5,6 +5,5 @@ export default class extends Controller {
     console.log('Hello, index!')
     localStorage.setItem("index", 0)
     localStorage.setItem("confetti", 1)
-    localStorage.setItem("animate", 1)
   }
 }
