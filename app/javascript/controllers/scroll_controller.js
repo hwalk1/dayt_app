@@ -4,7 +4,7 @@ export default class extends Controller {
 
   connect() {
     const title = document.getElementById('title');
-    const text = "Take the guesswork out of travel, it's a dayt";
+    const text = "Make the most out of your trip";
 
     const animateText = (text, element, intervalDuration) => {
     let count = 0;

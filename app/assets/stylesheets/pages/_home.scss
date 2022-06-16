@@ -11,25 +11,33 @@ body {
    height: 896px;
    background-color: $blue;
    color: $gray-titles;
+  //  background-image: linear-gradient(rgba(255, 255, 255, 1) 60%,rgba(255, 255, 255, 0)), url('00alien_planet_june22.jpg');
+  //  object-fit: cover;
+  //  background-repeat: no-repeat;
 }
 
 .home-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 70vh;
+  max-height: 490px;
   justify-content: space-around;
-  margin-top: 20px;
-
+  padding-top: 10px;
 
 }
 
 .home-p {
   height: 94.16%;
-  display: flex;
-  background-image: linear-gradient(rgba(255, 255, 255, 1) 60%,rgba(255, 255, 255, 0)), url('home.jpeg');
-  background-size: cover;
-  background-position: top;
+  width: 100%;
+  // display: flex;
+  background-color: $dark-blue!important;
+  color: $blue;
+  background-image: linear-gradient(rgba(255, 255, 255, 0) 60%,rgba(255, 255, 255, 0)), url('alien_photo.png');
+  background-size: contain;
+  background-position: bottom;
+  object-fit: contain;
+  background-repeat: no-repeat;
+
 
   .p-scroll {
     height: 21.5px;
@@ -39,4 +47,35 @@ body {
 
 .home-text {
   text-align: center;
+
+}
+
+.text-home {
+  padding: 10px 10px;
+
+  h2 {
+    font-size: 1rem;
+    padding-top: 10px;
+  }
+}
+
+.home_button {
+  margin-bottom: 15px;
+}
+
+.home_icon {
+  font-size: 1.2rem;
+}
+
+.dayt_word {
+  font-size: 1.5rem;
+  h2 {
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+  }
+
+  .home_icon {
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+  }
 }
