@@ -7,7 +7,7 @@ class DaytsController < ApplicationController
     @dayts = @dayts.tagged_with(params[:tags], any: true) if params[:tags].present?
     @trip_dayt = TripDayt.new
     @trip_duration = 0
-    @trip.dayts.each { |dayt| @trip_duration += dayt.duration }
+    @trip.trip_dayts.where(status: 'accepted').each { |trip_dayt| @trip_duration += trip_dayt.dayt.duration }
     @markers = @dayts.geocoded.map do |dayt|
       {
         lat: dayt.latitude,
