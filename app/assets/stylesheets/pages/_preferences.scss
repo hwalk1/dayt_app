@@ -47,9 +47,11 @@
   margin-top: 15px;
 }
 
-.trip-name {
-  border: 2px solid $green;
+.form-control:focus, .form-control:active {
+  background-color: white;
+  border: 2px solid black;
 }
+
 
 #trip_distance {
   border-radius: 10px;
