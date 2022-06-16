@@ -1,5 +1,5 @@
 <div>
-  <div class="slider-container" >
+  <div class="slider-container" data-controller="show-hide">
     <div class="slider" data-show-hide-target="slider">
 
       <div class="slidee container">
@@ -11,16 +11,17 @@
           </div>
           <div data-show-hide-target='container'>
           <div class="row justify-content-end" id="calendar-container">
-          <div class="calendar col-2 d-flex flex-column justify-content-around">
-            <p>9 am</p>
-            <p>10 am</p>
-            <p>11 am</p>
-            <p>12 pm</p>
-            <p>1 pm</p>
-            <p>2 pm</p>
-            <p>3 pm</p>
-            <p>4 pm</p>
-            <p>5 pm</p>
+          <div class="calendar col-2 d-flex flex-column justify-content-between align-items-center">
+            <p>8am</p>
+            <p>9am</p>
+            <p>10am</p>
+            <p>11am</p>
+            <p>12pm</p>
+            <p>1pm</p>
+            <p>2pm</p>
+            <p>3pm</p>
+            <p>4pm</p>
+            <p>5pm</p>
           </div>
 
 
@@ -28,11 +29,11 @@
             <ul id="hello-list" class="h-100 a-style">
               <% @trip_dayts.each do |trip_dayt| %>
                 <%= link_to dayt_path(trip_dayt.dayt) do %>
-                <li class="card-height-<%= ((trip_dayt.dayt.duration / 10) * 100).to_i %>">
+                <li class=" my-2 card-height-<%= ((trip_dayt.dayt.duration / 10) * 100).to_i %>">
                   <div style="height: 100%">
                     <div class="dayt-info card justify-content-around text-center m-1 p-1 lock-card">
                       <h2><%= trip_dayt.dayt.title %></h2>
-                      <p class="d-flex dayt-details p-1">
+                      <p class="dayt-details p-1">
                         <i class="fa-solid fa-location-dot"></i>
                         <%= trip_dayt.dayt.location %>
                       </p>
