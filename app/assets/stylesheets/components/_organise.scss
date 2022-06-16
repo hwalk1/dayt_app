@@ -24,6 +24,7 @@
   border-radius: 15px ;
   background-color: $blue;
   box-shadow: 8px 5px 5px #478f85;
+  border: 1px solid #adfbd9;
 
   p, h2 {
     margin: 0;
@@ -85,6 +86,7 @@
   width: 50px;
   right: 0;
   top: 12px;
+  margin-right: 35px;
 }
 
 .calendar {
@@ -109,6 +111,10 @@
     font-size: 30px;
 
   }
+}
+
+.map_organise_trip {
+  margin-left: 25px;
 }
 
 // #dayt-order-form-btn {
