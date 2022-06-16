@@ -258,6 +258,7 @@ rising.photos.attach(io: file, filename: 'rising.png', content_type: 'image/png'
 rising.user = aren
 rising.save
 
+
 # ***---- revolver upstairs ----***
 
 revolver = Dayt.new(
@@ -288,7 +289,7 @@ aquarium = Dayt.new(
   opening_time: 9,
   closing_time: 5,
   booking_url: 'https://www.visitsealife.com/melbourne/tickets-passes/',
-  tag_list: ['Indoor', 'Lunch', 'Dinner', 'Art']
+  tag_list: ['Indoor', 'Lunch', 'Snacks', 'Entertainment']
 )
 
 file = URI.open('https://tothotornot.com/wp-content/uploads/2018/04/Melbourne-Aquarium-7-15.jpg')
@@ -326,13 +327,27 @@ black_cat = Dayt.new(
   opening_time: 9,
   closing_time: 10,
   booking_url: 'https://www.visitsealife.com/melbourne/tickets-passes/',
-  tag_list: ['Indoor', 'Lunch', 'Dinner', 'Art', 'Drinks']
+  tag_list: ['Indoor', 'Snacks', 'Art', 'Drinks']
 )
 
 file = URI.open('https://theinnernorth.com.au/wp-content/uploads/2021/05/black-cat-interior-1.jpg')
 black_cat.photos.attach(io: file, filename: 'black_cat.png', content_type: 'image/png')
 black_cat.user = michael
 black_cat.save
+=======
+donut = Dayt.new(
+  title: 'The American Donut Kitchen',
+  content: 'Hot jam doughnuts made fresh right before your eyes. Melbourne\'s freshest and iconic doughnuts are available every market day',
+  location: 'Victoria Market, Queen, Queen St, Melbourne VIC 3000',
+  duration: 1,
+  price: 5,
+  tag_list: ['Outdoor', 'Lunch']
+)
+
+file = URI.open('https://cdn.concreteplayground.com/content/uploads/2020/06/HZN-angle-1.jpg')
+donut.photos.attach(io: file, filename: 'donut.png', content_type: 'image/png')
+donut.user = aren
+donut.save
 
 # puts 'faker time! 🤡'
 # # faker time
