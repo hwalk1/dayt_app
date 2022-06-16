@@ -11,6 +11,7 @@
             <h1>Organise Your Trip</h1>
             <p>DRAG to change your schedule</p>
           </div>
+
           <%= render "shared/organise", trip: @trip %>
         </div>
 
@@ -21,7 +22,7 @@
       </div>
     </div>
     <footer style="position: fixed; top: calc(100vh - 106px); height: 106px; display: grid; grid-template-columns: 1fr 1fr;">
-        <button class='btn map-btn btn-width' data-action='click->show-hide#toggle'>Map</button>
+        <button class='btn map-btn btn-width map_organise_trip' data-action='click->show-hide#toggle'>Map</button>
         <%# link_to "Confirm", trip_path(@trip), class: "btn next-btn btn-width" %>
       <%= form_with url: update_all_trip_dayts_path(@trip), method: :patch, id: "order-calendar-form" do |f| %>
         <% @trip_dayts.order(:order).each do |dayt| %>
