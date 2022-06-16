@@ -3,9 +3,15 @@
     <div class="slider-container" id="slider-container-itinerary">
       <div class="slider" data-show-hide-target="slider">
 
-        <div class="slidee container">
-          <h1>Organise Your Trip</h1>
-          <p>DRAG to change your schedule</p>
+        <div class="slidee container text-center">
+          <div class="organise-header">
+            <%= link_to trip_dayts_path(@trip) do %>
+              <i class="fa-solid fa-plus"></i>
+            <% end %>
+            <h1>Organise Your Trip</h1>
+            <p>DRAG to change your schedule</p>
+          </div>
+
           <%= render "shared/organise", trip: @trip %>
         </div>
 
