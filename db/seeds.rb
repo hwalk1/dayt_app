@@ -336,7 +336,7 @@ file = URI.open('https://theinnernorth.com.au/wp-content/uploads/2021/05/black-c
 black_cat.photos.attach(io: file, filename: 'black_cat.png', content_type: 'image/png')
 black_cat.user = michael
 black_cat.save
-=======
+
 donut = Dayt.new(
   title: 'The American Donut Kitchen',
   content: 'Hot jam doughnuts made fresh right before your eyes. Melbourne\'s freshest and iconic doughnuts are available every market day',
