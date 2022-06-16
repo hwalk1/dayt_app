@@ -18,7 +18,7 @@ User.destroy_all
 puts "Creating Users 💃"
 aren = User.new(name:"Aren", password:"123456", email:"aren@gmail.com")
 hayden = User.new(name:"Hayden", password:"123456", email:"hayden@gmail.com")
-michael = User.new(name:"Michael", password:"123456", email:"michael@gmail.com")
+michael = User.new(name:"Road Man", password:"123456", email:"michael@gmail.com")
 lea = User.new(name:"Lea", password:"123456", email:"lea@gmail.com")
 
 users = [aren, hayden, michael, lea]
@@ -41,6 +41,8 @@ hayden.save
 
 puts 'creating Dayts 🌞'
 
+# ***---- corner ----***
+
 corner = Dayt.new(
   title: 'Corner Hotel',
   content: 'Popular landmark for local & international music acts, with a rooftop bar & pub grub menu.',
@@ -60,6 +62,8 @@ corner.photos.attach(io: file, filename: 'corner2.png', content_type: 'image/png
 corner.user = hayden
 corner.save
 
+# ***---- grotto ----***
+
 grotto = Dayt.new(
   title: 'The Grotto',
   content: 'A secluded spot close to the city to take you away',
@@ -73,6 +77,8 @@ file = URI.open('https://citycollection.melbourne.vic.gov.au/wp-content/uploads/
 grotto.photos.attach(io: file, filename: 'grotto.png', content_type: 'image/png')
 grotto.user = aren
 grotto.save
+
+# ***---- lewagon ----***
 
 lewagon = Dayt.new(
   title: 'Le Wagon Melbourne',
@@ -88,6 +94,8 @@ lewagon.photos.attach(io: file, filename: 'lewagon.png', content_type: 'image/pn
 lewagon.user = aren
 lewagon.save
 
+# ***---- MCG ----***
+
 mcg = Dayt.new(
   title: 'Melbourne Cricket Ground',
   content: 'The Melbourne Cricket Ground, also known locally as "The \'G", is an Australian sports stadium located in Yarra Park, Melbourne, Victoria.',
@@ -102,6 +110,8 @@ file = URI.open('https://www.austadiums.com/news/images/mcg-aerial-pic1.jpg')
 mcg.photos.attach(io: file, filename: 'mcg.png', content_type: 'image/png')
 mcg.user = aren
 mcg.save
+
+# ***---- NGV ----***
 
 ngv = Dayt.new(
   title: 'National Gallery of Victoria',
@@ -120,6 +130,8 @@ ngv.photos.attach(io: file, filename: 'ngv.png', content_type: 'image/png')
 ngv.user = aren
 ngv.save
 
+# ***---- fishbowl ----***
+
 fishbowl = Dayt.new(
   title: 'Fishbowl',
   content: 'At FISHBOWL, we want to deliver the food that nature provided with minimal intervention and maximum care in a fun and authentic way.',
@@ -136,6 +148,8 @@ file = URI.open('https://media.timeout.com/images/105558062/image.jpg')
 fishbowl.photos.attach(io: file, filename: 'fishbowl.png', content_type: 'image/png')
 fishbowl.user = aren
 fishbowl.save
+
+# ***---- pidapipo ----***
 
 pidapipo = Dayt.new(
   title: 'Pidapipo',
@@ -154,6 +168,7 @@ pidapipo.photos.attach(io: file, filename: 'pidapipo.png', content_type: 'image/
 pidapipo.user = aren
 pidapipo.save
 
+# ***---- cinema nova ----***
 
 Cinema_nova = Dayt.new(
   title: 'Cinema Nova',
@@ -172,6 +187,8 @@ Cinema_nova.photos.attach(io: file, filename: 'Cinema_nova.png', content_type: '
 Cinema_nova.user = michael
 Cinema_nova.save
 
+# ***---- bartronica ----***
+
 Bartronica = Dayt.new(
   title: 'Bartronica',
   content: 'Australia`s coolest Arcade Bar! Featuring great beer, tasty cocktails and rare video games.',
@@ -189,6 +206,7 @@ Bartronica.photos.attach(io: file, filename: 'Bartronica.png', content_type: 'im
 Bartronica.user = michael
 Bartronica.save
 
+# ***---- beneath driver lane ----***
 
 bdl = Dayt.new(
   title: 'Beneath Driver Lane',
@@ -206,6 +224,8 @@ bdl.photos.attach(io: file, filename: 'bdl.png', content_type: 'image/png')
 bdl.user = aren
 bdl.save
 
+# ***---- the forum ----***
+
 forum = Dayt.new(
   title: 'The Forum',
   content: 'Forum Melbourne is a live music, cinema, theatre, and event venue located on the corner of Flinders Street and Russell Street in Melbourne, Australia. Built in 1929, it was designed by leading US ‘picture palace’ architect John Eberson, in association with the local architectural firm Bohringer, Taylor & Johnson',
@@ -221,6 +241,8 @@ forum.photos.attach(io: file, filename: 'forum.png', content_type: 'image/png')
 forum.user = aren
 forum.save
 
+# ***---- rising melbourne ----***
+
 rising = Dayt.new(
   title: 'RISING: Melbourne',
   content: 'RISING is a surge of art, music, performance and ceremony in the heart of Melbourne.',
@@ -235,6 +257,82 @@ file = URI.open('https://www.visitmelbourne.com/-/media/images/melbourne/events/
 rising.photos.attach(io: file, filename: 'rising.png', content_type: 'image/png')
 rising.user = aren
 rising.save
+
+# ***---- revolver upstairs ----***
+
+revolver = Dayt.new(
+  title: 'Revolver Upstairs',
+  content: "Arguably the best club in Melbourne. Don't lose your shoes here... (you won't find them)",
+  location: '229 Chapel St, Prahran VIC 3181',
+  duration: 2,
+  price: 25,
+  opening_time: 12,
+  closing_time: 12,
+  booking_url: 'https://revolverupstairs.com.au',
+  tag_list: ['Nightlife', 'Music', 'Indoor', 'Lunch', 'Dinner', 'Drinks']
+)
+
+file = URI.open('https://images.squarespace-cdn.com/content/v1/576a85e0b3db2b7deca81935/1618957368411-NNDJ61EA3VOLYI18C7U4/The+Club')
+revolver.photos.attach(io: file, filename: 'revolver.png', content_type: 'image/png')
+revolver.user = michael
+revolver.save
+
+# ***---- melbourne aquarium ----***
+
+aquarium = Dayt.new(
+  title: 'Melbourne Aquarium',
+  content: "The wonders of the marine world, right in Melbourne!",
+  location: 'King St, Melbourne VIC 3000',
+  duration: 2,
+  price: 37,
+  opening_time: 9,
+  closing_time: 5,
+  booking_url: 'https://www.visitsealife.com/melbourne/tickets-passes/',
+  tag_list: ['Indoor', 'Lunch', 'Dinner', 'Art']
+)
+
+file = URI.open('https://tothotornot.com/wp-content/uploads/2018/04/Melbourne-Aquarium-7-15.jpg')
+aquarium.photos.attach(io: file, filename: 'aquarium.png', content_type: 'image/png')
+aquarium.user = michael
+aquarium.save
+
+# ***---- royal botanic gardens ----***
+
+botanical = Dayt.new(
+  title: 'Royal Botanical Garden',
+  content: "Amble through the beautiful gardens of Melbourne",
+  location: 'Birdwood Ave, Melbourne VIC 3004',
+  duration: 2,
+  price: 0,
+  opening_time: 9,
+  closing_time: 5,
+  booking_url: 'https://www.visitsealife.com/melbourne/tickets-passes/',
+  tag_list: ['Outdoor', 'Lunch', 'Dinner', 'Art']
+)
+
+file = URI.open('https://whatson.melbourne.vic.gov.au/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWt3TlRka09UQTROQzA0TkdSa0xUUXlOREV0WVdNMU9TMDBaREEyTnpJNU9EazFNR0lHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--c463cfd164802b1eae109e7c93429d772cd79086/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VY21WemFYcGxYM1J2WDJ4cGJXbDBXd2RwQXVnRGFRSllBZz09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--0a3fe7bfb2cbe4508fa37b15b1e47ccbb206426a/9022d12d-56c4-441c-ba61-e2a44c09fb76.jpg')
+botanical.photos.attach(io: file, filename: 'botanical.png', content_type: 'image/png')
+botanical.user = michael
+botanical.save
+
+# ***---- black cat ----***
+
+black_cat = Dayt.new(
+  title: 'The Black Cat',
+  content: "A secluded bar to work, read or relax.",
+  location: '252 Brunswick St, Fitzroy VIC 3065',
+  duration: 2,
+  price: 20,
+  opening_time: 9,
+  closing_time: 10,
+  booking_url: 'https://www.visitsealife.com/melbourne/tickets-passes/',
+  tag_list: ['Indoor', 'Lunch', 'Dinner', 'Art', 'Drinks']
+)
+
+file = URI.open('https://theinnernorth.com.au/wp-content/uploads/2021/05/black-cat-interior-1.jpg')
+black_cat.photos.attach(io: file, filename: 'black_cat.png', content_type: 'image/png')
+black_cat.user = michael
+black_cat.save
 
 # puts 'faker time! 🤡'
 # # faker time
