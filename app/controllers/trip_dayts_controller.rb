@@ -7,13 +7,15 @@ class TripDaytsController < ApplicationController
     @trip_dayt = TripDayt.new(trip_dayt_params)
     @trip_dayt.trip = @trip
     @trip_dayt.save
+    @tags = params[:trip_dayt][:tags].split
     @dayts = Dayt.where.not(id: @trip.dayts.pluck(:id)).near(@trip.location, @trip.distance).order(id: :asc)
+    @dayts = @dayts.tagged_with(@tags, any: true) if params[:trip_dayt][:tags].present?
+    @ids = @dayts.map { |dayt| dayt.title }
     @dayt = @dayts[5]
-
     respond_to do |format|
       if @dayt
         format.html { redirect_to trip_dayts_path(@trip) }
-        format.text { render partial: "dayts/slide", locals: { trip: @trip, dayt: @dayt }, formats: [:html] }
+        format.text { render partial: "dayts/slide", locals: { trip: @trip, dayt: @dayt, tags: @tags }, formats: [:html] }
       else
         format.html { redirect_to trip_dayts_path(@trip) }
         format.text { render partial: "dayts/delete", formats: [:html] }

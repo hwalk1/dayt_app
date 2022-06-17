@@ -12,7 +12,7 @@
           <div class="swiper-wrapper">
             <% @dayts.first(6).each do |dayt|  %>
 
-              <%= render 'slide', dayt: dayt, trip: @trip %>
+              <%= render 'slide', dayt: dayt, trip: @trip, tags: @tags %>
 
             <% end %>
           </div>
