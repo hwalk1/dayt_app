@@ -11,8 +11,6 @@ class User < ApplicationRecord
   validates :name, presence: true
 
   # TAGS ===>
-  acts_as_taggable_on :tags
-  acts_as_taggable_on :dayts
 
 DISTANCE_KM = ["5 km", "10 km", "15 km", "20 km", "25 km", "30 km", "50 km", "100 km",]
 DISTANCE = [5 , 10 , 15 , 20 , 25 , 30 , 50 , 100]

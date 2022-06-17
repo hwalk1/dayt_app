@@ -4,11 +4,10 @@ class DaytsController < ApplicationController
     @dayts = Dayt.where.not(id: @trip.dayts.pluck(:id))
                  .near(@trip.location, @trip.distance)
                  .order(id: :asc)
-    @dayts = @dayts.tagged_with(params[:tags], any: true) if params[:tags].present?
+    @dayts = @dayts.tagged_with( @trip.tag_list.join(', '), any: true) if @trip.tag_list.any?
     @dayts = @dayts.order(id: :asc)
     @trip_dayt = TripDayt.new
     @trip_duration = 0
-    @tags = params[:tags]
     @trip.trip_dayts.where(status: 'accepted').each { |trip_dayt| @trip_duration += trip_dayt.dayt.duration }
     @markers = @dayts.geocoded.map do |dayt|
       {
@@ -90,8 +89,6 @@ class DaytsController < ApplicationController
   def edit
     @dayt = Dayt.find(params[:id])
   end
-
-
 
   private
 

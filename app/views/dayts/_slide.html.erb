@@ -7,7 +7,6 @@
     data: { action: "submit->trip-dayt#create submit->swiper#move" }
     } do |f| %>
       <%= f.hidden_field :dayt_id, value: dayt.id  %>
-      <%= f.hidden_field :tags, value: tags %>
       <%= f.hidden_field :status, value: 'declined' %>
       <button data-trip-dayt-target='declineButton'><i class="fas fa-regular fa-xmark" data-trip-dayt-target='declineIcon'></i></button>
     <% end %>
@@ -19,13 +18,12 @@
     data: { action: "submit->trip-dayt#create submit->swiper#move" }
     } do |f| %>
       <%= f.hidden_field :dayt_id, value: dayt.id %>
-      <%= f.hidden_field :tags, value: tags %>
       <%= f.hidden_field :status, value: 'accepted' %>
       <button data-trip-dayt-target='acceptButton'><i class="fa-regular fa-heart" data-trip-dayt-target='acceptIcon'></i></button>
   <% end %>
 
 <%# PHOTOS card swipper ========= > %>
-<%= link_to dayt_path(dayt, trip: trip, tags: tags), data_action: 'click->swiper#index' do %>
+<%= link_to dayt_path(dayt, trip: trip), data_action: 'click->swiper#index' do %>
   <%= cl_image_tag dayt.photos.first.key %>
 
 
