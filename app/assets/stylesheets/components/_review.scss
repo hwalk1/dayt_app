@@ -145,7 +145,8 @@ input[type=range]::-ms-thumb {
       appearance: none;
     }
     input[type="radio"]:checked + label {
-      background:grey;
+      background: $dark-blue;
+      color: white;
       animation-name: blink;
       animation-duration: 1s;
       border-color: rgb(55, 55, 55);
