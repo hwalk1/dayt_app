@@ -14,9 +14,9 @@
         <h2 class="text-center preference-titles">When?</h2>
               <%= f.input :date, as: :string, label: false, placeholder: "Today", required: false, input_html: {class: "datepicker text-center"} %>
 
-        <h2 class="text-center preference-titles">How Far?</h2>
+        <h2 class="text-center preference-titles">Travel Distance?</h2>
         <%= f.input :distance, label: false, input_html: { class: "text-center " }, collection: User::DISTANCE do %>
-        <%= f.select :distance, User::DISTANCE_KM, include_blank: 'Select a distance' %>
+        <%= f.select :distance, User::DISTANCE_KM, include_blank: 'How far do you want to travel' %>
         <% end %>
 
 
