@@ -13,9 +13,7 @@ export default class extends Controller {
       animation: 150,
       onEnd: (event) => {
         let i = 0;
-        console.log(this.cardTargets);
         this.cardTargets.forEach((card) => {
-          console.log(card.dataset.indexValue);
           this.inputTargets[i].value = parseInt(card.dataset.indexValue);
           i++;
         })
