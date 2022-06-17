@@ -78,8 +78,8 @@
 
 
   .card_body {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
   }
 
   .card-blue {
@@ -99,13 +99,14 @@
       color: $gray-titles;
       margin-bottom: 10px;
       text-align: center;
+      height: 62px;
       text-decoration: underline;
     }
 
     .card_text_content {
-        color: $dark-blue;
-        font-size: 1rem;
-        font-family:  $font-kodchasan-semi-bold;
+      color: $dark-blue;
+      font-size: 1rem;
+      font-family:  $font-kodchasan-semi-bold;
     }
 
     p {
@@ -179,7 +180,11 @@
   font-size: 0.8rem;
 }
 
-.rating_star_style{
-  margin-bottom: 10px;
-  margin-top: -5px;
+@media screen and ( max-height: 870px ) {
+  .swiper-slide img {
+    height: 200px!important;
+  }
+  .swiper {
+    height: 450px!important;
+  }
 }

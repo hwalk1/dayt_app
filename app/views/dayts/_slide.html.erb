@@ -25,7 +25,7 @@
   <% end %>
 
 <%# PHOTOS card swipper ========= > %>
-<%= link_to dayt_path(dayt, trip: trip), data_action: 'click->swiper#index' do %>
+<%= link_to dayt_path(dayt, trip: trip, tags: tags), data_action: 'click->swiper#index' do %>
   <%= cl_image_tag dayt.photos.first.key %>
 
 
