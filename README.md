@@ -4,6 +4,7 @@ Dayt is a travel planning app designed to make planning your next trip simple an
 To see it in action, it is currently live at: https://www.dayt.travel/
 
 This Rails project was made during our time at the [Le Wagon](https://www.lewagon.com/) full-stack developer bootcamp in Melbourne
+
 Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
 
 ## How to run
