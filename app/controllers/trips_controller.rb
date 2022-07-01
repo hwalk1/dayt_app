@@ -1,4 +1,6 @@
 class TripsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:new, :create, :itinerary]
+
   def new
     @trip = Trip.new
   end

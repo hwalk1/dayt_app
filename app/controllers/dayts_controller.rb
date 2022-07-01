@@ -1,4 +1,5 @@
 class DaytsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @trip = Trip.find(params[:trip_id])
     @dayts = Dayt.where.not(id: @trip.dayts.pluck(:id))
