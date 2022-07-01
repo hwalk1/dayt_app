@@ -1,4 +1,6 @@
 class TripDaytsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:create, :remove]
+
   def index
   end
 
@@ -23,13 +25,6 @@ class TripDaytsController < ApplicationController
     end
   end
 
-  # def save_extended_card
-  #   @trip = Trip.find(params[:trip_id])
-  #   @trip_dayt = TripDayt.new(trip_dayt_params)
-  #   @trip_dayt.trip = @trip
-  #   @trip_dayt.save
-  # end
-
   def destroy
   end
 
@@ -43,12 +38,11 @@ class TripDaytsController < ApplicationController
 
   def update_all
     @trip = Trip.find(params[:trip_id])
+    @trip.user = current_user
+    @trip.save
     params[:dayt_ids]&.each_with_index do |id, index|
       TripDayt.find(id).update!(order: index)
     end
-    # @trip.trip_dayts.where(status: "accepted", id: params[:dayt_ids]).each_with_index do |trip_dayt, index|
-    #   trip_dayt.update!(order: [index])
-    # end
     redirect_to trip_path(@trip)
   end
 
