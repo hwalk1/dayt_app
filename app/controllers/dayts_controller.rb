@@ -1,8 +1,11 @@
 class DaytsController < ApplicationController
+
 =begin
   A Dayt index is used to select create the stack of cards (Multiple Dayts) that is shown to the user after
   they have selected their preferences tags (Location, Interests, Travel distance & more)
 =end
+
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     # A trip is created after preferences are confirmed, this is passed in through params
     @trip = Trip.find(params[:trip_id])
@@ -10,14 +13,16 @@ class DaytsController < ApplicationController
     @dayts = Dayt.where.not(id: @trip.dayts.pluck(:id))
                  .near(@trip.location, @trip.distance)
                  .order(id: :asc)
+
     # then Dayts are selected if the tags are avialable
-    @dayts = @dayts.tagged_with(params[:tags], any: true) if params[:tags].present?
+    @dayts = @dayts.tagged_with( @trip.tag_list.join(', '), any: true) if @trip.tag_list.any?
     # Reordered and added to a trip.
     @dayts = @dayts.order(id: :asc)
     @trip_dayt = TripDayt.new
     @trip_duration = 0
     @tags = params[:tags]
-    # Used for adding up trip_duration bar at the bototm of the page
+    # Used for adding up trip_duration bar at the bottom of the page
+    
     @trip.trip_dayts.where(status: 'accepted').each { |trip_dayt| @trip_duration += trip_dayt.dayt.duration }
     # Used for mapbox rendering of markers
     @markers = @dayts.geocoded.map do |dayt|
@@ -102,8 +107,6 @@ class DaytsController < ApplicationController
   def edit
     @dayt = Dayt.find(params[:id])
   end
-
-
 
   private
 

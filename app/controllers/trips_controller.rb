@@ -1,5 +1,8 @@
 class TripsController < ApplicationController
+
   # This controller contains the logic for the trips, sorting & viewing of trips.
+  skip_before_action :authenticate_user!, only: [:new, :create, :itinerary]
+  
   def new
     @trip = Trip.new
   end
@@ -8,7 +11,7 @@ class TripsController < ApplicationController
     @trip = Trip.new(trip_params)
     @trip.user = current_user
     if @trip.save
-      redirect_to trip_dayts_path(@trip, tags: params[:trip][:search_tags])
+      redirect_to trip_dayts_path(@trip)
     else
       render :new
     end

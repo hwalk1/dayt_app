@@ -71,6 +71,7 @@
 
   <%= f.input :booking_url %>
   <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <%= render 'layouts/tags', f: f %>
   <footer>
     <%= f.submit 'Updayt', class: "btn next-btn" %>
   </footer>

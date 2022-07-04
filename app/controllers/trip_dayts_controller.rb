@@ -1,5 +1,9 @@
 class TripDaytsController < ApplicationController
+
   # This Trip Dayts controller is our join table for linking trips with many dayts and linking a dayt with many trips.
+
+  skip_before_action :authenticate_user!, only: [:create, :remove]
+  
   def index
   end
 
@@ -9,20 +13,22 @@ class TripDaytsController < ApplicationController
     # The trip from the trip dayt is assigned to the trip.
     @trip_dayt.trip = @trip
     @trip_dayt.save
+
     @tags = params[:trip_dayt][:tags].split
     # This is the logic where we have trips plucked near the params location & distance, which is then ordered.
     @dayts = Dayt.where.not(id: @trip.dayts.pluck(:id)).near(@trip.location, @trip.distance).order(id: :asc)
     # This check is to filter our which dayt is given to the user, and that the tags are present.
-    @dayts = @dayts.tagged_with(@tags, any: true) if params[:trip_dayt][:tags].present?
+    @dayts = @dayts.tagged_with( @trip.tag_list.join(', '), any: true) if @trip.tag_list.any?
     # This then maps the id's of each dayt as a title
     @ids = @dayts.map { |dayt| dayt.title }
     # Our dayt stack presented to the user is 5 cards
     @dayt = @dayts[5]
+
     respond_to do |format|
       # This is the formatting for which view is shown to the user.
       if @dayt
         format.html { redirect_to trip_dayts_path(@trip) }
-        format.text { render partial: "dayts/slide", locals: { trip: @trip, dayt: @dayt, tags: @tags }, formats: [:html] }
+        format.text { render partial: "dayts/slide", locals: { trip: @trip, dayt: @dayt }, formats: [:html] }
       else
         format.html { redirect_to trip_dayts_path(@trip) }
         format.text { render partial: "dayts/delete", formats: [:html] }
@@ -43,12 +49,11 @@ class TripDaytsController < ApplicationController
 
   def update_all
     @trip = Trip.find(params[:trip_id])
+    @trip.user = current_user
+    @trip.save
     params[:dayt_ids]&.each_with_index do |id, index|
       TripDayt.find(id).update!(order: index)
     end
-    # @trip.trip_dayts.where(status: "accepted", id: params[:dayt_ids]).each_with_index do |trip_dayt, index|
-    #   trip_dayt.update!(order: [index])
-    # end
     redirect_to trip_path(@trip)
   end
 

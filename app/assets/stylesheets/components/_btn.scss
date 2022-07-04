@@ -8,11 +8,10 @@
   font-weight: $font-kodchasan-semi-bold;
   text-decoration: none;
 
-    &:hover {
-      background-color: $blue;
-      border: 2px solid white;
-    }
-
+  &:hover {
+    background-color: $blue;
+    border: 2px solid white;
+  }
 }
 
 .full-btn {
