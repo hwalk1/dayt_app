@@ -1,4 +1,5 @@
 class TripsController < ApplicationController
+  # This controller contains the logic for the trips, sorting & viewing of trips.
   def new
     @trip = Trip.new
   end
@@ -24,7 +25,9 @@ class TripsController < ApplicationController
 
   def show
     @trip = Trip.find(params[:id])
+    # This is when dayts have been accepted to create te trip.
     @dayts = Dayt.includes(trip_dayts: :trip).where(trip_dayts: { status: "accepted", trip: @trip })
+    # This orders the dayts by tripdayt and orders them using the hidden table found on the organise page
     @trip_dayts = @trip.trip_dayts.where(status: "accepted").order(:order)
     unless @dayts.empty?
       @markers = @dayts.geocoded.map do |dayt|
