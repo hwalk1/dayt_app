@@ -1,0 +1,16 @@
+name: Test
+
+# triggers on
+on: [push]
+
+jobs:
+  test:
+    env:
+      RAILS_ENV: test
+      NODE_ENV: test
+    runs-on: ubuntu-latest # runner
+    steps:
+      - name: Checkout repository # copies your code into a runner VM
+        uses: actions/checkout@v2 # short for https://github.com/actions/checkout
+      - name: Hello World!
+        run: echo "Hello World!" # runs the script
