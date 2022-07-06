@@ -85,7 +85,7 @@ Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/ra
 ## About The Project
 
 <a href="https://github.com/hwalk1/dayt_app">
-    <img src="app/assets/images/Dayt-Product-Page (1).png" alt="Logo" width="800" height="300">
+    <img src="app/assets/images/Dayt-Product-Page (1).png" alt="Logo" width="1000" height="600">
 </a>
 
 
