@@ -84,7 +84,10 @@ Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/ra
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<a href="https://github.com/hwalk1/dayt_app">
+    <img src="app/assets/images/Dayt-Product-Page.png" alt="Logo" width="800" height="300">
+ </a>
+
 
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
 
