@@ -26,7 +26,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/hwalk1/dayt_app">
-    <img src="app/assets/images/DAYT-thick.png" alt="Logo" width="80" height="80">
+    <img src="app/assets/images/DAYT-thick.png" alt="Logo" width="300" height="100">
   </a>
 
 <h3 align="center">Dayt 🌏</h3>
