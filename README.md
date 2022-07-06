@@ -26,13 +26,19 @@
 <br />
 <div align="center">
   <a href="https://github.com/hwalk1/dayt_app">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="app/assets/images/DAYT-thick.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Dayt 🌏</h3>
 
   <p align="center">
-    project_description
+    Dayt is a travel planning app designed to make planning your next trip simple and easy while providing authentic experiences recommended by locals
+
+To see it in action, it is currently live at: https://www.dayt.travel/
+
+This Rails project was made during our time at the [Le Wagon](https://www.lewagon.com/) full-stack developer bootcamp in Melbourne
+
+Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
