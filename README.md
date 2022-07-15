@@ -107,32 +107,17 @@ It will keep showing you activities until your time (1 hours, 3 hours, 1 day) is
 
 ### Built With
 
-* [Ruby on Rails](https://nextjs.org/)
+* [Ruby on Rails](https://rubyonrails.org/)
 * [JavaScript](https://www.javascript.com/)
-* 
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
 * [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [SASS](https://sass-lang.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 <!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
 ### Installation
 
 ## How to run
@@ -176,10 +161,10 @@ rails s
 <!-- ROADMAP -->
 ## Roadmap
 
+- [ ] Premium Portal
 - [ ] User Profile
-- [ ] 
-- [ ] Feature 3
-    - [ ] Nested Feature
+    - [ ] Create Dayts
+    - [ ] Dashboard
 
 See the [open issues](https://github.com/hwalk1/dayt_app/issues) for a full list of proposed features (and known issues).
 
