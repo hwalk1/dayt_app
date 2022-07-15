@@ -152,7 +152,6 @@ Setup should now be complete and can be hosted locally on localhost:3000 with th
 ```
 rails s
 ```
-   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
