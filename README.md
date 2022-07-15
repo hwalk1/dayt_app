@@ -43,7 +43,7 @@ Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/ra
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-<!--     <a href="https://github.com/github_username/repo_name">View Demo</a> -->
+    <a href="https://dayt.travel">View Demo</a>
     ·
     <a href="https://github.com/hwalk1/dayt_app/issues">Report Bug</a>
     ·
