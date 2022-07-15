@@ -201,7 +201,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - Hayden Walker - haydenjwalker1@gmail.com
+Hayden Walker - haydenjwalker1@gmail.com
 
 Project Link: [https://github.com/hwalk1/dayt_app](https://github.com/hwalk1/dayt_app)
 
