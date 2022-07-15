@@ -108,9 +108,8 @@ It will keep showing you activities until your time (1 hours, 3 hours, 1 day) is
 ### Built With
 
 * [Ruby on Rails](https://nextjs.org/)
-* [JavaScript](https://reactjs.org/)
-* [Post](https://vuejs.org/)
-* [Angular](https://angular.io/)
+* [JavaScript](https://www.javascript.com/)
+* 
 * [Svelte](https://svelte.dev/)
 * [Laravel](https://laravel.com)
 * [Bootstrap](https://getbootstrap.com)
@@ -136,30 +135,39 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
+## How to run
+Run the following commands in the downloaded directory to have it running on localhost:3000
+
+Install dependencies with yarn and bundle:
+```
+bundle install
+```
+```
+yarn install
+```
+
+To create the postgres database:
+```
+rails db:create
+```
+To migrate the database to the most up to date schema:
+```
+rails db:migrate
+```
+To seed the database with some users and dayts(experiences):
+```
+rails db:seed
+```
+A .env file will need to be created in the root directory with api keys to [cloudinary](https://cloudinary.com/) and [mapbox](https://www.mapbox.com/) with the following variable names:
+```
+CLOUDINARY_URL
+MAPBOX_API_KEY
+```
+Setup should now be complete and can be hosted locally on localhost:3000 with the following command:
+```
+rails s
+```
    ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -168,12 +176,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
+- [ ] User Profile
+- [ ] 
 - [ ] Feature 3
     - [ ] Nested Feature
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/hwalk1/dayt_app/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -209,20 +217,18 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Your Name - Hayden Walker - haydenjwalker1@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/hwalk1/dayt_app](https://github.com/hwalk1/dayt_app)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+## Creators
+Made with ❤️ by [Lea](https://github.com/Lea-ah), [Michael](https://github.com/dcrv-exe), [Hayden](https://github.com/hwalk1) and [Aren](https://github.com/arenclissold)
 
-* []()
-* []()
-* []()
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
