@@ -43,11 +43,11 @@ Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/ra
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+<!--     <a href="https://github.com/github_username/repo_name">View Demo</a> -->
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/hwalk1/dayt_app/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/hwalk1/dayt_app/issues">Request Feature</a>
   </p>
 </div>
 
@@ -89,7 +89,17 @@ Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/ra
 </a>
 
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+<p> When arriving to a new destination or city, instead of spending time reading guidebooks, paying for expensive tours, or going through blogs and ultimately waisting time visiting things that weren’t for you. 
+
+Wouldn’t it be great to have access to local knowledge tailored specifically to you based on your interests, allowing you to quickly sort and create your perfect day. 
+
+Dayt (D A Y T) gives users the ability to build their perfect day itinerary with locally generated recommendations, this social travel platform connects traveler's with access to knowledge that would take years to discover on their own.
+
+Dayt, a mobile first web app shows you current user generated activities based on your location and interests for example museums, sunsets and live music. A stack of activity profiles are shown to you and the ability to swipe left or right can add them to your itinerary. In a matter of seconds and with all the information you need about the restaurant, cafe or landmark to truly travel like a local.
+
+It will keep showing you activities until your time (1 hours, 3 hours, 1 day) is all filled up and gives you a view of your day, directions and transport options to your stops.
+ 
+</p>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -97,9 +107,9 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
+* [Ruby on Rails](https://nextjs.org/)
+* [JavaScript](https://reactjs.org/)
+* [Post](https://vuejs.org/)
 * [Angular](https://angular.io/)
 * [Svelte](https://svelte.dev/)
 * [Laravel](https://laravel.com)
