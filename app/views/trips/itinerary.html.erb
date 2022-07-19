@@ -28,7 +28,7 @@
         <% @trip_dayts.order(:order).each do |dayt| %>
           <%= f.text_field "dayt_ids[]", id: nil, data: { sortable_target: "input"}, value: dayt.id, class: "opacity-0 pe-none" %>
         <% end %>
-        <%= f.submit class: "btn next-btn btn-width", id: "dayt-order-form-btn", style:"position: absolute; top: 9px; right: 16px; border: none; height: 66px" %>
+        <%= f.submit class: "btn next-btn btn-width", id: "dayt-order-form-btn", style:"position: absolute; top: 9px; right: -32%; border: none; height: 66px" %>
       <% end %>
     </footer>
     <%# <footer> %>

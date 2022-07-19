@@ -7,8 +7,8 @@
 
 body {
   // iphone 11 dimensions:
-   width: 414px;
-   height: 896px;
+   max-width: 500px;
+  //  max-height: 896px;
    background-color: $blue;
    color: $gray-titles;
   //  background-image: linear-gradient(rgba(255, 255, 255, 1) 60%,rgba(255, 255, 255, 0)), url('00alien_planet_june22.jpg');
@@ -27,8 +27,8 @@ body {
 }
 
 .home-p {
-  height: 94.16%;
   width: 100%;
+  height: calc(100vh - 52.5px);
   // display: flex;
   background-color: $dark-blue!important;
   color: $blue;
