@@ -7,6 +7,7 @@ class Trip < ApplicationRecord
   has_many :dayts, through: :trip_dayts
   has_many :reviews, -> { distinct }, through: :trip_dayts
 
+  # Standard validations for creation of a trip
   validates :title, presence: true
   validates :location, presence: true
   validates :distance, presence: true
