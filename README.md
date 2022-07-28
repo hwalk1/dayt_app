@@ -93,7 +93,7 @@ Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/ra
 
 Wouldn’t it be great to have access to local knowledge tailored specifically to you based on your interests, allowing you to quickly sort and create your perfect day. 
 
-Dayt (D A Y T) gives users the ability to build their perfect day itinerary with locally generated recommendations, this social travel platform connects traveler's with access to knowledge that would take years to discover on their own.
+Dayt gives users the ability to build their perfect day itinerary with locally generated recommendations, this social travel platform connects traveler's with access to knowledge that would take years to discover on their own.
 
 Dayt, a mobile first web app shows you current user generated activities based on your location and interests for example museums, sunsets and live music. A stack of activity profiles are shown to you and the ability to swipe left or right can add them to your itinerary. In a matter of seconds and with all the information you need about the restaurant, cafe or landmark to truly travel like a local.
 
